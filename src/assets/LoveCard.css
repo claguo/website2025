@@ -1,0 +1,30 @@
+
+.love-pic {
+    position: absolute;
+    max-width: 25vw;
+    max-height: 25vw;
+    opacity: 0;
+    object-fit: contain;
+    z-index: -1;
+}
+.is-hovered {
+    opacity: 1;
+}
+
+.name-split:hover {
+    font-style: italic;
+    color: #00D287;  
+}
+.thirds-container {
+    display: flex;
+    width: 66.67%;
+    flex-direction: column;
+}
+.star-icon {
+    font-family: 'rubik';
+    font-size: 6rem;
+    color: #00D287;
+    margin-top: 16vh;
+    margin-bottom: 16vh;
+    text-align: center;
+}

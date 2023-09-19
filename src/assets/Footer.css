@@ -1,0 +1,19 @@
+.end-text {
+    text-align: right;
+    margin: 0;
+}
+.socials-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: 11.5rem;
+}
+.footer-link:hover {
+    color: #00D287;
+    font-style: italic;
+}
+.footer-container {
+    margin-top: 11.5rem;
+    display: flex;
+    flex-direction: column;
+}
