@@ -1,7 +1,8 @@
 import React from 'react'
 import ProjectHero from '../components/ProjectHero';
-import TLDR from '../components/TLDR';
+import TLDR from '../components/ETO/ETOTLDR';
 import P5jsExperiments from '../components/P5jsExperiments';
+import ProjectNavButtons from '../components/ProjectNavButtons';
 
 function P5jsPage() {
   return (
@@ -9,6 +10,7 @@ function P5jsPage() {
       <ProjectHero />
       <TLDR />
       <P5jsExperiments />
+      <ProjectNavButtons />
     </>
   )
 }

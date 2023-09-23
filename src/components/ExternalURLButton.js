@@ -24,6 +24,7 @@ function ExternalURLButton(props) {
         border: isHovered ? '1px solid #c2e772' : '1px solid #00D287',
         display: 'inline-block',
         width: 'auto',
+        marginTop: '1rem',
         backgroundColor: isHovered ? '#c2e772' : 'transparent',
         // backgroundColor: props.active ? '#00D287' : 'transparent'
       }}>
@@ -71,7 +72,7 @@ function ExternalURLButton(props) {
           margin: '0',
           overflowWrap: 'anywhere',
           fontStyle: isHovered ? 'italic' : '',
-          color: isHovered ? '#2fa767' : '#00A56A'
+          color: isHovered ? '#2fa767' : '#00A56A',
         }}
         onClick={handleButtonClick}
       >

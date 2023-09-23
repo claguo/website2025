@@ -13,6 +13,7 @@ function Button( props ) {
       <div style={{
         transform: isHovered ? 'skewX(-11deg)' : '',
         borderRadius: '1.2rem',
+        marginTop: '1rem',
         padding: '0.25rem 3rem',
         border: isHovered ? '1px solid #c2e772' : '1px solid #00D287',
         display: 'inline-block',

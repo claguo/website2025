@@ -9,7 +9,9 @@ function ProjectCard(props) {
   return (
     <>
         <Link
-        to={`/${project.path}`}
+        to={project.path !== 'astros'
+        ? `/${project.path}`
+        : null}
         onMouseEnter={() => {setIsHovered(true);}}
         onMouseLeave={() => {setIsHovered(false);}}
         className='horizSection'

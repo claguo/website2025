@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useCallback, useLayoutEffect } from 'react';
 import '../../assets/LoveCard.css';
 
 const useMousePosition = () => {
@@ -48,8 +48,6 @@ function LoveCardItem(props) {
   const yPos = isHovered ? y : 1000;
   let [refimg, { width: widthimg, height: heightimg }] = useSize();
   let [refdiv, { height: heightdiv }] = useSize();
-
-  const radius = heightdiv/2
 
   return (
     <>

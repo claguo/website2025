@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import '../assets/Footer.css'
 import ExternalURLButton from './ExternalURLButton';
-import ButtonMailto from './ButtonMailto';
+import Navbar from './Navbar';
 
 function Footer() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className='green-text' style={{display: 'flex', justifyContent: 'space-between', margin: '12rem 0 6rem'}}>
+    <>
+    <div className='green-text' style={{display: 'flex', justifyContent: 'space-between', margin: '12rem 0 0rem'}}>
       {/* <h1 style={{textAlign: 'right', fontFamily: 'rubik'}}>♡</h1> */}
-      <h1 className='twoColumns'>thank you for visiting! let's<br/>work together!</h1>
+      <h1 className='twoColumns'>✿✿<br/>thank you for visiting; let's work together!</h1>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -35,6 +35,11 @@ function Footer() {
         <ExternalURLButton text='linkedin' url='https://www.linkedin.com/in/claguo/' heading={true}/>
       </div>
     </div>
+    <div style={{marginBottom: '0.5rem'}}>
+    <Navbar />
+    <p className='caption' style={{textAlign: 'center'}}>© Claire Guo 2023</p>
+    </div>
+    </>
   )
 }
 

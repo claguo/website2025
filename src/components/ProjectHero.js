@@ -8,27 +8,27 @@ function ProjectHero() {
 
   return (
     <>
-      <img src={ `../imgs/${path}.png` } alt = { project.title } style = {{ width: '100vw', height: '70vh', margin: '0 -6rem 3rem' }} />
-      <div style={{display: 'flex'}}>
-        <h1 className = 'threeColumns'> { project.title } </h1>
-        <div className='fourColumns' style = {{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
-          <div className = 'oneColumn'>
+      <img src={ `../imgs/${path}.png` } alt = { project.title } style = {{ width: '100vw', height: '72vh', margin: '0 -6rem 3rem' }} />
+      <div className='horizSection' style={{justifyContent: 'space-between'}}>
+        <h1> { project.title } </h1>
+        <div style = {{ width: '57.1428571429%', display: 'flex', justifyContent: 'space-between', margin: '1rem 0 4rem' }}>
+          <div style={{width: '24%', marginLeft: '0.5rem'}}>
             <h2> category </h2>
-            <p style={{fontSize: '0.75rem'}}> {project.category} </p>
+            <p className='caption'> {project.category} </p>
           </div>
-          <div className = {project.team ? 'oneColumn' : 'twoColumns'} style={{ paddingRight: '1vw' }}>
+          <div style={{ width: '24%'}}>
             <h2> my role</h2>
-            <p style={{fontSize: '0.75rem'}}> {project.type} </p>
+            <p className='caption'> {project.type} </p>
           </div>
-          {project.team != undefined
-            ? <div className='oneColumn' style={{ paddingRight: '1vw' }}>
+          {project.team !== undefined
+            ? <div style={{width: '24%'}}>
                 <h2> team </h2>
-                <p style={{fontSize: '0.75rem'}}> {project.team} </p>
+                <p className='caption'> {project.team} </p>
               </div>
             : null }
-          <div className = 'oneColumn'>
+          <div style={{width: '24%'}}>
             <h2> duration </h2>
-            <p style={{fontSize: '0.75rem'}}> {project.duration} </p>
+            <p className='caption'> {project.duration} </p>
           </div>
         </div>
       </div>

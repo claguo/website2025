@@ -120,7 +120,7 @@ h1 {
     margin: 0;
     font-family: 'poppins';
     /* letter-spacing: -.04em; */
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 h2 {
@@ -163,7 +163,7 @@ figure {
 }
 
 img {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     object-fit: cover;
 }
 
@@ -183,17 +183,21 @@ button:hover {
 } */
 
 .twoColumns {
-    width: 24.94047619vw;
+    /* width: 24.94047619vw; */
+    width: 40%;
     /* 7 columns with 6rem margin and 0.5rem gutter */
 }
 .oneColumn {
-    width: 12.261904761vw;
+    /* width: 12.261904761vw; */
+    width: 20%;
 }
 .threeColumns {
-    width: 37.678571428vw;
+    /* width: 37.678571428vw; */
+    width: 60%;
 }
 .fourColumns {
-    width: 50.416666666vw;
+    /* width: 50.416666666vw; */
+    width: 60%;
 }
 
 .paragraphContainer {
@@ -204,7 +208,8 @@ button:hover {
 
 .horizSection {
     display: flex;
-    gap: 0.476190476vw;
+    /* gap: 0.476190476vw; */
+    gap: 1rem;
 }
 
 .section {
@@ -215,10 +220,10 @@ button:hover {
 .section-gray {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 6rem;
     background-color: #ececec;
     border-radius: 0.5rem;
-    padding: 6rem 12.7381vw;
+    padding: 6rem 14.2857%;
 }
 
 .bigHeader {
@@ -246,4 +251,43 @@ button:hover {
 
 .green-text {
     color: #00AE70;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.quote-box {
+    background-color: #e2e2e2;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+
+.push-right {
+    margin-left: 24.94047619vw;
+    padding-left: 1rem;
+}
+
+.caption {
+    font-size: 0.75rem;
+}
+
+.third-width {
+    width: 32.3%;
+}
+
+.right-p {
+    margin-left: 60%;
+    margin-top: 1rem;
+}
+
+.carlos-width {
+    width: 30%;
+}
+
+.zine-img {
+    width: 49.9%;
+    margin-bottom: 1rem;
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { SplitText } from '@cyriacbr/react-split-text';
 
 function SplitHover( props ) {
   const split = props.text.split('');

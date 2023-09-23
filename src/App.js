@@ -21,7 +21,7 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
-            <Route path="/" exact element={<HomePage/>}/>
+            <Route path="/" exact element={<HomePage/>} />
             <Route path="/about" element={<AboutPage/>} />
             <Route path="/collab-risd" element={<CollabRISDPage/>} />
             <Route path="/eat-the-ocean" element={<EatTheOceanPage/>} />

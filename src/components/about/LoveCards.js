@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import LoveCardItem from './LoveCardItem'
 import cereal from '../../assets/imgs/love/lovecereal.png'
 import marina from '../../assets/imgs/love/lovemarina.webp'
