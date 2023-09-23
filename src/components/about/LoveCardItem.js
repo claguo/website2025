@@ -47,7 +47,7 @@ function LoveCardItem(props) {
   const xPos = isHovered ? x : 1000;
   const yPos = isHovered ? y : 1000;
   let [refimg, { width: widthimg, height: heightimg }] = useSize();
-  let [refdiv, { height: heightdiv }] = useSize();
+  let [refdiv] = useSize();
 
   return (
     <>

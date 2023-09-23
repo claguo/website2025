@@ -14,20 +14,22 @@ function Navbar(isFooter) {
     setActive(location.pathname);
   }, [location]);
 
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') { 
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-        setShow(false); 
-      } else { // if scroll up show the navbar
-        setShow(true);  
-      }
-
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY); 
-    }
-  };
+  
 
   useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') { 
+        if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+          setShow(false); 
+        } else { // if scroll up show the navbar
+          setShow(true);  
+        }
+  
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY); 
+      }
+    };
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
 
