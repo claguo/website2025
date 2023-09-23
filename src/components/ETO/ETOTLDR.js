@@ -1,8 +1,4 @@
 import React from 'react';
-import { useProjectContext } from '../../context/ProjectContext';
-import ExternalURLButton from "../ExternalURLButton";
-import CollabTLDR from '../CollabRISD/CollabTLDR';
-
 
 function ETOTLDR() {
 

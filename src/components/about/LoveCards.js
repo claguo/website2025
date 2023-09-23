@@ -13,7 +13,7 @@ function LoveCards() {
   return (
     <>
     {/* <h2>outside of the studio, i am...</h2> */}
-    <div className='threeColumns' style={{
+    <div style={{
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-between'

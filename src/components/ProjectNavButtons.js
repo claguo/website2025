@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import Button from "./Button";
 import { useLocation } from 'react-router-dom';
 import { useProjectContext } from '../context/ProjectContext';
@@ -10,22 +10,10 @@ function ProjectNavButtons() {
   const prevProject = useProjectContext().find(( project ) => project.id === currentProject.id-1 );
   let isFirstProj = false;
 
-  // if (prevProject !== undefined) {
-  //   if (prevProject.path !== 'astros') {
-  //     prevId = prevProject.id;
-  //   } else {setIsFirstProj(true);}
-  // } else {setIsFirstProj(true);}
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+});
 
-  // if (prevProject === undefined) {
-  //   setIsFirstProj(true);
-  // } else {
-  //   if (prevProject.path === 'astros') {
-  //     setIsFirstProj(true);
-  //   }
-  // }
-  // if (prevProject === undefined || prevProject.path === 'astros') {
-  //   setIsFirstProj(true);
-  // }
   if (prevProject === undefined || prevProject.path === 'astros') {
     isFirstProj = true;
   }
