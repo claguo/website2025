@@ -8,7 +8,7 @@ function ProjectHero() {
 
   return (
     <>
-      <img src={ `../imgs/${path}.png` } alt = { project.title } style = {{ width: '100vw', height: '72vh', margin: '0 -6rem 3rem' }} />
+      <img src={ `../imgs/${path}.png` } alt = { project.title } style = {{objectPosition: '0% 0%', width: '100vw', height: '72vh', margin: '0 -6rem 3rem' }} />
       <div className='horizSection' style={{justifyContent: 'space-between'}}>
         <h1> { project.title } </h1>
         <div style = {{ width: '57.1428571429%', display: 'flex', justifyContent: 'space-between', margin: '1rem 0 4rem' }}>

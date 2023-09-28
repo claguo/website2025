@@ -14,8 +14,6 @@ function Navbar(isFooter) {
     setActive(location.pathname);
   }, [location]);
 
-  
-
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') { 

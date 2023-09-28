@@ -4,7 +4,7 @@ import SplitHover from "../SplitHoverEffects";
 function AboutHero() {
   return (
     <>
-      <h1 className='green-text' style={{paddingTop: '38vh'}}>nice to meet you; i'm</h1>
+      <h1 className='green-text' style={{paddingTop: '38vh'}}> </h1>
       <div style={{display: 'flex', gap: '1.5rem'}}>
         <SplitHover className='' text='claire' conditionalStyle={{fontStyle: 'italic'}} />
         <SplitHover className='flower-symbol' conditionalStyle={{color: '#c2e772'}} text='✿' />
