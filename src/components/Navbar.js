@@ -35,6 +35,8 @@ function Navbar(isFooter) {
       if (typeof window !== 'undefined') { 
         if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
           setShow(false); 
+        } else if (window.scrollY === 0) {
+          setShow(true);
         } else { // if scroll up show the navbar
           setShow(true);  
         }
