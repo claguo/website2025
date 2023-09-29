@@ -3,7 +3,6 @@ import carlos from '../../assets/imgs/eto/etocarlos.png';
 import Figure from "../Figure";
 import ExternalURLButton from "../ExternalURLButton";
 import H1 from "../H1";
-import H2 from "../H2";
 
 function InsightCard(props) {
   const [width, setWidth] = useState(window.innerWidth);
