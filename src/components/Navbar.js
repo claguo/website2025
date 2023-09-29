@@ -8,7 +8,7 @@ function Navbar(isFooter) {
   const location = useLocation();
   const [active, setActive] = useState(null);
   const [show, setShow] = useState(true);
-  const [showOverlay, setShowOverlay] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
   const [isHovered, setIsHovered] = useState(false);
