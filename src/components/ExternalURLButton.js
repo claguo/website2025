@@ -13,6 +13,7 @@ function ExternalURLButton(props) {
     <>
     { props.isButton === true
     ? <div 
+      className={props.className}
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}
       onClick={handleButtonClick}
@@ -26,7 +27,6 @@ function ExternalURLButton(props) {
         width: 'auto',
         marginTop: '1rem',
         backgroundColor: isHovered ? '#c2e772' : 'transparent',
-        // backgroundColor: props.active ? '#00D287' : 'transparent'
       }}>
       <p style={ isHovered ? {transform: 'skewX(11deg)', fontStyle: 'italic' } : {}}>{props.text}</p>
     </div>
@@ -52,14 +52,7 @@ function ExternalURLButton(props) {
     ? <h1
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}
-      style={{
-        display: 'inline-block',
-        cursor: 'pointer',
-        margin: '0',
-        overflowWrap: 'anywhere',
-        fontStyle: isHovered ? 'italic' : '',
-        color: isHovered ? '#00D287' : '#00A56A'
-      }}
+      className={`${isHovered ? 'text-mid-green italic' : 'text-dark-green'} inline-block m-0 text-md lg:text-lg cursor-pointer`}
       onClick={handleButtonClick}>
         { props.text }
       </h1>

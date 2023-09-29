@@ -1,17 +1,18 @@
 import React from "react";
 import SplitHover from "../SplitHoverEffects";
+import H1 from '../H1';
 
 function AboutHero() {
   return (
     <>
-      <h1 className='green-text' style={{paddingTop: '38vh'}}> </h1>
-      <div style={{display: 'flex', gap: '1.5rem'}}>
+      <H1 className='text-green pt-[24vh] lg:pt-[40vh]'></H1>
+      <div className='flex gap-4 lg:gap-8'>
         <SplitHover className='' text='claire' conditionalStyle={{fontStyle: 'italic'}} />
         <SplitHover className='flower-symbol' conditionalStyle={{color: '#c2e772'}} text='✿' />
       </div>
-      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end', margin: '2rem 0 10rem'}}>
-        <h1 className='threeColumns green-text' style={{textAlign: 'right'}}> <b>ui/ux designer,</b></h1>
-        <h1 className='threeColumns green-text' style={{textAlign: 'right'}}>risd bfa industrial design + computation '24</h1>
+      <div className='flex flex-col items-end mt-4'>
+        <H1 className='w-3/5 text-green text-right'> <b>ui/ux designer,</b></H1>
+        <H1 className='w-3/5 text-green text-right'>risd bfa industrial design + computation '24</H1>
       </div>
     </>
   )

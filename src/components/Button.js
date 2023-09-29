@@ -7,9 +7,7 @@ function Button( props ) {
   return (
     <Link to={props.to}
       onMouseEnter={() => {setIsHovered(true);}}
-      onMouseLeave={() => {setIsHovered(false);}}
-      style={{
-      }}>
+      onMouseLeave={() => {setIsHovered(false);}}>
       <div style={{
         transform: isHovered ? 'skewX(-11deg)' : '',
         borderRadius: '1.2rem',

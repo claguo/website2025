@@ -2,11 +2,11 @@ import React from "react";
 
 function Figure(props) {
   return (
-    <figure className={props.className} style={{ display: 'flex', flexDirection: 'column', borderRadius: '4px', overflow: 'hidden' }}>
+    <figure className={`flex flex-col rounded overflow-hidden ${props.className}`}>
       <img src={ props.src } alt={ props.alt } style={{ height: '100%', borderRadius: '0' }}/>
-      <p style={{ backgroundColor: props.color, padding: '1rem', fontWeight: 'bold' }}>
+      <b className={`text-sm lg:text-base px-4 py-2 lg:py-4 ${props.color}`}>
         {props.caption}
-      </p>
+      </b>
     </figure>
   )
 }

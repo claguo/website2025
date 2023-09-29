@@ -55,20 +55,8 @@ function LoveCardItem(props) {
       ref={refdiv}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: '2',
-        borderRadius: '6rem',
-        outline: '1px solid black',
-        padding: '0.25rem 2rem',
-        margin: '0.5rem 0',
-        fontStyle: isHovered ? 'italic' : '',
-        outlineColor: isHovered ? '#00D287' : ''
-      }}
-      > 
-        <p style={{pointerEvents: 'none', color: isHovered ? '#00D287' : '', fontWeight: isHovered ? 'bold' : '',mixBlendMode: 'multiply'}}>{props.text}</p>
+      className={`text-sm lg:text-base flex justify-center z-10 rounded-2xl outline-1 outline px-4 lg:px-6 py-1 lg:my-2 ${isHovered ? 'italic' : ''} ${isHovered ? 'outline-green' : 'outline-black'}`}> 
+        <p className={`pointer-events-none ${isHovered ? 'text-green font-bold' : ''}`}>{props.text}</p>
       </div>
       <div style={{position: 'fixed', top: '0', left: '0'}}>
         <img

@@ -11,13 +11,7 @@ import snow from '../../assets/imgs/love/lovesnow.JPG'
 function LoveCards() {
 
   return (
-    <>
-    {/* <h2>outside of the studio, i am...</h2> */}
-    <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between'
-    }}>
+    <div className='flex flex-wrap justify-center gap-2 lg:gap-0 lg:justify-between'>
         <LoveCardItem
         src={grass}
         text="sitting in the grass"
@@ -48,11 +42,7 @@ function LoveCards() {
         src={out}
         text="reading OUT by Natsuo Kirino"
         />
-
-
-
     </div>
-    </>
   )
 }
 

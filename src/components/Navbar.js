@@ -8,7 +8,23 @@ function Navbar(isFooter) {
   const location = useLocation();
   const [active, setActive] = useState(null);
   const [show, setShow] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [isHovered, setIsHovered] = useState(false);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  const isMobile = width <= 768;
 
   useEffect(() => {
     setActive(location.pathname);
@@ -38,24 +54,62 @@ function Navbar(isFooter) {
     }
   }, [lastScrollY]);
 
+  function Overlay(props) {
+    const active = props
+    return (
+      <>
+        {props.show
+        ? <div onClick={() => setShowOverlay(false)} className='fixed h-[100vh] w-[100vw] -ml-[6%] bg-gray z-30 flex flex-col justify-center items-center gap-8'>
+            <Button to='/' active={active === '/'} text='home' />
+            <Button to='/about' active={active === '/about'} text='about' />
+            <ExternalURLButton text='resume' url={resume} isButton={true}/>
+          </div>
+        : null}
+      </>
+    )
+  }
+
   return (
-    <div style={{
-      // margin: isFooter ? '0' : '0 0 -6rem 0',
-      marginLeft: '-2rem',
+    <>
+    {isMobile
+    ? <>
+      <div className={`z-50 w-[90%] transition duration-100 ease-in flex justify-end fixed ${show ? 'opacity-100' : 'opacity-0'}`}>
+        <div
+          onMouseEnter={() => {setIsHovered(true);}}
+          onMouseLeave={() => {setIsHovered(false);}}
+          onClick={() => setShowOverlay(!showOverlay)}
+          style={{
+          transform: isHovered ? 'skewX(-11deg)' : '',
+          borderRadius: '1.2rem',
+          marginTop: '1rem',
+          padding: '0.25rem 3rem',
+          border: isHovered ? '1px solid #c2e772' : '1px solid #00D287',
+          display: 'inline-block',
+          backgroundColor: isHovered ? '#c2e772' : 'transparent',
+        }}>
+          <p style={ isHovered ? {transform: 'skewX(11deg)'} : {}}>{showOverlay ? 'close' : 'menu'}</p>
+        </div>
+      </div>
+      <Overlay show={showOverlay} active={active} />
+      </>
+    : <div style={{
+      marginLeft: '-2%',
       display: 'flex',
       justifyContent: 'space-between',
       position: 'fixed',
-      width: '100%',
-      transition: '0.25s',
+      width: '92%',
+      transition: '100ms ease-in',
       opacity: show ? '100' : '0'
     }}>
       <Button to='/' active={active === '/'} text='home' />
-      <div className='horizSection' style={{marginRight: '8rem'}}>
-        {/* <Button to='/work' active={active === '/work'} text='work' /> */}
+      <div className='flex gap-4'>
         <Button to='/about' active={active === '/about'} text='about' />
         <ExternalURLButton text='resume' url={resume} isButton={true}/>
       </div>
     </div>
+    }
+    
+    </>
 
     // <div style={{
     //   margin: '1.5rem -2rem 0',
@@ -73,40 +127,3 @@ function Navbar(isFooter) {
 }
   
   export default Navbar
-
-// import React, { useState } from 'react';
-// import Button from './Button';
-
-// function Navbar() {
-//   const [activeButton, setActiveButton] = useState(null);
-
-//   const handleButtonClick = (buttonName) => {
-//     setActiveButton(buttonName);
-//   };
-// console.log(activeButton)
-//   return (
-//     <div>
-//       <Button
-//         className={activeButton === 'Button 1' ? 'active' : ''}
-//         onClick={() => handleButtonClick('Button 1')}
-//         text='hello'
-//       >
-//         Button 1
-//       </Button>
-//       <button
-//         className={activeButton === 'Button 2' ? 'active' : ''}
-//         onClick={() => handleButtonClick('Button 2')}
-//       >
-//         Button 2
-//       </button>
-//       <button
-//         className={activeButton === 'Button 3' ? 'active' : ''}
-//         onClick={() => handleButtonClick('Button 3')}
-//       >
-//         Button 3
-//       </button>
-//     </div>
-//   );
-// }
-
-// export default Navbar;

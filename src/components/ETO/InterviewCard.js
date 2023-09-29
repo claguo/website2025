@@ -2,7 +2,7 @@ import React from "react";
 
 function InterviewCard(props) {
   return (
-    <div className='quote-box' style={{width: '24%', marginTop: '1rem'}}>
+    <div className='bg-gray rounded-lg lg:rounded-2xl p-4 flex flex-col lg:w-[23.5%]'>
       <h1>{props.emoji}</h1>
       <p style={{fontWeight: 'bold'}}>{props.name}</p>
       <p className='caption'>@ {props.location}</p>

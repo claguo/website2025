@@ -10,28 +10,28 @@ import pg8 from '../../assets/imgs/guosweets/Claire_Zine-08.png';
 import pg9 from '../../assets/imgs/guosweets/Claire_Zine-09.png';
 import pg10 from '../../assets/imgs/guosweets/Claire_Zine-10.png';
 import pg11 from '../../assets/imgs/guosweets/Claire_Zine-11.png';
-
+import ContainerGray from "../ContainerGray";
+import H2 from "../H2";
 
 function GuoZine() {
   return (
-    <div className='section-gray'>
-      <h2>1. the zine</h2>
+    <ContainerGray>
+      <H2>1. the zine</H2>
       <img style={{marginLeft: '50.1%'}} className='zine-img' src={pg1} alt='Page 1' />
 
       <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-      <img className='zine-img' src={pg2} alt='Page 1' />
-      <img className='zine-img' src={pg3} alt='Page 1' />
-      <img className='zine-img' src={pg4} alt='Page 1' />
-      <img className='zine-img' src={pg5} alt='Page 1' />
-      <img className='zine-img' src={pg6} alt='Page 1' />
-      <img className='zine-img' src={pg7} alt='Page 1' />
-      <img className='zine-img' src={pg8} alt='Page 1' />
-      <img className='zine-img' src={pg9} alt='Page 1' />
-      <img className='zine-img' src={pg10} alt='Page 1' />
-      <img className='zine-img' src={pg11} alt='Page 1' />
-
+        <img className='zine-img' src={pg2} alt='Page 1' />
+        <img className='zine-img' src={pg3} alt='Page 1' />
+        <img className='zine-img' src={pg4} alt='Page 1' />
+        <img className='zine-img' src={pg5} alt='Page 1' />
+        <img className='zine-img' src={pg6} alt='Page 1' />
+        <img className='zine-img' src={pg7} alt='Page 1' />
+        <img className='zine-img' src={pg8} alt='Page 1' />
+        <img className='zine-img' src={pg9} alt='Page 1' />
+        <img className='zine-img' src={pg10} alt='Page 1' />
+        <img className='zine-img' src={pg11} alt='Page 1' />
       </div>
-    </div>
+    </ContainerGray>
   )
 }
 

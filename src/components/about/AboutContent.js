@@ -1,18 +1,18 @@
 import React from "react";
 import LoveCards from './LoveCards';
+import ContainerGray from '../ContainerGray';
+import H1 from '../H1';
 
 function AboutContent() {
   return (
-    <div className='section-gray'>
-      <h1 className='twoColumns'>nice to meet you!</h1>
-      <div className='paragraphContainer' style={{marginLeft: '40%'}}>
-        <p>I am an industrial designer passionate about building social equity through design! At the core of my design practice is a desire to learn about and work with a diverse range of people and problems to enable me to create more empathetic and inclusive designs.</p>
-      </div>
-      <h1 className='twoColumns section'>outside of the studio, i am...</h1>
-      <div style={{marginLeft: '40%'}}>
+    <ContainerGray>
+      <H1 className='lg:w-2/5'>nice to meet you!</H1>
+      <p className='text-sm lg:text-base lg:ml-[40%] mt-2'>I am an industrial designer passionate about building social equity through design! At the core of my design practice is a desire to learn about and work with a diverse range of people and problems to enable me to create more empathetic and inclusive designs.</p>
+      <H1 className='mt-16 lg:mt-36'>outside of the studio, i am...</H1>
+      <div className='lg:ml-[40%] mt-2'>
         <LoveCards />
       </div>
-    </div>
+    </ContainerGray>
   )
 }
 

@@ -1,11 +1,14 @@
 import React from "react";
+import H1 from "../H1";
+import H2 from "../H2";
+import PBlurb from "../PBlurb";
 
 function EventHeader(props) {
   return (
     <div>
-      <h2 style={{ color: '#00D287', transform: 'rotate(-2.247deg)' }}> { props.date } </h2>
-      <h1> { props.name } </h1>
-      <p className='right-p'> {props.intro } </p>
+      <H2 className='text-dark-green -rotate-2 mb-0 lg:mb-2'>{ props.date }</H2>
+      <H1> { props.name } </H1>
+      <PBlurb> {props.intro } </PBlurb>
     </div>
   )
 }

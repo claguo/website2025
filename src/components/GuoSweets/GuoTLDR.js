@@ -1,11 +1,14 @@
 import React from "react";
+import ContainerGray from '../ContainerGray';
+import H2 from '../H2';
+import PBlurb from '../PBlurb';
 
 function GuoTLDR() {
   return (
-    <div className='section-gray'>
-      <h2>0. tl;dr</h2>
-      <p className='right-p'>Recipes for my favorite homemade desserts made by my mom compiled into a zine! A typography and layout exercise with my illustrations!</p>
-    </div>
+    <ContainerGray>
+      <H2>0. tl;dr</H2>
+      <PBlurb>Recipes for my favorite homemade desserts made by my mom compiled into a zine! A typography and layout exercise with my illustrations!</PBlurb>
+    </ContainerGray>
   )
 }
 

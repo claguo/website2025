@@ -1,6 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
     font-family: 'poppins';
-    font-size: 16px;
     background-color: #f3f3f3;
     line-height: 1.5;
 }
@@ -111,16 +114,17 @@ a:hover {
 } */
 body {
     margin: 0;
-    padding: 0 6rem;
+    /* padding: 0 6rem; */
+    padding: 0 6vw;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 400;
     margin: 0;
     font-family: 'poppins';
     /* letter-spacing: -.04em; */
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 h2 {
@@ -258,7 +262,7 @@ button:hover {
 }
 
 .quote-box {
-    background-color: #e2e2e2;
+    /* background-color: #e2e2e2; */
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -281,10 +285,6 @@ button:hover {
 .right-p {
     margin-left: 60%;
     margin-top: 1rem;
-}
-
-.carlos-width {
-    width: 30%;
 }
 
 .zine-img {

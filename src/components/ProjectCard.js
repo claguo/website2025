@@ -14,29 +14,17 @@ function ProjectCard(props) {
         : null}
         onMouseEnter={() => {setIsHovered(true);}}
         onMouseLeave={() => {setIsHovered(false);}}
-        className='horizSection'
-        style={{margin: '6rem 0 6rem'}}
+        className='
+        flex flex-col gap-4 mb-28
+        lg:flex-row lg:justify-between lg:gap-12 lg:items-end lg:mb-36'
         >
-            <figure className='horizSection'>
-                <div className='threeColumns' style={{display:'flex'}}>
-                <img src={src} alt={project.title} 
-                    style={{
-                        width: '92%',
-                        aspectRatio: '16/9',
-                        transform: isHovered ? 'skewX(-4deg)' : '',
-                        borderRadius: '1rem'
-                    }}
-                />
-                </div>
-
-                <div className='twoColumns paragraphContainer' style={{justifyContent: 'flex-end'}}>
-                    <div>
-                        <h1>{project.title}</h1>
-                        <h2>{project.type}</h2>
-                    </div>
-                    <p>{project.description}</p>
-                </div>
-            </figure>
+            <img src={src} alt={project.title} 
+                className={`${isHovered ? "lg:-skew-x-[7deg]" : ''} w-100 lg:w-[52%] aspect-video rounded-lg`}/>
+            <div>
+                <h1 className='lg:text-lg'>{project.title}</h1>
+                <h2 className='text-sm lg:text-base'> {project.type}</h2>
+                <p>{project.description}</p>
+            </div>
         </Link>
 
     </>
