@@ -1,5 +1,5 @@
 import React from "react";
-import InsightCard from "./InsightCard";
+import InsightCard from "../InsightCard";
 import ContainerGray from "../ContainerGray";
 import H2 from "../H2";
 

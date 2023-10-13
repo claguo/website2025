@@ -27,6 +27,7 @@ function ExternalURLButton(props) {
         width: 'auto',
         marginTop: '1rem',
         backgroundColor: isHovered ? '#c2e772' : 'transparent',
+        alignSelf: 'start'
       }}>
       <p style={ isHovered ? {transform: 'skewX(11deg)', fontStyle: 'italic' } : {}}>{props.text}</p>
     </div>

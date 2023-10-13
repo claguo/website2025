@@ -2,7 +2,7 @@ const projectData = [
     {
         id: 0,
         title: 'internship: astros',
-        type: 'ui/ux design + data visualization + frontend development',
+        type: 'ui/ux design + data visualization + web development',
         description: "I worked as a UI/UX design intern on the Houston Astros' internal website with a team of 8 developers during Summer 2023. Currently under NDA; contact me for more information!",
         path: 'astros'
     },
@@ -19,6 +19,16 @@ const projectData = [
     },
     {
         id: 2,
+        title: 'reproductive care world',
+        type: 'UI/UX Design + Data visualization + Web Development',
+        description: 'An interactive web app that displays reproductive care-related data from across the globe in order to help destigmatize abortion and reveal the network of women experiencing similar difficulties worldwide.',
+        path: 'repro-care',
+        category: 'Individual Project',
+        duration: 'Jan - Oct 2023',
+        tldr: 'tldr'
+    },
+    {
+        id: 3,
         title: 'eat the ocean',
         type: 'Design Research',
         description: 'An imagined seafood restaurant designed to reduce bycatch waste in the New England fishing industry through awareness and education.',
@@ -55,23 +65,23 @@ const projectData = [
     //     path: 'hitch'
     // },
     {
-        id: 3,
+        id: 4,
         title: 'guo sweets',
-        thumbnail: '/imgs/advcadfinalfinal.png',
         type: 'Graphic Design + Illustration',
         description: 'Recipes for my favorite homemade desserts made by my mom compiled into a zine; a documentation of family memory and culture.',
         path: 'guo-sweets',
         category: 'Individual Project',
         duration: 'Dec - Jan 2022'
-    }
+    // },
     // {
-    //     id: 4,
-    //     title: 'cocomicap',
-    //     thumbnail: '/imgs/advcadfinalfinal.png',
-    //     type: 'small business',
-    //     description: 'Just for fun!! My ',
-    //     path: 'guo-sweets'
-    // }
+    //     id: 5,
+    //     title: 'design research: girls & games',
+    //     type: 'UX Research',
+    //     description: 'A qualitative research project investigating the experiences of women in gaming.',
+    //     path: 'girls-games',
+    //     category: 'Individual Project',
+    //     duration: 'Nov-Dec 2021'
+    }
 ];
 
 export default projectData;
