@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ExternalURLButton from "./ExternalURLButton";
 import Button from './Button';
 import { useLocation } from 'react-router-dom';
-import resume from '../assets/Claire-Resume.pdf'
+import resume from '../assets/Claire_Resume.pdf'
 
 function Navbar(isFooter) {
   const location = useLocation();
