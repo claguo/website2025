@@ -11,6 +11,8 @@ function ProjectNavButtons() {
   let isFirstProj = false;
   const [width, setWidth] = useState(window.innerWidth);
 
+  console.log(nextProject)
+
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
@@ -24,19 +26,19 @@ function ProjectNavButtons() {
 
   const isMobile = width <= 768;
 
-  if (prevProject === undefined || prevProject.path === 'astros') {
+  if (prevProject === undefined) {
     isFirstProj = true;
   }
 
   return (
     <div className='flex flex-col lg:flex-row items-center justify-between mt-16'>
     {isFirstProj === false ? (
-      <Button to={`/${prevProject.path}`} text='view previous project' />
+      <Button to={`/${prevProject.path}`} text={`view previous: ${prevProject.title}`} />
     ) : isMobile === false ? (
       <Button to='/' text='home' />
     ) : null}
     {nextProject !== undefined ? (
-      <Button to={`/${nextProject.path}`} text='view next project' />
+      <Button to={`/${nextProject.path}`} text={`view next: ${nextProject.title}`} />
     ) : (
       <Button to='/' text='home' />
     )}

@@ -2,9 +2,11 @@ const projectData = [
     {
         id: 0,
         title: 'internship: astros',
-        type: 'ui/ux design + data visualization + web development',
-        description: "I worked as a UI/UX design intern on the Houston Astros' internal website with a team of 8 developers during Summer 2023. Currently under NDA; contact me for more information!",
-        path: 'astros'
+        type: 'UI/UX Design + Data Visualization + Web Development',
+        description: "I worked as a UI/UX design intern on the Houston Astros' internal website with a team of 7 developers during Summer 2023. I designed and built tools data analysis tools for scouts, analysts, performance scientists, and coaches.",
+        path: 'astros',
+        category: 'Internship',
+        duration: 'Jun - Aug 2023 (3 mo)',
     },
     {
         id: 1,

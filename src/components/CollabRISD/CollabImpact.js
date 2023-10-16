@@ -36,7 +36,7 @@ function CollabImpact() {
         <div className='flex flex-col gap-2 lg:w-1/2'>
         <ImpactCard
             color='bg-[#EBB2FC]'
-            content='6-7 people reached out to Yuqing about the Earthling Lab! She took a group of 10 people on a tour of the lab. The group included Brown and RISD students, grad and undergrad students, and students in several different majors).'
+            content='6-7 people reached out to Yuqing about the Earthling Lab! She took a group of 10 people on a tour of the lab. The group included Brown and RISD students, grad and undergrad students, and students in several different majors.'
             src={[earthling]}
             caption={['Yuqing and collaborators touring the Earthing Lab!']}/>
           <ImpactCard 

@@ -14,7 +14,7 @@ function SplitHover( props ) {
     <div className={props.className} style={{display: 'flex'}} >
     {split.map((char, index) => (
       <div key={index}
-        className='text-7xl lg:text-[12rem] font-mono text-green'
+        className='text-7xl lg:text-[12rem] font-mono text-green cursor-default'
         onMouseEnter={() => handleMouseEnter(index)}
         style={
           italicStates[index] ? {...props.conditionalStyle} : {}
