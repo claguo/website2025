@@ -6,15 +6,15 @@ import earthling from '../../assets/imgs/collabrisd/earthling.png'
 import jenny from '../../assets/imgs/collabrisd/jennytoys.png'
 import yue from '../../assets/imgs/collabrisd/speeddate3.jpg'
 import collab from '../../assets/imgs/collabrisd/collabcampusnotion.png'
-import H2 from "../H2";
-import ContainerGray from "../ContainerGray";
 import H1 from "../H1";
+import ContainerGray from "../ContainerGray";
+import LargeP from "../LargeP";
 
 function CollabImpact() {
   return ( 
     <ContainerGray>
-      <H2>1. impact</H2>
-      <H1 className='lg:mr-[40%]'>Connections created, projects launched!</H1>
+      <H1>1. impact</H1>
+      <LargeP>Connections created, projects launched!</LargeP>
       <div className='flex flex-col lg:flex-row gap-4 mt-8'>
         <div className='flex flex-col gap-2 lg:w-1/2'>
           <ImpactCard 

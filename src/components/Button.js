@@ -8,15 +8,10 @@ function Button( props ) {
     <Link to={props.to}
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}>
-      <div style={{
-        transform: isHovered ? 'skewX(-11deg)' : '',
-        borderRadius: '1.2rem',
-        marginTop: '1rem',
-        padding: '0.25rem 3rem',
-        border: isHovered ? '1px solid #c2e772' : '1px solid #00D287',
-        display: 'inline-block',
-        backgroundColor: isHovered ? '#c2e772' : props.active ? '#00D287' : 'transparent',
-      }}>
+      <div className={`
+      cursor-pointer rounded-[1.2rem] py-[0.25rem] px-[3rem] inline-block w-auto mt-[1rem] self-start border-solid border-2
+      ${isHovered ? '-skew-x-[11deg] bg-lighter-green border-lighter-green' : props.active ? 'bg-lighter-green border-lighter-green' : 'border-gray'}
+      ${props.className}`}>
         <p style={ isHovered ? {transform: 'skewX(11deg)'} : {}}>{props.text}</p>
       </div>
     </Link>

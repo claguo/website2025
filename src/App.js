@@ -24,6 +24,10 @@ function App() {
             <Route path='/repro-care' element={<ReproCarePage/>} />
             <Route path="/eat-the-ocean" element={<EatTheOceanPage/>} />
             <Route path="/guo-sweets" element={<GuoSweetsPage/>} />
+            <Route path='/repro-web-app' component={() => {
+              window.location.href = 'https://repro-care-world.netlify.app/';
+              return null;
+            }}/>
             {/* {projectData.map((project) => (
               <Route key={project.id} path={`/projects/${project.path}`} element={<ProjectPage project={project} />} />
             ))} */}

@@ -1,12 +1,12 @@
 import React from "react";
 import InsightCard from "../InsightCard";
 import ContainerGray from "../ContainerGray";
-import H2 from "../H2";
+import H1 from "../H1";
 
 function ETOInsights() {
   return (
     <ContainerGray>
-      <H2>2. key insights</H2>
+      <H1>2. key insights</H1>
       <div className='flex flex-col gap-4'>
         <InsightCard id='1'
           insight='Exorbitant amounts of bycatch fish are tossed overboard, despite being perfectly suitable for consumption.'

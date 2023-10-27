@@ -4,15 +4,15 @@ import projects from '../../assets/imgs/collabrisd/archiveprojects.png';
 import taxidermy from '../../assets/imgs/collabrisd/taxidermynotion.png';
 import mobile from '../../assets/imgs/collabrisd/notionmobile.PNG';
 import ContainerGray from "../ContainerGray";
-import H2 from "../H2";
 import H1 from "../H1";
+import LargeP from "../LargeP";
 import PBlurb from "../PBlurb";
 
 function CollabArchive() {
   return (
     <ContainerGray>
-      <H2>4. digital archive</H2>
-      <H1>A digital archive of projects looking for collaborators and collaboration resources.</H1>
+      <H1>4. digital archive</H1>
+      <LargeP className='lg:mr-[40%]'>A digital archive of projects looking for collaborators and collaboration resources.</LargeP>
       <PBlurb className='flex flex-col'>This transition into the digital realm enhances accessibility, as the digital archive is free from the constraints of time and location that events typically entail. This means that our resources remain accessible to anyone, around the clock.
         <ExternalURLButton className='self-center lg:self-start' url='https://lily-sandalwood-e02.notion.site/Cabinet-of-Collaboration-634ebe90250b40f5a04e9c2cf380bdf9?pvs=4' text='View Our Notion Page!' isButton={true} />
       </PBlurb>

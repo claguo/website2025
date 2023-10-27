@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import carlos from '../assets/imgs/eto/etocarlos.png';
 import Figure from "./Figure";
 import ExternalURLButton from "./ExternalURLButton";
-import H1 from "./H1";
+import LargeP from "./LargeP";
 
 function InsightCard(props) {
   const [width, setWidth] = useState(window.innerWidth);
@@ -22,8 +22,8 @@ function InsightCard(props) {
 
   return (
     <div className='bg-gray px-6 py-4 lg:px-16 lg:py-8 rounded'>
-    <H1 className='text-[#0009E3]'>❋</H1>
-    <H1>{props.insight}</H1>
+    <LargeP className='text-[#0009E3]'>❋</LargeP>
+    <LargeP>{props.insight}</LargeP>
     <div className='flex flex-col mt-4 text-sm lg:text-base gap-2'>
     {props.desc
     ? (<p>{props.desc}</p>)
@@ -36,7 +36,7 @@ function InsightCard(props) {
     ? (<>
       <p className='text-sm lg:text-base mt-2'><b>Sources: </b>Carlos, the fishing hobbyist, brings his measuring tape when he goes fishing to ensure his catch meets the DEM minimum length. At both Perry and Matt’s oyster farms, oysters are first carefully hand-filtered by sex, then filtered by size through a machine post catch.</p>
       <div className='flex flex-col lg:flex-row items-end justify-between mt-4'>
-        <Figure className='lg:w-[28%]' src={carlos} caption="Carlos' measuring tape." color='bg-[#ffffff]'/>
+        <Figure className='lg:w-[28%]' src={carlos} caption="Carlos' fishing setup at India Point Park: his fishing pole, measuring tape, and a fish he caught in a bucket." color='bg-[#ffffff]'/>
         {!isMobile
         ? <figure className='w-[100%] lg:w-[70%] flex flex-col rounded overflow-hidden'>
             <iframe

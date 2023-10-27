@@ -9,7 +9,7 @@ function Hero() {
     <div className='flex flex-col'>
       <SplitHover text='claire' conditionalStyle={{fontStyle: 'italic'}} />
       <div className='flex self-end gap-4 lg:gap-[8vw]'>
-      <SplitHover conditionalStyle={{color: '#c2e772'}} text='✿✿' />
+      <SplitHover conditionalStyle={{color: '#00D287'}} text='✿✿' />
       <SplitHover text='guo' conditionalStyle={{fontStyle: 'italic'}} />
       </div>
 

@@ -12,7 +12,6 @@ import sd1 from '../../assets/imgs/collabrisd/speeddate2.jpg';
 import sd3 from '../../assets/imgs/collabrisd/speeddate3.jpg';
 import sd2 from '../../assets/imgs/collabrisd/speeddate1.jpg';
 import Figure from "../Figure";
-import H2 from "../H2";
 import InstagramPosts from "./InstagramPosts";
 
 function EventSpeedDate() {
@@ -27,21 +26,21 @@ function EventSpeedDate() {
         <Figure
           className='lg:w-[32.3%]'
           src = { sd1 }
-          alt = 'Speed Date entrance'
+          alt = 'The door to the Speed Date event with our bright green poster.'
           color = 'bg-[#D1E84D]'
           caption = 'Speed Date entrance!'
         />
         <Figure
           className='lg:w-[32.3%]'
           src = { sd2 }
-          alt = 'Speed Date event'
+          alt = 'Students using our prompt cards, brainstorming around a table.'
           color = 'bg-[#D1E84D]'
           caption = 'Brainstorm!'
         />
         <Figure
           className='lg:w-[32.3%]'
           src = { sd3 }
-          alt = 'Prompt-writing table'
+          alt = 'The event in progress: students paired up and discussing their ideas.'
           color = 'bg-[#D1E84D]'
           caption = 'Pair up, exchange ideas, and rotate!'
         />
@@ -59,7 +58,7 @@ function EventSpeedDate() {
         </div>
       </figure> */}
       <div>
-        <H2> designed materials </H2>
+        <h3 className='text-sm lg:text-base font-bold mb-[0.25rem] font-sans'> designed materials </h3>
         <p className='text-sm lg:text-base lg:mr-[40%]'>Posters and Instagram posts to spread the word, prompt cards to spark conversations, and profile cards to exchange contact information at the end.</p>
         <div className='flex flex-col lg:flex-row justify-between mt-4 gap-4'>
           <img src={poster} alt='Speed Date poster' className='object-contain lg:w-[48%]'/>

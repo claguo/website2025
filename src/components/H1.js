@@ -2,7 +2,7 @@ import React from "react";
 
 function H1({children, className}) {
   return (
-    <h1 className={`text-base lg:text-lg ${className}`}>{children}</h1>
+    <h1 className={`${className} text-sm lg:text-base font-bold mb-[0.25rem]`}>{children}</h1>
   )
 }
 

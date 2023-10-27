@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function ExternalURLButton(props) {
-  const externalUrl = props.url; // Replace with your external URL
+  const externalUrl = props.url;
   const [isHovered, setIsHovered] = useState(false)
 
   const handleButtonClick = () => {
@@ -13,65 +13,28 @@ function ExternalURLButton(props) {
     <>
     { props.isButton === true
     ? <div 
-      className={props.className}
+      className={`cursor-pointer rounded-[1.2rem] py-[0.25rem] px-[3rem] inline-block w-auto mt-[1rem] self-start border-solid border-2 ${isHovered ? '-skew-x-[11deg] bg-lighter-green border-lighter-green' : 'border-gray'} ${props.className}`}
       onMouseEnter={() => {setIsHovered(true);}}
       onMouseLeave={() => {setIsHovered(false);}}
       onClick={handleButtonClick}
-      style={{
-        cursor: 'pointer',
-        transform: isHovered ? 'skewX(-11deg)' : '',
-        borderRadius: '1.2rem',
-        padding: '0.25rem 3rem',
-        border: isHovered ? '1px solid #c2e772' : '1px solid #00D287',
-        display: 'inline-block',
-        width: 'auto',
-        marginTop: '1rem',
-        backgroundColor: isHovered ? '#c2e772' : 'transparent',
-        alignSelf: 'start'
-      }}>
-      <p style={ isHovered ? {transform: 'skewX(11deg)', fontStyle: 'italic' } : {}}>{props.text}</p>
-    </div>
-    // ? <div
-    //     onMouseEnter={() => {setIsHovered(true);}}
-    //     onMouseLeave={() => {setIsHovered(false);}}
-    //     style={{
-    //       display: 'inline-block',
-    //       borderRadius: '0.25rem',
-    //       marginTop: '1rem',
-    //       padding: '0.5rem 1rem',
-    //       cursor: 'pointer',
-    //       border: isHovered ? '2px solid #ff7edd' : '2px solid #00D287',
-    //       backgroundColor: isHovered ? '#ff7edd' : 'transparent',
-    //       transform: isHovered ? 'skewX(-11deg)' : '',
-    //     }}
-    //   >
-    //     <h3 style={{ transform: isHovered ? 'skewX(11deg)' : '', fontStyle: isHovered ? 'italic' : '' }} onClick={handleButtonClick} >
-    //       { props.text }
-    //     </h3>
-    //   </div>
-    : props.heading === true
-    ? <h1
-      onMouseEnter={() => {setIsHovered(true);}}
-      onMouseLeave={() => {setIsHovered(false);}}
-      className={`${isHovered ? 'text-mid-green italic' : 'text-dark-green'} inline-block m-0 text-md lg:text-lg cursor-pointer`}
-      onClick={handleButtonClick}>
-        { props.text }
-      </h1>
-    : <p
+      >
+        <p style={ isHovered ? {transform: 'skewX(11deg)', fontStyle: 'italic' } : {}}>{props.text}</p>
+      </div>
+    : props.big === true
+      ? <span
         onMouseEnter={() => {setIsHovered(true);}}
         onMouseLeave={() => {setIsHovered(false);}}
-        style={{
-          display: 'inline-block',
-          cursor: 'pointer',
-          margin: '0',
-          overflowWrap: 'anywhere',
-          fontStyle: isHovered ? 'italic' : '',
-          color: isHovered ? '#2fa767' : '#00A56A',
-        }}
-        onClick={handleButtonClick}
-      >
-        { props.text }
-      </p>
+        className={`${isHovered ? 'text-light-green italic' : 'text-green'} inline-block m-0 text-md lg:text-lg cursor-pointer`}
+        onClick={handleButtonClick}>
+          { props.text }
+        </span>
+      : <p
+        onMouseEnter={() => {setIsHovered(true);}}
+        onMouseLeave={() => {setIsHovered(false);}}
+        className={`inline-block cursor-pointer m-0 ${isHovered ? 'italic text-green' : 'text-dark-green'}`}
+        onClick={handleButtonClick}>
+          { props.text }
+        </p>
     }
     </>
   )
