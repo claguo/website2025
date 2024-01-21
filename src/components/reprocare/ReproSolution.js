@@ -1,6 +1,4 @@
 import React from "react";
-import wireframes from "../../assets/imgs/reprocare/reprowireframes.png";
-import colors from "../../assets/imgs/reprocare/reprocolors.png";
 import cover from "../../assets/imgs/reprocare/reprocover.png";
 import scale from "../../assets/imgs/reprocare/reproscale.png";
 import usa from "../../assets/imgs/reprocare/reprousa.png";

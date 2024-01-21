@@ -7,7 +7,6 @@ function CategoryButton(props) {
   const [isHovered, setIsHovered] = useState(false);
   const [isToggled, setIsToggled] = useState(true);
   const category = props.text;
-  let color = "";
   let bgcolor = "";
   let bordercolor = "";
 

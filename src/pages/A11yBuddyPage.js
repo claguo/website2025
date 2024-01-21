@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectHero from "../components/ProjectHero";
 import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
-import ContainerGray from "../components/ContainerGray";
 import TLDR from "../components/a11ybuddy/A11yTLDR";
 import Research from "../components/a11ybuddy/A11yResearch";
 import Solution from "../components/a11ybuddy/A11ySolution";
