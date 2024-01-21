@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from 'react-router-dom';
 import { useProjectContext } from '../context/ProjectContext';
+import FilterButton from "./buttons/CategoryButton";
 
 function ProjectHero() {
   const path = useLocation().pathname.slice(1);
@@ -13,30 +14,37 @@ function ProjectHero() {
       </div>
       
       <div className='flex lg:flex-row flex-col lg:justify-between'>
-        <h1 className='text-md lg:text-lg'> { project.title } </h1>
-
-        <div className='flex lg:w-4/7 justify-between gap-2 flex-wrap' style = {{ margin: '1rem 0 4rem' }}>
-          <div className='w-[48%] lg:w-[24%] flex flex-col gap-[0.5rem]'>
+        <div>
+          <h1 className='text-md lg:text-lg'> { project.title } </h1>
+          <div className='flex flex-wrap'>
+            {project.categories.map((category) => (
+              <FilterButton text={category} />
+            ))}
+          </div>
+        </div>
+        <div className='flex lg:w-[43%] justify-end gap-4 mt-[0.75rem]'>
+          <div className='w-[48%] flex flex-col gap-[0.5rem]'>
             <span className='text-sm lg:text-base font-bold'> category </span>
             <p className='caption'> {project.category} </p>
           </div>
 
-          <div className='w-[48%] lg:w-[24%] flex flex-col gap-[0.5rem]'>
+          {/* <div className='w-[48%] lg:w-[24%] flex flex-col gap-[0.5rem]'>
             <span className='text-sm lg:text-base font-bold'> my role</span>
             <p className='caption'> {project.type} </p>
-          </div>
+          </div> */}
 
           {project.team !== undefined
-            ? <div className='w-[48%] lg:w-[24%] flex flex-col gap-[0.5rem]'>
+            ? <div className='w-[48%] flex flex-col gap-[0.5rem]'>
                 <span className='text-sm lg:text-base font-bold'> team </span>
                 <p className='caption'> {project.team} </p>
               </div>
             : null }
             
-          <div className='w-[48%] lg:w-[24%] flex flex-col gap-[0.5rem]'>
+          <div className='w-[48%] flex flex-col gap-[0.5rem]'>
             <span className='text-sm lg:text-base font-bold'> duration </span>
             <p className='caption'> {project.duration} </p>
           </div>
+
         </div>
         
       </div>

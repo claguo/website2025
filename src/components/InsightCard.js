@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import carlos from '../assets/imgs/eto/etocarlos.png';
 import Figure from "./Figure";
-import ExternalURLButton from "./ExternalURLButton";
+import ExternalURLButton from "./buttons/ExternalURLButton";
 import LargeP from "./LargeP";
 
 function InsightCard(props) {

@@ -4,27 +4,27 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mono': ['Space Mono', 'sans-serif'],
-        'sans': ['poppins']
+        mono: ["Space Mono", "sans-serif"],
+        sans: ["poppins"],
       },
       colors: {
-        'lighter-green': '#00D287',
-        'light-green': '#009E67',
-        'green': '#007A50',
-        'dark-green': '#00583A',
-        'bg-gray': '#ececec',
-        'gray': '#e1e1e1',
-        'collab-purple': '#EBB2FC'
+        "yellow-green": "#C2E772",
+        "light-green": "#7dfab1",
+        green: "#19e98f",
+        "dark-green": "#00885F",
+        "bg-gray": "#ececec",
+        gray: "#e1e1e1",
+        "dark-gray": "#888888",
+        "collab-purple": "#EBB2FC",
       },
       fontSize: {
-        'lg': ['3rem', '1.25'],
-        'sm': ['0.75rem'],
-        'md': ['2rem', '1.25']
-      }
+        lg: ["3rem", "1.25"],
+        sm: ["0.75rem", "1.25"],
+        md: ["2rem", "1.25"],
+      },
     },
   },
   plugins: [],
-}
+};
 
 // old green: #00D287
-

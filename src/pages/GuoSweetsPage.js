@@ -1,8 +1,8 @@
-import React from 'react'
-import ProjectHero from '../components/ProjectHero'
-import GuoTLDR from '../components/GuoSweets/GuoTLDR'
-import GuoZine from '../components/GuoSweets/GuoZine'
-import ProjectNavButtons from '../components/ProjectNavButtons'
+import React from "react";
+import ProjectHero from "../components/ProjectHero";
+import GuoTLDR from "../components/GuoSweets/GuoTLDR";
+import GuoZine from "../components/GuoSweets/GuoZine";
+import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
 
 function GuoSweetsPage() {
   return (
@@ -12,7 +12,7 @@ function GuoSweetsPage() {
       <GuoZine />
       <ProjectNavButtons />
     </>
-  )
+  );
 }
 
-export default GuoSweetsPage
+export default GuoSweetsPage;

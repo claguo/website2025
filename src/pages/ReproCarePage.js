@@ -1,11 +1,11 @@
-import React from 'react'
-import ProjectHero from '../components/ProjectHero';
-import TLDR from '../components/reprocare/ReproTLDR';
-import Research from '../components/reprocare/ReproResearch';
-import Insights from '../components/reprocare/ReproInsights';
-import ReproSolution from '../components/reprocare/ReproSolution';
-import ProjectNavButtons from '../components/ProjectNavButtons';
-import NextSteps from '../components/NextSteps';
+import React from "react";
+import ProjectHero from "../components/ProjectHero";
+import TLDR from "../components/reprocare/ReproTLDR";
+import Research from "../components/reprocare/ReproResearch";
+import Insights from "../components/reprocare/ReproInsights";
+import ReproSolution from "../components/reprocare/ReproSolution";
+import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
+import NextSteps from "../components/NextSteps";
 
 function ReproCarePage() {
   return (
@@ -15,17 +15,18 @@ function ReproCarePage() {
       <Research />
       <Insights />
       <ReproSolution />
-      <NextSteps section={4}
+      <NextSteps
+        section={4}
         steps={[
-          'Currently in progress: UI details tweaks (spacing, sizing, consistency)',
-          'Seek feedback from women.',
-          'Add clinic data.',
-          'Optimize for mobile screens.'
+          "Currently in progress: UI details tweaks (spacing, sizing, consistency)",
+          "Seek feedback from women.",
+          "Add clinic data.",
+          "Optimize for mobile screens.",
         ]}
       />
       <ProjectNavButtons />
     </>
-  )
+  );
 }
 
 export default ReproCarePage;

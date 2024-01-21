@@ -1,5 +1,5 @@
 import React from "react";
-import ExternalURLButton from "../ExternalURLButton";
+import ExternalURLButton from "../buttons/ExternalURLButton";
 import projects from '../../assets/imgs/collabrisd/archiveprojects.png';
 import taxidermy from '../../assets/imgs/collabrisd/taxidermynotion.png';
 import mobile from '../../assets/imgs/collabrisd/notionmobile.PNG';
