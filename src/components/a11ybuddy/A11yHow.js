@@ -18,7 +18,7 @@ function A11yHow(props) {
       <h3 className="text-sm lg:text-base font-bold mb-[0.25rem] font-sans">
         how it works
       </h3>
-      <div className="mx-[12%]">
+      <div className="lg:mx-[12%]">
         <Carousel
           renderThumbs={() => {
             "false";
@@ -60,7 +60,7 @@ function A11yHow(props) {
             if (isSelected) {
               return (
                 <li
-                  className="border-[1px] border-dark-green bg-green w-[0.75rem] h-[0.75rem] rounded-full inline-block mx-[0.5rem] relative top-0"
+                  className="border-[1px] border-dark-green bg-green w-[0.5rem] h-[0.5rem] lg:w-[0.75rem] lg:h-[0.75rem] rounded-full inline-block mx-[0.5rem] relative top-0"
                   aria-label={`Selected: ${label} ${index + 1}`}
                   title={`Selected: ${label} ${index + 1}`}
                 />
@@ -68,7 +68,7 @@ function A11yHow(props) {
             }
             return (
               <li
-                className="bg-dark-gray w-[0.75rem] h-[0.75rem] rounded-full inline-block mx-[0.5rem] relative top-0"
+                className="bg-dark-gray w-[0.5rem] h-[0.5rem] lg:w-[0.75rem] lg:h-[0.75rem] rounded-full inline-block mx-[0.5rem] relative top-0"
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
                 value={index}

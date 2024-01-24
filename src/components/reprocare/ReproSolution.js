@@ -36,12 +36,12 @@ function ReproSolution() {
           alt="Reproductive Care World front page with world stats"
         />
 
-        <div className="flex flex-col lg:flex-row lg:items-center gap-4 mt-16 lg:mt-36">
+        <div className="flex flex-col-reverse lg:flex-row lg:items-center gap-[1rem] mt-16 lg:mt-36">
           <LargeP className="lg:w-2/5">
             You are not alone! 1 point on the globe represents 10,000 women.
           </LargeP>
           <img
-            className="outline outline-1 mt-2 outline-[#B0B0B0] w-3/5"
+            className="outline outline-1 mt-2 outline-[#B0B0B0] lg:w-3/5"
             src={scale}
             alt="Screenshot of the web app showing of 10,000 smiley face icons."
           />
@@ -49,7 +49,7 @@ function ReproSolution() {
 
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 mt-16 lg:mt-36">
           <img
-            className="outline outline-1 mt-2 outline-[#B0B0B0] w-3/5"
+            className="outline outline-1 mt-2 outline-[#B0B0B0] lg:w-3/5"
             src={usa}
             alt="Reproductive Care World USA page with country stats"
           />

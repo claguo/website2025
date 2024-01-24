@@ -1,10 +1,10 @@
-import React, {useLayoutEffect} from 'react'
-import Hero from '../components/Hero'
-import WorkSection from '../components/WorkSection'
+import React, { useLayoutEffect } from "react";
+import Hero from "../components/Hero";
+import WorkSection from "../components/WorkSection";
 
 function HomePage() {
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   });
 
   return (
@@ -12,7 +12,7 @@ function HomePage() {
       <Hero />
       <WorkSection />
     </>
-  )
+  );
 }
 
 export default HomePage;

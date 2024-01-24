@@ -11,7 +11,6 @@ function Hero() {
           <SplitHover conditionalStyle={{ color: "#19e98f" }} text="✿✿" />
           <SplitHover text="guo" conditionalStyle={{ fontStyle: "italic" }} />
         </div>
-
         <p className="lg:w-1/3 mb-[1rem]">
           Previously @ the&nbsp;
           <ExternalURLButton

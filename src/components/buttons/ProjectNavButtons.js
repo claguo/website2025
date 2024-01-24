@@ -16,7 +16,6 @@ function ProjectNavButtons() {
   const prevProject = useProjectContext().find(
     (project) => project.id === currentProject.id - 1,
   );
-  let isFirstProj = false;
   const [width, setWidth] = useState(window.innerWidth);
 
   const [isLHovered, setIsLHovered] = useState(false);
@@ -35,80 +34,64 @@ function ProjectNavButtons() {
 
   const isMobile = width <= 768;
 
-  if (prevProject === undefined) {
-    isFirstProj = true;
-  }
-
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between mt-16">
+    <>
       {isMobile === true ? (
-        <Link to="/">
+        <Link to="/" className="flex flex-col items-center mt-8">
           <Button
-            className={`pl-[1.25rem] pr-[1rem] ${
-              isLHovered
-                ? "bg-light-green border-light-green px-[3rem]"
-                : "border-green px-[3rem]"
+            className={`px-[3rem] ${
+              isLHovered ? "bg-light-green border-light-green" : "border-green"
             }`}
             text="home"
           />
         </Link>
-      ) : isFirstProj === false ? (
-        <>
-          <Link to={`/${prevProject.path}`}>
-            <Button
-              onMouseEnter={() => {
-                setIsLHovered(true);
-              }}
-              onMouseLeave={() => {
-                setIsLHovered(false);
-              }}
-              text={`< ${prevProject.title}`}
-              isHovered={isLHovered}
-              className={`pl-[1.25rem] pr-[1rem] ${
-                isLHovered
-                  ? "bg-light-green border-light-green px-[3rem]"
-                  : "border-green px-[3rem]"
-              }`}
-            />
-          </Link>
-          <Link to={`/${nextProject.path}`}>
-            <Button
-              onMouseEnter={() => {
-                setIsRHovered(true);
-              }}
-              onMouseLeave={() => {
-                setIsRHovered(false);
-              }}
-              text={`${nextProject.title} >`}
-              isHovered={isRHovered}
-              className={`pl-[1.25rem] pr-[1rem] ${
-                isRHovered
-                  ? "bg-light-green border-light-green px-[3rem]"
-                  : "border-green px-[3rem]"
-              }`}
-            />
-          </Link>
-        </>
       ) : (
-        <Link to={`/${nextProject.path}`}>
-          <Button
-            onMouseEnter={() => {
-              setIsRHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsRHovered(false);
-            }}
-            text={`${nextProject.title} >`}
-            isHovered={isRHovered}
-            className={`pl-[1.25rem] pr-[1rem] ${
-              isRHovered
-                ? "bg-light-green border-light-green px-[3rem]"
-                : "border-green px-[3rem]"
-            }`}
-          />
-        </Link>
+        <div
+          className={`flex flex-col lg:flex-row mt-16 ${
+            prevProject === undefined ? "justify-end" : "justify-between"
+          }`}
+        >
+          {prevProject !== undefined ? (
+            <Link to={`/${prevProject.path}`}>
+              <Button
+                onMouseEnter={() => {
+                  setIsLHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setIsLHovered(false);
+                }}
+                text={`< ${prevProject.title}`}
+                isHovered={isLHovered}
+                className={`pl-[1.25rem] pr-[1rem] ${
+                  isLHovered
+                    ? "bg-light-green border-light-green"
+                    : "border-green"
+                }`}
+              />
+            </Link>
+          ) : null}
+          {nextProject !== undefined ? (
+            <Link to={`/${nextProject.path}`}>
+              <Button
+                onMouseEnter={() => {
+                  setIsRHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setIsRHovered(false);
+                }}
+                text={`${nextProject.title} >`}
+                isHovered={isRHovered}
+                className={`pl-[1.25rem] pr-[1rem] ${
+                  isRHovered
+                    ? "bg-light-green border-light-green"
+                    : "border-green"
+                }`}
+              />
+            </Link>
+          ) : null}
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

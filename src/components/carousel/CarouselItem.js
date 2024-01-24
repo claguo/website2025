@@ -6,7 +6,7 @@ function CarouselItem(props) {
       <img
         src={props.src}
         alt={props.alt}
-        className="lg:max-w-[70%] pb-[3.5rem]"
+        className="lg:max-w-[70%] pb-[3rem] lg:pb-[3.5rem]"
       />
       <p className="lg:max-w-[30%] text-left">{props.text}</p>
     </div>

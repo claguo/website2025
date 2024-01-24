@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./buttons/Button";
 import FilterButton from "./buttons/CategoryButton";
+import { IoMdArrowForward } from "react-icons/io";
 
 function ProjectCard(props) {
   const [isHovered, setIsHovered] = useState(false);
@@ -42,11 +43,13 @@ function ProjectCard(props) {
             ))}
           </div>
           <p>{project.description}</p>
-          <Button
-            className="lg:hidden"
-            to={`${project.path}`}
-            text="View Project"
-          />
+          <div style={{ alignSelf: "flex-end" }}>
+            <Button
+              className="lg:hidden gap-[0.5rem] pl-[1rem] pr-[0.5rem] bg-light-green border-light-green"
+              text="view project"
+              icon={<IoMdArrowForward />}
+            />
+          </div>
         </div>
       </Link>
     </>

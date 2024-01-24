@@ -14,7 +14,7 @@ function A11yBuddyPage() {
       <Research />
       <Solution />
       <NextSteps
-        section="4"
+        section="3"
         steps={[
           "Debugging for the release of an MVP to the VSCode marketplace.",
           "User testing to collect feedback.",

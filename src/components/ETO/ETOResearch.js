@@ -52,17 +52,19 @@ function ETOResearch() {
       </div>
       <div className="flex flex-col gap-2 mt-16 lg:mt-36">
         <LargeP>NOAA 2020 Discard Estimation</LargeP>
-        <PBlurb>
+        <p className="lg:ml-[60%] mt-4 text-sm lg:text-base">
           An annual report of species' discarded, amounts discarded, and reason
           for discard from the National Oceanic and Atmospheric
-          Administration&nbsp;
+          Administration&nbsp;{" "}
           <ExternalURLButton
             url="https://www.fisheries.noaa.gov/resource/data/annual-discard-reports-northeast"
             text="(NOAA)"
+            isButton={false}
+            className="inline"
           />
           . Fish are discarded for many reasons including no market,
           regulations, and poor quality.
-        </PBlurb>
+        </p>
         <p className="text-sm lg:text-base font-bold mb-[0.25rem] font-sans">
           An example: Monkfish chart from the 2020 report
         </p>

@@ -4,7 +4,7 @@ import LargeP from "../LargeP";
 
 function AboutHero() {
   return (
-    <section className="pt=[24vh] lg:pt-[40vh] flex">
+    <section className="pt=[24vh] pt-[20vh] lg:pt-[40vh] flex">
       {/* <LargeP className='text-green pt-[24vh] lg:pt-[40vh]'></LargeP> */}
       <div className="flex gap-4 lg:gap-8">
         <SplitHover text="claire" conditionalStyle={{ fontStyle: "italic" }} />

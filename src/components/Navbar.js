@@ -4,8 +4,10 @@ import ExternalURLButton from "./buttons/ExternalURLButton";
 import Button from "./buttons/Button";
 import { useLocation } from "react-router-dom";
 import resume from "../assets/Claire_Resume.pdf";
+import { IoCloseSharp } from "react-icons/io5";
+import { IoMdMenu } from "react-icons/io";
 
-function Navbar(isFooter) {
+function Navbar() {
   const location = useLocation();
   const [active, setActive] = useState(null);
   const [show, setShow] = useState(true);
@@ -14,7 +16,7 @@ function Navbar(isFooter) {
   const [width, setWidth] = useState(window.innerWidth);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isHomeHovered, setIsHomeHovered] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isMenuHovered, setIsMenuHovered] = useState(false);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -68,15 +70,52 @@ function Navbar(isFooter) {
         {props.show ? (
           <div
             onClick={() => setShowOverlay(false)}
-            className="fixed h-[100vh] w-[100vw] -ml-[6%] bg-gray z-30 flex flex-col justify-center items-center gap-8"
+            className="fixed h-[100vh] w-[100vw] -ml-[6%] bg-bg-gray z-30 flex flex-col justify-center items-center gap-8"
           >
-            <Button to="/" active={active === "/"} text="home" />
-            <Button to="/about" active={active === "/about"} text="about" />
+            <Link to="/">
+              <Button
+                onMouseEnter={() => {
+                  setIsHomeHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setIsHomeHovered(false);
+                }}
+                text="home"
+                isHovered={isHomeHovered}
+                className={`${
+                  isHomeHovered
+                    ? "bg-light-green border-light-green px-[3rem]"
+                    : active === "/"
+                      ? "bg-green border-green px-[3rem]"
+                      : "border-green px-[3rem]"
+                }`}
+              />
+            </Link>
+            <Link to="/about">
+              <Button
+                onMouseEnter={() => {
+                  setIsAboutHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setIsAboutHovered(false);
+                }}
+                text="about"
+                isHovered={isAboutHovered}
+                className={`${
+                  isAboutHovered
+                    ? "bg-light-green border-light-green px-[3rem]"
+                    : active === "/about"
+                      ? "bg-green border-green px-[3rem]"
+                      : "border-green px-[3rem]"
+                }`}
+              />
+            </Link>
             <ExternalURLButton
               text="resume"
               url={resume}
               isButton={true}
               className="px-[3rem]"
+              hasBg={false}
             />
           </div>
         ) : null}
@@ -93,7 +132,24 @@ function Navbar(isFooter) {
               show ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div
+            <Button
+              text={showOverlay ? "close" : "menu"}
+              onMouseEnter={() => {
+                setIsMenuHovered(true);
+              }}
+              onMouseLeave={() => {
+                setIsMenuHovered(false);
+              }}
+              onClick={() => setShowOverlay(!showOverlay)}
+              isHovered={isMenuHovered}
+              className={`${
+                isMenuHovered
+                  ? "bg-light-green border-light-green pl-[1.25rem] pr-[1rem]"
+                  : "border-green pl-[1.25rem] pr-[1rem]"
+              }`}
+              icon={showOverlay ? <IoCloseSharp /> : <IoMdMenu />}
+            />
+            {/* <div
               onMouseEnter={() => {
                 setIsHovered(true);
               }}
@@ -114,7 +170,7 @@ function Navbar(isFooter) {
               <p style={isHovered ? { transform: "skewX(11deg)" } : {}}>
                 {showOverlay ? "close" : "menu"}
               </p>
-            </div>
+            </div> */}
           </div>
           <Overlay show={showOverlay} active={active} />
         </>
@@ -175,25 +231,10 @@ function Navbar(isFooter) {
               isButton={true}
               className="px-[3rem]"
             />
-            {/* <Button to='/about' active={active === '/about'} text='about' />
-        <ExternalURLButton text='resume' url={resume} isButton={true}/> */}
           </div>
         </div>
       )}
     </>
-
-    // <div style={{
-    //   margin: '1.5rem -2rem 0',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    // }}>
-    //   <div className='horizSection' style={{gap: '1rem'}}>
-    //     <Button to='/' active={active === '/'} text='home' />
-    //     <Button to='/work' active={active === '/work'} text='work' />
-    //     <Button to='/about' active={active === '/about'} text='about' />
-    //     <Button to='/resume' active={active === '/resume'} text='resume' />
-    //   </div>
-    // </div>
   );
 }
 

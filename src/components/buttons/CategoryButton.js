@@ -73,7 +73,7 @@ function CategoryButton(props) {
         )
       }
       isHovered={isHovered}
-      className={`gap-[0.5rem] pl-[1rem] pr-[0.5rem] ${
+      className={`text-sm lg:text-base gap-[0.5rem] pl-[1em] pr-[0.5em] ${
         isHovered && !isToggled
           ? `${bgcolor} ${bordercolor}`
           : isHovered && isToggled

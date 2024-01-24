@@ -16,13 +16,7 @@ function Footer() {
             designed and coded by claire guo.
           </span>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "right",
-          }}
-        >
+        <div className="flex flex-col lg:text-right">
           <span
             onClick={() => (window.location = "mailto:cguo02@risd.edu")}
             onMouseEnter={() => {

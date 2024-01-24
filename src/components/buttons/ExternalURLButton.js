@@ -25,7 +25,7 @@ function ExternalURLButton(props) {
           text={props.text}
           icon={props.icon}
           isHovered={isHovered}
-          className={`${props.className} gap-[0.5rem] ${
+          className={`${props.className} ${
             isHovered
               ? "bg-light-green border-light-green"
               : props.hasBg
@@ -56,7 +56,7 @@ function ExternalURLButton(props) {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={`inline-block cursor-pointer m-0 rounded-[0.125rem] ${
+          className={`inline-block cursor-pointer m-0 rounded-[0.125rem] w-fit ${
             isHovered ? "bg-green" : "bg-light-green"
           }`}
           style={isHovered ? { transform: "skewX(-11deg)" } : {}}
