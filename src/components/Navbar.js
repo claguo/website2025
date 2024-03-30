@@ -128,7 +128,7 @@ function Navbar() {
       {isMobile ? (
         <>
           <div
-            className={`z-50 w-[90%] transition duration-100 ease-in flex justify-end fixed ${
+            className={`mt-[0.5rem] z-50 w-[90%] transition duration-100 ease-in flex justify-end fixed ${
               show ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -176,15 +176,9 @@ function Navbar() {
         </>
       ) : (
         <div
-          style={{
-            marginLeft: "-2%",
-            display: "flex",
-            justifyContent: "space-between",
-            position: "fixed",
-            width: "92%",
-            transition: "100ms ease-in",
-            opacity: show ? "100" : "0",
-          }}
+          className={`mt-[0.5rem] -ml-[2%] flex justify-between fixed w-[92%] transition duration-100 ease-in ${
+            show ? "opacity-100" : "opacity-0"
+          }`}
         >
           <Link to="/">
             <Button

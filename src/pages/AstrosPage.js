@@ -9,6 +9,7 @@ function AstrosPage() {
   return (
     <>
       <ProjectHero />
+      <AstrosFinal />
       <AstrosTLDR />
       <AstrosProject
         name="1. model runner dashboard"
@@ -68,7 +69,6 @@ function AstrosPage() {
           },
         ]}
       />
-      <AstrosFinal />
       <ProjectNavButtons />
     </>
   );
