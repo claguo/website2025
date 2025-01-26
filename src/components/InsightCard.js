@@ -1,8 +1,4 @@
-import React, {useState, useEffect} from "react";
-import carlos from '../assets/imgs/eto/etocarlos.png';
-import Figure from "./Figure";
-import ExternalURLButton from "./buttons/ExternalURLButton";
-import LargeP from "./LargeP";
+import React from "react";
 
 function InsightCard(props) {
   // const [width, setWidth] = useState(window.innerWidth);
@@ -29,7 +25,7 @@ function InsightCard(props) {
           <p className="text-xs lg:text-sm">{props.desc}</p>
         </div>
       </div>
-    {/* <LargeP className='text-[#0009E3]'>❋</LargeP>
+      {/* <LargeP className='text-[#0009E3]'>❋</LargeP>
     <LargeP>{props.insight}</LargeP>
     <div className='flex flex-col mt-4 text-sm lg:text-base gap-2'>
     {props.desc
@@ -60,7 +56,7 @@ function InsightCard(props) {
       </>)
     : null} */}
     </>
-  )
+  );
 }
 
 export default InsightCard;

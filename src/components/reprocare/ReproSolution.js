@@ -1,11 +1,7 @@
 import React from "react";
-import cover from "../../assets/imgs/reprocare/reprocover.png";
 import scale from "../../assets/imgs/reprocare/reproscale.png";
 import usa from "../../assets/imgs/reprocare/reprousa.png";
 import ContentWrapper from "../general/ContentWrapper";
-import LargeP from "../LargeP";
-import PBlurb from "../PBlurb";
-import ExternalURLButton from "../buttons/ExternalURLButton";
 import { MdArrowOutward } from "react-icons/md";
 import { IoStarSharp } from "react-icons/io5";
 import Button from "../buttons/Button";
@@ -23,12 +19,13 @@ function ReproSolution() {
       <div className="flex flex-col gap-[0.5rem] items-center">
         <IoStarSharp />
         <h2>Reproductive Care World</h2>
-        <p className="lg:px-[6rem] text-center">I decided to build an interactive data
-          visualization web app that displays abortion-related data from across
-          the globe. This web app seeks to normalize and destigmatize abortion
-          and reveal the network of women experiencing similar difficulties
-          worldwide. This was created using React and Globe.gl with data sourced
-          from Guttmacher Institute Data Center.
+        <p className="lg:px-[6rem] text-center">
+          I decided to build an interactive data visualization web app that
+          displays abortion-related data from across the globe. This web app
+          seeks to normalize and destigmatize abortion and reveal the network of
+          women experiencing similar difficulties worldwide. This was created
+          using React and Globe.gl with data sourced from Guttmacher Institute
+          Data Center.
         </p>
         <Button
           onClick={handleButtonClick}
@@ -37,16 +34,12 @@ function ReproSolution() {
         />
       </div>
       <Content summary="You are not alone! 1 point on the globe represents 10,000 women.">
-        <img src={scale} />
+        <img src={scale} alt="" />
       </Content>
       <Content summary="Big numbers suggest a sense of community.">
-        <img src={usa} />
+        <img src={usa} alt="" />
       </Content>
 
-
-
-
-      
       {/* <div className="flex flex-col">
 
 

@@ -52,7 +52,7 @@ function A11ySolution() {
     <Section tagText="Design" project="a11y">
       <img
         src={demo}
-        alt="Demo gif. Add alt text to image, save file, see egg hatch, then press 'get new egg'"
+        alt="Demo gif. Add alt text to img tag, save file, see egg hatch, then press 'get new egg'"
         className="rounded-[12px] lg:rounded-[16px]"
       />
       <p className="text-md text-center mx-xs lg:mx-2xl">

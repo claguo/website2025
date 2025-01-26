@@ -1,7 +1,5 @@
 import React from "react";
-import InterviewCard from "../InterviewCard";
 import ExternalURLButton from "../buttons/ExternalURLButton";
-import Content from "../Content";
 import Section from "../general/Section";
 import Card from "../general/Card";
 

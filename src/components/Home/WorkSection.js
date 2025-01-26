@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import ProjectCard from "../custom/ProjectCard.js";
 import { useProjectContext } from "../../context/ProjectContext.js";
 import ContentWrapper from "../general/ContentWrapper.js";
@@ -9,15 +8,17 @@ import mochi from "../../assets/imgs/mochi/mochi-cover.png";
 
 function WorkSection() {
   const projects = useProjectContext();
-  const [filters, setFilters] = useState([
-    "ui/ux design",
-    "web development",
-    "design strategy",
-    "game development",
-    "graphic design",
-    "illustration",
-  ]);
-  const [filtered, setFiltered] = useState(projects);
+  // const [filters, setFilters] = useState([
+  //   "ui/ux design",
+  //   "web development",
+  //   "design strategy",
+  //   "game development",
+  //   "graphic design",
+  //   "illustration",
+  // ]);
+  // const [filtered, setFiltered] = useState(projects);
+  const filtered = useState(projects);
+
   const [hovered, setHovered] = useState(false);
 
   return (

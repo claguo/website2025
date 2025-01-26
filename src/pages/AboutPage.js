@@ -1,14 +1,7 @@
 import React, { useLayoutEffect } from "react";
 
-import SplitHover from "../components/custom/SplitHoverEffects";
 import pfp from "../assets/imgs/pfp.jpg";
 import SecondaryPage from "../components/general/SecondaryPage";
-import ContentWrapper from "../components/general/ContentWrapper";
-
-import tulip from "../assets/imgs/about/tulip.png";
-import lily from "../assets/imgs/about/lily.png";
-import smoliv from "../assets/imgs/about/smoliv.png";
-import keroppi from "../assets/imgs/about/keroppi.png";
 import Section from "../components/general/Section";
 import LoveCards from "../components/custom/LoveCards";
 

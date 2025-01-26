@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import { MdArrowOutward } from "react-icons/md";
 
 function ExternalURLButton(props) {
   const externalUrl = props.url;

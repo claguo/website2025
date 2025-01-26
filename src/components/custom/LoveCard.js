@@ -13,14 +13,6 @@ const useMousePosition = () => {
   return mousePosition;
 };
 
-const getDimensionObject = (node) => {
-  const rect = node.getBoundingClientRect();
-  return {
-    width: rect.width,
-    height: rect.height,
-  };
-};
-
 const useSize = () => {
   const [dimensions, setDimensions] = useState({});
   const ref = useCallback((node) => {
