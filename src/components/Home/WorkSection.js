@@ -8,6 +8,7 @@ import mochi from "../../assets/imgs/mochi/mochi-cover.png";
 
 function WorkSection() {
   const projects = useProjectContext();
+
   // const [filters, setFilters] = useState([
   //   "ui/ux design",
   //   "web development",
@@ -17,7 +18,6 @@ function WorkSection() {
   //   "illustration",
   // ]);
   // const [filtered, setFiltered] = useState(projects);
-  const filtered = useState(projects);
 
   const [hovered, setHovered] = useState(false);
 
@@ -119,7 +119,7 @@ function WorkSection() {
             />
           </div>
 
-          {filtered.map((project) => (
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </ContentWrapper>

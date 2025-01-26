@@ -4,8 +4,6 @@ import projects from "../../assets/imgs/collabrisd/archiveprojects.png";
 import taxidermy from "../../assets/imgs/collabrisd/taxidermynotion.png";
 import mobile from "../../assets/imgs/collabrisd/notionmobile.PNG";
 import ContentWrapper from "../general/ContentWrapper";
-import LargeP from "../LargeP";
-import PBlurb from "../PBlurb";
 import { MdArrowOutward } from "react-icons/md";
 import { IoStarSharp } from "react-icons/io5";
 import Content from "../Content";

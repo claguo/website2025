@@ -1,6 +1,4 @@
 import React from "react";
-import LargeP from "../LargeP";
-import PBlurb from "../PBlurb";
 import ContentWrapper from "../general/ContentWrapper";
 import { IoStarSharp } from "react-icons/io5";
 import Content from "../Content";
@@ -22,7 +20,7 @@ function CollabProblem() {
           <div className='quote-box'>Interviewees' favorite platforms for inspiration include pinterest, RISD alumni, Instagram, YouTube</div>
         </div> */}
     </ContentWrapper>
-  )
+  );
 }
 
 export default CollabProblem;
