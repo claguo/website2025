@@ -45,7 +45,7 @@ function ProjectCard({ project, size, className }) {
                 {project.title}
               </h3>
               <p className="text-sm font-sans">{project.description}</p>
-              <IoMdArrowForward className="text-[20px]" />
+              <IoMdArrowForward className="text-[20px] lg:hidden" />
             </div>
 
             <img

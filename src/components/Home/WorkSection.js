@@ -103,7 +103,7 @@ function WorkSection() {
                 {" "}
                 "Designing healthcare products for patients and doctors,
                 rebranding the Mochi marketing website, and building Bento
-                Design System. Coming soon!",
+                Design System. Coming soon!"
               </p>
               <Button
                 className="lg:hidden px-0"
