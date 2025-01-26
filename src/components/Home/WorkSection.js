@@ -101,9 +101,9 @@ function WorkSection() {
               </h3>
               <p className="text-sm font-sans">
                 {" "}
-                "Designing healthcare products for patients and doctors,
+                Designing healthcare products for patients and doctors,
                 rebranding the Mochi marketing website, and building Bento
-                Design System. Coming soon!"
+                Design System. Coming soon!
               </p>
               <Button
                 className="lg:hidden px-0"
