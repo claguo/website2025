@@ -1,7 +1,6 @@
-import React from 'react';
-import ProjectHero from '../components/ProjectHero';
-import ProjectNavButtons from '../components/ProjectNavButtons';
-import ContainerGray from '../components/ContainerGray';
+import React from "react";
+import ProjectHero from "../components/ProjectHero";
+import ContainerGray from "../components/ContainerGray";
 
 function PairPage() {
   return (
@@ -10,9 +9,8 @@ function PairPage() {
       <ContainerGray>
         <div>Coming soon!</div>
       </ContainerGray>
-      <ProjectNavButtons />
     </>
-  )
-};
+  );
+}
 
 export default PairPage;

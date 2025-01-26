@@ -1,18 +1,33 @@
-import React from 'react';
-import ContainerGray from '../ContainerGray';
-import H1 from '../H1';
-import LargeP from '../LargeP';
-import PBlurb from '../PBlurb';
+import React from "react";
+import Section from "../general/Section";
+import ProjectSummary from "../ProjectSummary";
+import Callout from "../general/Callout";
 
 function ETOTLDR() {
-
   return (
-    <ContainerGray>
-      <H1> 0. tl;dr </H1>
-      <LargeP className='lg:mr-[40%]'>Reducing bycatch waste in New England fishing industries by diversifying consumer diet.</LargeP>
-      <PBlurb>An estimated 17-22% (2 billion pounds) of U.S. catch is discarded annually. Bycatch fish are tossed overboard as waste, despite their potential value as nutritious sources of food. Eat the ocean is a seafood restaurant that introduces American consumers to new, "bycatch" seafood species served in familiar seafood dishes.</PBlurb>
-    </ContainerGray>
-  )
+    <Section tagText="tl;dr" project="eto">
+      <p>
+        Each year, An estimated 17-22% (2 billion pounds) of U.S. catch is
+        discarded due to a lack of consumer market. Eat the Ocean is{" "}
+        <span className="text-text-eto font-medium">
+          a recipe app designed to reduce bycatch waste by diversifying consumer
+          diet
+        </span>
+        , creating new demand for underappreciated seafood.
+      </p>
+      <ProjectSummary />
+      <Callout title="Why it matters">
+        <p>
+          Bycatch is the unintentional capture of non-target fish and marine
+          wildlife. Each year, commercial trawlers catch and discard an
+          estimated two billion pounds of bycatch, injuring or killing the
+          wildlife in the process. Tossed fish is not only wasteful, but also
+          disrupts marine ecosystems, destabilizes food webs, and harms ocean
+          biodiversity.
+        </p>
+      </Callout>
+    </Section>
+  );
 }
 
 export default ETOTLDR;

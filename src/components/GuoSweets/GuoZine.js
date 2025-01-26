@@ -10,12 +10,12 @@ import pg8 from '../../assets/imgs/guosweets/Claire_Zine-08.png';
 import pg9 from '../../assets/imgs/guosweets/Claire_Zine-09.png';
 import pg10 from '../../assets/imgs/guosweets/Claire_Zine-10.png';
 import pg11 from '../../assets/imgs/guosweets/Claire_Zine-11.png';
-import ContainerGray from "../ContainerGray";
+import ContentWrapper from "../general/ContentWrapper";
 import H1 from "../H1";
 
 function GuoZine() {
   return (
-    <ContainerGray>
+    <ContentWrapper>
       <H1>1. the zine</H1>
       <img style={{marginLeft: '50.1%'}} className='zine-img' src={pg1} alt='Page 1' />
 
@@ -31,7 +31,7 @@ function GuoZine() {
         <img className='zine-img' src={pg10} alt='Page 10: soybean rice balls title page' />
         <img className='zine-img' src={pg11} alt='Page 11: soybean rice ball recipe with ingredients and instructions' />
       </div>
-    </ContainerGray>
+    </ContentWrapper>
   )
 }
 

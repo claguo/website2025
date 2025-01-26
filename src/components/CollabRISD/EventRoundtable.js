@@ -8,22 +8,28 @@ import ig3 from '../../assets/imgs/collabrisd/rdig3.png';
 import ig4 from '../../assets/imgs/collabrisd/rtig4.png';
 import ig5 from '../../assets/imgs/collabrisd/rtig5.png';
 import InstagramPosts from "./InstagramPosts";
+import ContentWrapper from "../general/ContentWrapper";
+import Content from "../Content";
 
 function EventRoundtable() {
   return (
-    <div className='flex flex-col gap-8 mt-16 lg:mt-36'>
-      <EventHeader
-        name='Learn: Roundtable'
-        date='sunday, apr 23 @ 7pm!'
-        intro='We invited student club leaders, and others who have worked on collaborative projects in the past to speak about their experiences to other students. Attendees learn about the challenges they faced, how they found collborators, and other insights about their collaborative experience. Speakers get the opportunity to gain exposure for their projects and potentially recruit new collaborators or club members.'
-      />
-      <img src={ roundtable } alt='Roundtable event in progress'/>
-      <div>
-        <h3 className='text-sm lg:text-base font-bold mb-[0.25rem] font-sans'>event poster</h3>
-        <img className='lg:w-3/5' src = {poster} alt = 'Roundtable poster' />
+    <ContentWrapper className="bg-[#FAE7FF]">
+      <div className="flex flex-col gap-[0.5rem] items-center">
+        <div className="font-mono font-bold">2</div>
+        <h3>Learn: Roundtable</h3>
+        <p className="text-center lg:px-[6rem]">We invited student club leaders and others who have worked on collaborative projects in the past to speak about their experiences.</p>
+        <p className="font-mono text-xs">Sunday, April 23, 7PM @ Taproom, Memorial Hall 4F</p>
       </div>
+      <img src={ roundtable } alt='Roundtable event in progress'/>
+      <p className="text-center lg: px-[6rem]">Attendees learn about the challenges they faced, how they found collborators, and other insights about their collaborative experience. Speakers get the opportunity to gain exposure for their projects and potentially recruit new collaborators or club members.</p>
+      <Content
+        summary="Materials designed by me!"
+        paragraph="Event poster and social media posts to spread the word."
+      >
+        <img src = {poster} alt = 'Roundtable poster' />
+      </Content>
       <InstagramPosts posts={[ig1, ig2, ig3, ig4, ig5]} />
-    </div>
+    </ContentWrapper>
   )
 }
 

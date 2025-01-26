@@ -3,7 +3,6 @@ import AstrosTLDR from "../components/astros/AstrosTLDR";
 import ProjectHero from "../components/ProjectHero";
 import AstrosProject from "../components/astros/AstrosProject";
 import AstrosFinal from "../components/astros/AstrosFinal";
-import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
 
 function AstrosPage() {
   return (
@@ -69,7 +68,6 @@ function AstrosPage() {
           },
         ]}
       />
-      <ProjectNavButtons />
     </>
   );
 }

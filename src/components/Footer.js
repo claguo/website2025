@@ -1,51 +1,66 @@
-import React, { useState } from "react";
-import "../assets/Footer.css";
-import ExternalURLButton from "./buttons/ExternalURLButton";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-function Footer() {
-  const [isHovered, setIsHovered] = useState(false);
+import SplitHover from "./custom/SplitHoverEffects";
+import Button from "./buttons/Button";
+import ExternalURLButton from "./buttons/ExternalURLButton";
+import ProjectCard from "./custom/ProjectCard";
+
+import { useProjectContext } from "../context/ProjectContext";
+
+function Footer(props) {
+  const projects = useProjectContext();
+  const path = useLocation().pathname;
+  const currentProject = useProjectContext().find(
+    (project) => project.path === path.slice(1),
+  );
 
   return (
-    <footer>
-      <div className="text-dark-green flex flex-col lg:flex-row justify-between lg:mt-48 mt-24">
-        <div className="flex flex-col">
-          <span className="text-md lg:text-lg text-green">✿✿</span>
-          <span className="text-md lg:text-lg text-dark-green">
-            thank you for visiting!
-            <br />
-            designed and coded by claire guo.
-          </span>
+    <footer className="flex flex-col lg:items-center w-screen gap-lg lg:gap-2xl py-md lg:py-3xl">
+      <div className="flex justify-center">
+        <SplitHover text="✶" styling="color" />
+      </div>
+
+      {currentProject && (
+        <div className="flex flex-col items-center gap-2xs lg:gap-xs px-xs">
+          <span className="font-mono italic">Other projects</span>
+          <div className="flex gap-sm overflow-x-scroll w-full snap-x">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                size="sm"
+                className={`snap-center ${
+                  project.id === currentProject.id ? "hidden" : ""
+                }`}
+              />
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col lg:text-right">
-          <span
-            onClick={() => (window.location = "mailto:cguo02@risd.edu")}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-            className={`${
-              isHovered ? "text-green italic" : "text-dark-green"
-            } inline-block cursor-pointer lg:text-lg text-md mt-4 lg:mt-0`}
-          >
-            cguo02@risd.edu
-          </span>
-          <ExternalURLButton
-            text="github"
-            url="https://github.com/claguo"
-            big={true}
+      )}
+
+      <div className="flex flex-col gap-sm items-center">
+        <div className="flex flex-col items-center">
+          <span>Thank you for visiting!</span>
+          <span>Designed and built by me :)</span>
+        </div>
+        <div className="flex flex-col text-md lg:text-lg font-mono italic items-center">
+          <Button
+            text="claireguo@gmail.com"
+            onClick={() => (window.location = "mailto:claireguo@gmail.com")}
           />
+          <ExternalURLButton text="github" url="https://github.com/claguo" />
           <ExternalURLButton
             text="linkedin"
-            url="https://www.linkedin.com/in/claguo/"
-            big={true}
+            url="https://www.linkedin.com/in/claguo"
           />
         </div>
       </div>
+
+      {/* 
       <p className="caption" style={{ textAlign: "right", margin: "1rem 0" }}>
-        © Claire Guo 2023
-      </p>
+        © Claire Guo 2025
+      </p> */}
     </footer>
   );
 }

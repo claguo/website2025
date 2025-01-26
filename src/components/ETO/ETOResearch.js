@@ -1,79 +1,105 @@
 import React from "react";
 import InterviewCard from "../InterviewCard";
 import ExternalURLButton from "../buttons/ExternalURLButton";
-import noaa from "../../assets/imgs/eto/etonoaa.png";
-import ContainerGray from "../ContainerGray";
-import LargeP from "../LargeP";
-import H1 from "../H1";
-import PBlurb from "../PBlurb";
+import Content from "../Content";
+import Section from "../general/Section";
+import Card from "../general/Card";
+
+import spreadsheet from "../../assets/imgs/eto/spreadsheet.png";
 
 function ETOResearch() {
   return (
-    <ContainerGray>
-      <H1>1. research</H1>
-      <PBlurb>
-        New England has a long history of fishing, whaling, ship building, and
-        maritime commerce. The maritime industry is culturally significant and
-        economically essential to the region.
-        <b>
-          {" "}
-          So, I conducted research to identify a design opportunity related to
-          sustainability in the New England fishing industry.
-        </b>
-      </PBlurb>
-      <div className="flex flex-col gap-4 mt-16 lg:mt-36">
-        <LargeP>A diverse set of interviews!</LargeP>
-        <div className="flex flex-col lg:flex-row justify-between gap-2">
-          <InterviewCard
-            emoji="🧔🏻"
-            name="Paul Osimo"
-            location="Providence, RI"
-            desc="Fishing charter captain + commercial fisherman"
-          />
-          <InterviewCard
-            emoji="👱🏻‍♂️"
-            name="Perry Raso"
-            location="South Kingston, RI"
-            desc="Oyster farm + oyster bar owner"
-          />
-          <InterviewCard
-            emoji="👴🏻"
-            name="Matt Behan"
-            location="Charleston, RI"
-            desc="Co-owner of family fish farm"
-          />
-          <InterviewCard
-            emoji="🧔🏽"
-            name="Carlos Sostre"
-            location="India Point Park, RI"
-            desc="Catch-and-release fishing hobbyist"
-          />
+    <Section tagText="Research" project="eto">
+      <div className="flex flex-col gap-sm">
+        <p>
+          My research was driven by the question: how can we make the New
+          England fishing industry more sustainable? To learn more, I spoke to a
+          diverse set of locals involved in the fishing industry.
+        </p>
+        <div className="flex gap-xs overflow-x-scroll w-[calc(100vw-32px)] lg:w-auto">
+          <Card className="w-[216px] shrink-0 lg:w-auto lg:flex-1 lg:shrink">
+            <div className="flex flex-col gap-2xs">
+              <span className="text-lg">🧔🏻</span>
+              <div className="flex flex-col gap-4xs">
+                <span className="text-sm font-bold">Paul Osimo</span>
+                <p className="text-xs text-text-subtle">
+                  Fishing charter captain & commercial fisherman @ Providence,
+                  RI
+                </p>
+              </div>
+            </div>
+            <p>“So much bycatch is caught and thrown overboard.”</p>
+          </Card>
+          <Card className="w-[216px] shrink-0 lg:w-auto lg:flex-1 lg:shrink">
+            <div className="flex flex-col gap-2xs">
+              <span className="text-lg">👱🏻‍♂️</span>
+              <div className="flex flex-col gap-4xs">
+                <span className="text-sm font-bold">Perry Raso</span>
+                <p className="text-xs text-text-subtle">
+                  Oyster farm & oyster bar owner @ South Kingston, RI
+                </p>
+              </div>
+            </div>
+            <p>“Sustainability is extremely important for us.”</p>
+          </Card>
+          <Card className="w-[216px] shrink-0 lg:w-auto lg:flex-1 lg:shrink">
+            <div className="flex flex-col gap-2xs">
+              <span className="text-lg">👴🏻</span>
+              <div className="flex flex-col gap-4xs">
+                <span className="text-sm font-bold">Matt Behan</span>
+                <p className="text-xs text-text-subtle">
+                  Co-owner of family fish farm @ Charleston, RI
+                </p>
+              </div>
+            </div>
+            <p>“We filter our oysters by sex and size before selling them.”</p>
+          </Card>
+          <Card className="w-[216px] shrink-0 lg:w-auto lg:flex-1 lg:shrink">
+            <div className="flex flex-col gap-2xs">
+              <span className="text-lg">🧔🏽</span>
+              <div className="flex flex-col gap-4xs">
+                <span className="text-sm font-bold">Carlos Sostre</span>
+                <p className="text-xs text-text-subtle">
+                  Catch-and-release fishing hobbyist @ India Point Park, RI
+                </p>
+              </div>
+            </div>
+            <div>
+              “I bring my tape measure when I go fishing to make sure I comply
+              with{" "}
+              <ExternalURLButton
+                url="https://dem.ri.gov/"
+                text="DEM"
+                plaintext={true}
+              />{" "}
+              regulations.”
+            </div>
+          </Card>
         </div>
       </div>
-      <div className="flex flex-col gap-2 mt-16 lg:mt-36">
-        <LargeP>NOAA 2020 Discard Estimation</LargeP>
-        <p className="lg:ml-[60%] mt-4 text-sm lg:text-base">
-          An annual report of species' discarded, amounts discarded, and reason
-          for discard from the National Oceanic and Atmospheric
-          Administration&nbsp;{" "}
-          <ExternalURLButton
-            url="https://www.fisheries.noaa.gov/resource/data/annual-discard-reports-northeast"
-            text="(NOAA)"
-            isButton={false}
-            className="inline"
-          />
-          . Fish are discarded for many reasons including no market,
-          regulations, and poor quality.
-        </p>
-        <p className="text-sm lg:text-base font-bold mb-[0.25rem] font-sans">
-          An example: Monkfish chart from the 2020 report
+
+      <div className="flex flex-col gap-sm">
+        <p>
+          Through secondary research, I found an annual report of species'
+          discarded, quantities discarded, and reason for discard from the
+          National Oceanic and Atmospheric Administration, the NOAA Discard
+          Reports.{" "}
+          <span className="font-medium text-text-eto">
+            For many fish, the primary reason for discard is the lack of a
+            market
+          </span>
+          .
         </p>
         <img
-          src={noaa}
-          alt="Monkfish chart from the NOAA 2020 Discard Estimation report"
+          src={spreadsheet}
+          alt="Spreadsheet of data from NOAA 2024 discard estimate. Includes fish species, pounds discarded, percent of total catch, and reasons for discard."
         />
       </div>
-    </ContainerGray>
+      <p className="text-md text-center">
+        How might we diversify consumer diet to create a market for
+        underappreciated seafood?
+      </p>
+    </Section>
   );
 }
 

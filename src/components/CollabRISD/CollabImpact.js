@@ -6,47 +6,50 @@ import earthling from '../../assets/imgs/collabrisd/earthling.png'
 import jenny from '../../assets/imgs/collabrisd/jennytoys.png'
 import yue from '../../assets/imgs/collabrisd/speeddate3.jpg'
 import collab from '../../assets/imgs/collabrisd/collabcampusnotion.png'
-import H1 from "../H1";
-import ContainerGray from "../ContainerGray";
+import ContentWrapper from "../general/ContentWrapper";
 import LargeP from "../LargeP";
+import { IoStarSharp } from "react-icons/io5";
 
 function CollabImpact() {
   return ( 
-    <ContainerGray>
-      <H1>1. impact</H1>
-      <LargeP>Connections created, projects launched!</LargeP>
-      <div className='flex flex-col lg:flex-row gap-4 mt-8'>
-        <div className='flex flex-col gap-2 lg:w-1/2'>
+    <ContentWrapper>
+      <div className="flex flex-col gap-[0.5rem] items-center">
+        <IoStarSharp />
+        <h2>Impact</h2>
+        <p>Connections created; projects launched!</p>
+      </div>
+      <div className='flex flex-col lg:flex-row gap-[8rem]'>
+        <div className='flex flex-col gap-[6rem] flex-1'>
           <ImpactCard 
             color='bg-[#EBB2FC]'
-            content="Wendy found collaborators to found RISD's first Taxidermy Club with!"
-            src={[taxidermynotion, taxidermy]}
-            caption={['APR 2023: Taxidermy Club in the ideation phase; on our Notion page.', 'SEPT 2023: Taxidermy Club recruiting members at their first RISD Club Fair!']}/>
-          <ImpactCard 
-            color='bg-[#FC7247]'
-            content='Yue said she is now planning a CSP with people she met through our events!'
-            src={[yue]}
-            caption={['Yue met collaborators at our Speed Date event!']}/>
+            content="Wendy launched RISD's first Taxidermy Club with collaborators!"
+            src={[taxidermy]}
+            caption={['Here, Taxidermy Club is recruiting members at their first RISD Club Fair.']}/>
           <ImpactCard 
             color='bg-[#D1E84D]'
-            content='Jenny, who was looking for engineers with a more technical background for her toy design project, received one response from Brown!'
+            content='Jenny, a product designer, partnered with an engineer at Brown to bring technical expertise to her personal project.'
             src={[jenny]}
-            caption={["Jenny's toy design project in the ideation phase; on our Notion page."]}/>
-        </div>
-        <div className='flex flex-col gap-2 lg:w-1/2'>
-        <ImpactCard
-            color='bg-[#EBB2FC]'
-            content='6-7 people reached out to Yuqing about the Earthling Lab! She took a group of 10 people on a tour of the lab. The group included Brown and RISD students, grad and undergrad students, and students in several different majors.'
-            src={[earthling]}
-            caption={['Yuqing and collaborators touring the Earthing Lab!']}/>
+            caption={["This is Jenny's toy design project on our Notion page, in the ideation phase."]}/>          
           <ImpactCard 
             color='bg-[#FC7247]'
-            content='6 people are interested in carrying on THIS project (Campus Collab) next year!'
+            content='Yue is planning a CSP with people she met through our events.'
+            src={[yue]}
+            caption={['Yue met collaborators at our Speed Date event!']}/>
+        </div>
+        <div className='flex flex-col gap-[6rem] justify-center flex-1'>
+        <ImpactCard
+            color='bg-[#EBB2FC]'
+            content='Yuqing recruited Earthling Lab members.'
+            src={[earthling]}
+            caption={['Yuqing and collaborators touring the Earthing Lab! This group included both Brown and RISD students and grad and undergrad students, in varying majors, but with a common interest in sustainability research.']}/>
+          <ImpactCard 
+            color='bg-[#FC7247]'
+            content='6 people are interested in carrying on THIS project (Collab @ RISD) next year!'
             src={[collab]}
-            caption={['Our own Notion project page!']}/>
+            caption={['Our own Notion project page, where we recruited collaborators!']}/>
         </div>
       </div>
-    </ContainerGray>
+    </ContentWrapper>
   )
 }
 

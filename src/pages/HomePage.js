@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from "react";
-import Hero from "../components/Hero";
-import WorkSection from "../components/WorkSection";
+import Hero from "../components/Home/Hero";
+import WorkSection from "../components/Home/WorkSection";
 
 function HomePage() {
   useLayoutEffect(() => {

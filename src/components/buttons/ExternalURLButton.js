@@ -13,42 +13,7 @@ function ExternalURLButton(props) {
 
   return (
     <>
-      {props.isButton === true ? (
-        <Button
-          onMouseEnter={() => {
-            setIsHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-          onClick={handleButtonClick}
-          text={props.text}
-          icon={props.icon}
-          isHovered={isHovered}
-          className={`${props.className} ${
-            isHovered
-              ? "bg-light-green border-light-green"
-              : props.hasBg
-                ? "bg-green border-green"
-                : "border-green"
-          }`}
-        />
-      ) : props.big === true ? (
-        <span
-          onMouseEnter={() => {
-            setIsHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-          className={`${
-            isHovered ? "text-green italic" : "text-dark-green"
-          } inline-block m-0 text-md lg:text-lg cursor-pointer`}
-          onClick={handleButtonClick}
-        >
-          {props.text}
-        </span>
-      ) : (
+      {props.plaintext === true ? (
         <div
           onMouseEnter={() => {
             setIsHovered(true);
@@ -56,16 +21,20 @@ function ExternalURLButton(props) {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={`inline-block cursor-pointer m-0 rounded-[0.125rem] w-fit ${
-            isHovered ? "bg-green" : "bg-light-green"
+          className={`font-mono italic inline-block cursor-pointer ${
+            isHovered ? "text-blue" : "text-text-default"
           }`}
-          style={isHovered ? { transform: "skewX(-11deg)" } : {}}
           onClick={handleButtonClick}
         >
-          <p className="flex items-center">
-            {props.text} <MdArrowOutward className="" />
-          </p>
+          <span className="flex items-center">{props.text}</span>
         </div>
+      ) : (
+        // plaintext === true
+        <Button
+          onClick={handleButtonClick}
+          text={props.text}
+          icon={props.icon}
+        />
       )}
     </>
   );

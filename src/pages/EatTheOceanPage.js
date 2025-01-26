@@ -1,21 +1,26 @@
 import React from "react";
-import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
+
+import SecondaryPage from "../components/general/SecondaryPage";
 import ProjectHero from "../components/ProjectHero";
 import ETOTLDR from "../components/ETO/ETOTLDR";
 import ETOResearch from "../components/ETO/ETOResearch";
-import ETOInsights from "../components/ETO/ETOInsights";
-import ETODesignSolution from "../components/ETO/ETODesignSolution";
+import ETODesign from "../components/ETO/ETODesign";
+// import ETODesignSolution from "../components/ETO/ETODesignSolution";
+import ContentWrapper from "../components/general/ContentWrapper";
+
+import hero from "../assets/imgs/eto/hero.png";
 
 function EatTheOceanPage() {
   return (
-    <>
-      <ProjectHero />
-      <ETOTLDR />
-      <ETOResearch />
-      <ETOInsights />
-      <ETODesignSolution />
-      <ProjectNavButtons />
-    </>
+    <SecondaryPage>
+      <ProjectHero src={hero} />
+      <ContentWrapper>
+        <ETOTLDR />
+        <ETOResearch />
+        <ETODesign />
+        {/* <ETODesignSolution /> */}
+      </ContentWrapper>
+    </SecondaryPage>
   );
 }
 

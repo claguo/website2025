@@ -5,24 +5,31 @@ import ExternalURLButton from "./buttons/ExternalURLButton";
 import LargeP from "./LargeP";
 
 function InsightCard(props) {
-  const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  // function handleWindowSizeChange() {
+  //   setWidth(window.innerWidth);
+  // }
 
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('resize', handleWindowSizeChange);
+  //   return () => {
+  //       window.removeEventListener('resize', handleWindowSizeChange);
+  //   }
+  // }, []);
 
-  const isMobile = width <= 768;
+  // const isMobile = width <= 768;
 
   return (
-    <div className='bg-gray px-6 py-4 lg:px-16 lg:py-8 rounded'>
-    <LargeP className='text-[#0009E3]'>❋</LargeP>
+    <>
+      <div className="flex items-baseline gap-[1rem] lg:px-[6rem]">
+        <p className="font-mono font-bold text-sm lg:text-md">{props.id}</p>
+        <div className="flex flex-col gap-[1rem]">
+          <p className="text-sm lg:text-md">{props.insight}</p>
+          <p className="text-xs lg:text-sm">{props.desc}</p>
+        </div>
+      </div>
+    {/* <LargeP className='text-[#0009E3]'>❋</LargeP>
     <LargeP>{props.insight}</LargeP>
     <div className='flex flex-col mt-4 text-sm lg:text-base gap-2'>
     {props.desc
@@ -51,8 +58,8 @@ function InsightCard(props) {
         : null}
       </div>
       </>)
-    : null}
-  </div>
+    : null} */}
+    </>
   )
 }
 

@@ -6,7 +6,6 @@ import CollabArchive from "../components/CollabRISD/CollabArchive";
 import CollabImpact from "../components/CollabRISD/CollabImpact";
 import NextSteps from "../components/NextSteps";
 import CollabTLDR from "../components/CollabRISD/CollabTLDR";
-import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
 
 function CollabRISDPage() {
   return (
@@ -25,7 +24,6 @@ function CollabRISDPage() {
           "As for the digital archive, next steps involve advertising the Notion page more as well as populating information in the resource sections.",
         ]}
       />
-      <ProjectNavButtons />
     </>
   );
 }

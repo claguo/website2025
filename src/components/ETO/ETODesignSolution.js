@@ -9,15 +9,23 @@ import learn1 from '../../assets/imgs/eto/learn1.png';
 import learn2 from '../../assets/imgs/eto/learn2.png';
 import menu from '../../assets/imgs/eto/menu.png';
 import recipes from '../../assets/imgs/eto/recipes.png';  
-import ContainerGray from "../ContainerGray";
-import H1 from "../H1";
+import ContentWrapper from "../general/ContentWrapper";
 import LargeP from "../LargeP";
+import Content from "../Content";
+import { IoStarSharp } from "react-icons/io5";
 
 function ETODesignSolution() {
   return (
-    <ContainerGray>
-      <H1>3. design solution</H1>
-      <p className='text-sm lg:text-base lg:w-3/5'>Based on the key insights from the research I conducted, I came up with <b>eat the ocean</b>, a hypothetical seafood restaurant that introduces American consumers to bycatch seafood species' served in familiar dishes</p>
+    <ContentWrapper>
+      <div className="flex flex-col gap-[0.5rem] items-center">
+        <IoStarSharp />
+        <h2>The Solution</h2>
+        <p className="lg:px-[6rem] text-center">Based on these key insights, I came up with <b>eat the ocean</b>, a seafood restaurant that introduces American consumers to bycatch seafood species' served in familiar dishes.</p>
+      </div>
+
+      <Content summary="New fish, same dish. A menu with new fish species but prepared in familiar American seafood dishes like sandwiches and chowders would help encourage people to try underutilized fish.">
+        <img className="pl-[40%]" src={menu} alt='Screenshot of restaurant menu. There are sandwiches, fish, soup, salads, and drinks.'/>
+      </Content>
     
       <div className='gap-4 mt-16 lg:mt-36 flex flex-col lg:flex-row lg:items-center justify-between'>
         <div className='lg:w-3/5 gap-2 flex flex-col'>
@@ -64,7 +72,7 @@ function ETODesignSolution() {
         </div>
       </div>
 
-    </ContainerGray>
+    </ContentWrapper>
   )
 }
 

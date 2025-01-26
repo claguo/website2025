@@ -1,20 +1,20 @@
 import React from "react";
-import ContainerGray from "./ContainerGray";
-import H1 from "./H1";
+import Section from "./general/Section";
+import { IoStarSharp } from "react-icons/io5";
 
 function NextSteps(props) {
   return (
-    <ContainerGray>
-      <div className='flex flex-col lg:flex-row'>
-        <H1 className='w-2/5'> {props.section}. next steps </H1>   
-        <div className='lg:w-3/5 flex flex-col gap-4 text-sm lg:text-base'>
-          {props.steps.map((step, index) =>
-            <p key={ index }>❋ { step } </p>
-          )}  
-        </div> 
-      </div> 
-    </ContainerGray>
-  )
+    <Section tagText="Next steps" project={props.project}>
+      <div className="flex flex-col gap-4xs">
+        {props.steps.map((step, index) => (
+          <div key={index} className="flex gap-3xs items-center">
+            <IoStarSharp className="text-[16px] text-text-subtle" />
+            <p>{step} </p>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
 }
 
 export default NextSteps;

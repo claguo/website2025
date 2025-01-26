@@ -3,25 +3,28 @@ import ExternalURLButton from "../buttons/ExternalURLButton";
 import projects from "../../assets/imgs/collabrisd/archiveprojects.png";
 import taxidermy from "../../assets/imgs/collabrisd/taxidermynotion.png";
 import mobile from "../../assets/imgs/collabrisd/notionmobile.PNG";
-import ContainerGray from "../ContainerGray";
-import H1 from "../H1";
+import ContentWrapper from "../general/ContentWrapper";
 import LargeP from "../LargeP";
 import PBlurb from "../PBlurb";
 import { MdArrowOutward } from "react-icons/md";
+import { IoStarSharp } from "react-icons/io5";
+import Content from "../Content";
 
 function CollabArchive() {
   return (
-    <ContainerGray>
-      <H1>4. digital archive</H1>
-      <LargeP className="lg:mr-[40%]">
-        A digital archive of projects looking for collaborators and
-        collaboration resources.
-      </LargeP>
-      <PBlurb className="flex flex-col">
-        This transition into the digital realm enhances accessibility, as the
+    <ContentWrapper className="bg-[#E4F3FA]">
+      <div className="flex flex-col gap-[0.5rem] items-center">
+        <IoStarSharp />
+        <h2>Solution 2: Digital Archive</h2>
+      </div>
+      <Content
+        summary="A digital archive of projects looking for collaborators and
+        collaboration resources."
+        paragraph="This transition into the digital realm enhances accessibility, as the
         digital archive is free from the constraints of time and location that
         events typically entail. This means that our resources remain accessible
-        to anyone, around the clock.
+        to anyone, around the clock."
+      >
         <ExternalURLButton
           text="view our notion page"
           icon={<MdArrowOutward />}
@@ -30,7 +33,7 @@ function CollabArchive() {
           hasBg={true}
           className="pl-[1.25rem] pr-[1rem]"
         />
-      </PBlurb>
+      </Content>
       <img className="mt-8" src={projects} alt="Projects archive" />
       <div className="flex justify-between">
         <img
@@ -44,7 +47,7 @@ function CollabArchive() {
           alt="Taxidermy club's Notion page"
         />
       </div>
-    </ContainerGray>
+    </ContentWrapper>
   );
 }
 

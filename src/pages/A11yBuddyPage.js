@@ -1,29 +1,32 @@
 import React from "react";
 import ProjectHero from "../components/ProjectHero";
-import ProjectNavButtons from "../components/buttons/ProjectNavButtons";
 import TLDR from "../components/a11ybuddy/A11yTLDR";
 import Research from "../components/a11ybuddy/A11yResearch";
-import Solution from "../components/a11ybuddy/A11ySolution";
+import Design from "../components/a11ybuddy/A11yDesign";
 import NextSteps from "../components/NextSteps";
+import ContentWrapper from "../components/general/ContentWrapper";
+import SecondaryPage from "../components/general/SecondaryPage";
+
+import hero from "../assets/imgs/a11ybuddy/hero.png";
 
 function A11yBuddyPage() {
   return (
-    <>
-      <ProjectHero />
-      <TLDR />
-      <Research />
-      <Solution />
-      <NextSteps
-        section="3"
-        steps={[
-          "Debugging for the release of an MVP to the VSCode marketplace.",
-          "User testing to collect feedback.",
-          "Implementation of more accessibility tests! Currently we only test for alt text.",
-          "A creature archive to view all the creatures the user has raised.",
-        ]}
-      />
-      <ProjectNavButtons />
-    </>
+    <SecondaryPage>
+      <ProjectHero src={hero} />
+      <ContentWrapper>
+        <TLDR />
+        <Research />
+        <Design />
+        <NextSteps
+          project="a11y"
+          steps={[
+            "Implement more accessibility tests",
+            "User testing to collect feedback",
+            "Implement creature archive to view all the creatures the user has raised",
+          ]}
+        />
+      </ContentWrapper>
+    </SecondaryPage>
   );
 }
 

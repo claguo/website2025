@@ -3,167 +3,49 @@
 @tailwind utilities;
 
 html {
-    font-family: 'poppins';
-    background-color: #f3f3f3;
-    line-height: 1.5;
+  line-height: 1.5;
+  color: #07081d;
+  display: flex;
 }
 
-/*body {
-    margin: 0;
-    padding: 0 14.2857vw;
-    1/6 vw gutter
-}
-
-h1 {
-    display: inline;
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin: 0;
-    font-family: 'space mono';
-    letter-spacing: -.04em;
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    margin: 0.5rem 0;
-}
-
-h3 {
-    font-size: 1rem;
-    margin: 0;
-    color: black;
-}
-
-p {
-    margin: 0;
-    font-family: 'karla';
-    margin-top: 1rem;
-    color: black;
-}
-
-img {
-    border-radius: .5rem;
-    object-fit: 'cover'
-}
-
-figure {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-family: 'space mono';
-    letter-spacing: -.04em;
-}
-
-a:hover {
-    color: #00D287;
-    font-style: italic;
-}
-
-.navitems {
-    color: white;  
-    transform: rotate(-90deg);
-    margin-right: .1rem;
-    padding: 1rem;
-    z-index: 99;
-}
-.navitems:hover {
-    color: white;
-    font-style: italic;
-}
-
-.socials {
-    font-size: 1rem;
-    transform: rotate(0);
-}
-
-.small_link {
-    text-decoration: underline;
-}
-.small_link:hover {
-    font-style: italic;
-}
-.twoColumns {
-    width: 31.42857vw;
-    1/6 vw + 48px gutter + 1/6 vw
-}
-.oneColumn {
-    width: 14.2857vw;
-    1/6 vw
-}
-.threeColumns {
-    width: 48.5714vw;
-    1/6 + 48px + 1/6 + 48px +1/6
-}
-.section {
-    display: flex;
-    flex-direction: column;
-    margin: 0 3rem;
-} */
-
-
-/* @media screen and (max-width: 960px) {
-    .class {
-
-    }
-    
-} */
-body {
-    margin: 0;
-    /* padding: 0 6rem; */
-    padding: 0 6vw;
-}
-
-h1 {
+/* h1 {
     font-size: 2rem;
     font-weight: 400;
     margin: 0;
-    font-family: 'poppins';
-    /* letter-spacing: -.04em; */
     line-height: 1.5;
 }
 
 h2 {
     font-size: 1rem;
-    font-family: 'poppins';
     text-transform: lowercase;
     font-style: normal;
     font-weight: 700;
     margin: 0 0 0.5rem;
-}
+} */
 
-h3 {
+/* h3 {
     font-size: 1rem;
     font-family: 'space mono';
     margin: 0;
-}
+} */
 
-p {
+/* p {
     font-family: 'poppins';
-}
+} */
 
-.bigP {
+/* .bigP {
     font-size: 1.5rem;
-}
+} */
 
-a {
+/* a {
     text-decoration: none;
     color: black;
     font-family: 'space mono';
-}
+} */
 
-figure {
+/* figure {
     margin: 0;
-}
-
-img {
-    border-radius: 0.25rem;
-    object-fit: cover;
-}
+} */
 
 /* button {
     border: none;
@@ -179,22 +61,22 @@ button:hover {
     font-style: italic;
     font-weight: 700;
 } */
-
+/* 
 .twoColumns {
-    /* width: 24.94047619vw; */
+    width: 24.94047619vw;
     width: 40%;
-    /* 7 columns with 6rem margin and 0.5rem gutter */
+    7 columns with 6rem margin and 0.5rem gutter
 }
 .oneColumn {
-    /* width: 12.261904761vw; */
+    width: 12.261904761vw;
     width: 20%;
 }
 .threeColumns {
-    /* width: 37.678571428vw; */
+    width: 37.678571428vw;
     width: 60%;
 }
 .fourColumns {
-    /* width: 50.416666666vw; */
+    width: 50.416666666vw;
     width: 60%;
 }
 
@@ -206,11 +88,11 @@ button:hover {
 
 .horizSection {
     display: flex;
-    /* gap: 0.476190476vw; */
+    gap: 0.476190476vw;
     gap: 1rem;
-}
+} */
 
-.section {
+/* .section {
     margin-top: 12rem;
     display: flex;
     flex-direction: column;
@@ -229,7 +111,7 @@ button:hover {
     color: #00D287;
     font-family: 'space mono';
     line-height: 1;
-    /* font-weight: bold; */
+    font-weight: bold;
 }
 
 .flower-symbol {
@@ -256,7 +138,6 @@ button:hover {
 }
 
 .quote-box {
-    /* background-color: #e2e2e2; */
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -284,4 +165,4 @@ button:hover {
 .zine-img {
     width: 49.9%;
     margin-bottom: 1rem;
-}
+} */
