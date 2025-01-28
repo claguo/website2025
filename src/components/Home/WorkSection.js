@@ -103,7 +103,8 @@ function WorkSection() {
                 {" "}
                 Designing healthcare products for patients and doctors,
                 rebranding the Mochi marketing website, and building Bento
-                Design System. Coming soon!
+                Design System.{" "}
+                <span className="text-pink font-medium">Coming soon!</span>
               </p>
               <Button
                 className="lg:hidden px-0"

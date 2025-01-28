@@ -13,7 +13,7 @@ function Button({ to, text, icon, onClick, className, type }) {
         onClick={onClick}
         className={`font-mono italic flex items-center gap-3xs cursor-pointer ${
           type === "text only" ? "" : "px-[1rem] py-[0.5rem]"
-        } ${className} ${isHovered ? "text-green" : ""}`}
+        } ${className} ${isHovered ? "text-pink" : ""}`}
       >
         {text}
         {icon && icon}
