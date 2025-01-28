@@ -90,7 +90,7 @@ function A11yResearch() {
 
       {/* DESIGN PRINCIPLES */}
       <div className="flex flex-col gap-xs lg:flex-row">
-        <Card>
+        <Card className="flex-1">
           <span className="font-mono italic text-text-subtle">
             Design Principle 1
           </span>
@@ -107,7 +107,7 @@ function A11yResearch() {
             </p>
           </TextStack>
         </Card>
-        <Card>
+        <Card className="flex-1">
           <span className="font-mono italic text-text-subtle">
             Design Principle 2
           </span>
@@ -122,7 +122,7 @@ function A11yResearch() {
             </p>
           </TextStack>
         </Card>
-        <Card>
+        <Card className="flex-1">
           <span className="font-mono italic text-text-subtle">
             Design Principle 3
           </span>

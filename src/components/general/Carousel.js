@@ -1,27 +1,42 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Button from "../buttons/Button";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
 
 function Carousel({ title, items, delay = 6000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, delay);
+  // const startInterval = () => {
+  //   intervalRef.current = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  //   }, delay);
+  // };
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, [items.length, delay]);
+  // const resetInterval = () => {
+  //   if (intervalRef.current) {
+  //     clearInterval(intervalRef.current);
+  //   }
+  //   startInterval();
+  // };
 
-  // Handle the "next" button click
+  // useEffect(() => {
+  //   intervalRef.current = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  //   }, delay);
+
+  //   return () => clearInterval(intervalRef.current); // Cleanup the interval on unmount
+  // }, [items.length, delay]);
+
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % items.length);
+    // resetInterval();
   };
-  // Handle the "prev" button click
+
   const prevImage = () => {
     setCurrentIndex((currentIndex - 1) % items.length);
+    // resetInterval();
   };
 
   return (

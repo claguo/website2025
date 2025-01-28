@@ -2,7 +2,6 @@ import React from "react";
 import ProjectHero from "../components/ProjectHero";
 import TLDR from "../components/reprocare/ReproTLDR";
 import Research from "../components/reprocare/ReproResearch";
-import Insights from "../components/reprocare/ReproInsights";
 import ReproSolution from "../components/reprocare/ReproSolution";
 import NextSteps from "../components/NextSteps";
 import SecondaryPage from "../components/general/SecondaryPage";
@@ -16,15 +15,13 @@ function ReproCarePage() {
       <ContentWrapper>
         <TLDR />
         <Research />
-        <Insights />
         <ReproSolution />
         <NextSteps
-          section={4}
+          project="rcw"
           steps={[
-            "Currently in progress: UI details tweaks (spacing, sizing, consistency)",
-            "Seek feedback from women.",
-            "Add clinic data.",
-            "Optimize for mobile screens.",
+            "Seek feedback from women",
+            "Optimize for mobile",
+            "Add clinic data",
           ]}
         />
       </ContentWrapper>

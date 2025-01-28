@@ -21,8 +21,8 @@ function ExternalURLButton(props) {
             setIsHovered(false);
           }}
           className={`font-mono italic inline-block cursor-pointer ${
-            isHovered ? "text-blue" : "text-text-default"
-          }`}
+            props.className
+          } ${isHovered ? "text-blue" : "text-text-default"}`}
           onClick={handleButtonClick}
         >
           <span className="flex items-center">{props.text}</span>

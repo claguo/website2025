@@ -1,71 +1,29 @@
 import React from "react";
-import scale from "../../assets/imgs/reprocare/reproscale.png";
-import usa from "../../assets/imgs/reprocare/reprousa.png";
-import ContentWrapper from "../general/ContentWrapper";
 import { MdArrowOutward } from "react-icons/md";
-import { IoStarSharp } from "react-icons/io5";
-import Button from "../buttons/Button";
-import Content from "../Content";
+import Section from "../general/Section";
+import ExternalURLButton from "../buttons/ExternalURLButton";
 
 function ReproSolution() {
-  const externalUrl = "https://repro-care-world.netlify.app/";
-  const handleButtonClick = () => {
-    // Open the external URL in a new tab
-    window.open(externalUrl, "_blank");
-  };
-
   return (
-    <ContentWrapper>
-      <div className="flex flex-col gap-[0.5rem] items-center">
-        <IoStarSharp />
-        <h2>Reproductive Care World</h2>
-        <p className="lg:px-[6rem] text-center">
-          I decided to build an interactive data visualization web app that
-          displays abortion-related data from across the globe. This web app
-          seeks to normalize and destigmatize abortion and reveal the network of
-          women experiencing similar difficulties worldwide. This was created
-          using React and Globe.gl with data sourced from Guttmacher Institute
-          Data Center.
-        </p>
-        <Button
-          onClick={handleButtonClick}
+    <Section tagText="Design" project="rcw">
+      <p>
+        I decided to build an interactive data visualization web app that
+        displays abortion-related data from across the globe. This web app seeks
+        to normalize and destigmatize abortion and reveal the network of women
+        experiencing similar difficulties worldwide. This was created using
+        React and Globe.gl with data sourced from Guttmacher Institute Data
+        Center.
+      </p>
+      <div className="flex gap-2xs items-center text-text-rcw">
+        <ExternalURLButton
+          plaintext={true}
           text="View the web app"
-          icon={<MdArrowOutward />}
+          url="https://repro-care-world.netlify.app/"
+          className="text-text-rcw font-mono text-md"
         />
+        <MdArrowOutward className="text-md" />
       </div>
-      <Content summary="You are not alone! 1 point on the globe represents 10,000 women.">
-        <img src={scale} alt="" />
-      </Content>
-      <Content summary="Big numbers suggest a sense of community.">
-        <img src={usa} alt="" />
-      </Content>
-
-      {/* <div className="flex flex-col">
-
-
-        <div className="flex flex-col-reverse lg:flex-row lg:items-center gap-[1rem] mt-16 lg:mt-36">
-          <LargeP className="lg:w-2/5">
-            You are not alone! 1 point on the globe represents 10,000 women.
-          </LargeP>
-          <img
-            className="outline outline-1 mt-2 outline-[#B0B0B0] lg:w-3/5"
-            src={scale}
-            alt="Screenshot of the web app showing of 10,000 smiley face icons."
-          />
-        </div>
-
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 mt-16 lg:mt-36">
-          <img
-            className="outline outline-1 mt-2 outline-[#B0B0B0] lg:w-3/5"
-            src={usa}
-            alt="Reproductive Care World USA page with country stats"
-          />
-          <LargeP className="lg:w-2/5">
-            Big numbers suggest a sense of community.
-          </LargeP>
-        </div>
-      </div> */}
-    </ContentWrapper>
+    </Section>
   );
 }
 

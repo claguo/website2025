@@ -1,44 +1,45 @@
 import React from "react";
-import { useState } from "react";
-import ContentWrapper from "../general/ContentWrapper";
+import Section from "../general/Section";
+import ProjectSummary from "../ProjectSummary";
+import Callout from "../general/Callout";
+import ExternalURLButton from "../buttons/ExternalURLButton";
 import { MdArrowOutward } from "react-icons/md";
-import Content from "../Content";
-import { IoStarSharp } from "react-icons/io5";
-import cover from "../../assets/imgs/reprocare/reprocover.png";
 
 function ReproTLDR() {
-  const externalUrl = "https://repro-care-world.netlify.app/";
-  const handleButtonClick = () => {
-    // Open the external URL in a new tab
-    window.open(externalUrl, "_blank");
-  };
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <ContentWrapper>
-      <div className="flex flex-col gap-[0.5rem] items-center">
-        <IoStarSharp />
-        <h2>tl;dr</h2>
-      </div>
-      <Content
-        summary="Destigmatizing abortion and providing a sense of social support."
-        paragraph="One of the biggest barriers to abortion care is a lack of social
-        support. This project is an attempt to ameliorate this by displaying
-        abortion-related data in a positive, approachable, interactive way."
-      />
-      <div
-        className="relative cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onClick={handleButtonClick}
-      >
-        <img src={cover} alt="Reproductive Care World front page with world stats" className={`${isHovered ? 'brightness-[0.5]' : ''}`}/>
-        <div className={`cursor-pointer font-mono italic absolute inset-0 flex justify-center items-center backdrop-blur-[2px] text-white px-[3rem] gap-[0.5rem] ${isHovered ? "" : "opacity-0"}`}>
-          <p>Go to web app</p>
-          <MdArrowOutward/>
+    <Section tagText="tl;dr" project="rcw">
+      <div className="flex flex-col gap-xs">
+        <p>
+          One of the biggest barriers to abortion care is a lack of social
+          support. This project is an attempt to ameliorate this by{" "}
+          <span className="font-medium text-text-rcw">
+            displaying abortion-related data in a positive, approachable,
+            interactive way.
+          </span>
+        </p>
+        <div className="flex gap-2xs items-center text-text-rcw">
+          <ExternalURLButton
+            plaintext={true}
+            text="Go to web app"
+            url="https://repro-care-world.netlify.app/"
+            className="text-text-rcw"
+          />
+          <MdArrowOutward className="text-[20px]" />
         </div>
       </div>
-    </ContentWrapper>
+
+      <ProjectSummary />
+
+      <Callout title="Why it matters">
+        <p>
+          Even before the overturning of Roe v. Wade in June 2022, seeking an
+          abortion was already an extremely stressful experience for people with
+          uteruses. As a woman who grew up in Texas, the overturn of Roe v. Wade
+          sparked in me a profound sense of anxiety, as well as a strong desire
+          to take action.
+        </p>
+      </Callout>
+    </Section>
   );
 }
 

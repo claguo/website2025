@@ -69,7 +69,7 @@ const projectData = [
     title: "Reproductive Care World",
     categories: ["ui/ux design", "web development"],
     description:
-      "An interactive web app that visualizes reproductive care data from across the globe. It illuminates the worldwide network of women facing similar challenges and helps break the stigma surrounding abortion.",
+      "An interactive web app that visualizes gloabl data to highlight women's shared challenges and destigmatize abortion.",
     alt: "Screenshot of web app: a blue globe and statistics",
     path: "repro-care",
     category: "UI/UX, Web Dev",
