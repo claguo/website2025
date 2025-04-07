@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ExternalURLButton from "../buttons/ExternalURLButton";
 import Button from "../buttons/Button";
 import { useLocation } from "react-router-dom";
-import resume from "../../assets/ClaireGuo_Resume.pdf";
+import resume from "../../assets/ClaireGuo_resume.pdf";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import { IoStarSharp } from "react-icons/io5";

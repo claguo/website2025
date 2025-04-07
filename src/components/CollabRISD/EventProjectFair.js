@@ -7,7 +7,7 @@ import cb from "../../assets/imgs/collabrisd/pfcb.JPG";
 import met from "../../assets/imgs/collabrisd/pfmet.JPG";
 import poster from "../../assets/imgs/collabrisd/pfposter.png";
 import boarddesign from "../../assets/imgs/collabrisd/pfboard.png";
-import Content from "../Content";
+import Content from "../general/Content";
 import ContentWrapper from "../general/ContentWrapper";
 
 function EventProjectFair() {

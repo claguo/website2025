@@ -1,12 +1,12 @@
 import React from "react";
 import LoveCard from "./LoveCard";
-import cereal from "../../assets/imgs/love/lovecereal.png";
-import marina from "../../assets/imgs/love/lovemarina.webp";
-import grass from "../../assets/imgs/love/lovegrass.jpeg";
-import out from "../../assets/imgs/love/loveout.webp";
-import debussy from "../../assets/imgs/love/lovedebussy.jpg";
-import val from "../../assets/imgs/love/loveval.PNG";
-import snow from "../../assets/imgs/love/lovesnow.JPG";
+import cereal from "../../assets/imgs/about/lovecereal.png";
+import marina from "../../assets/imgs/about/lovemarina.webp";
+import grass from "../../assets/imgs/about/lovegrass.jpeg";
+import out from "../../assets/imgs/about/loveout.webp";
+import debussy from "../../assets/imgs/about/lovedebussy.jpg";
+import val from "../../assets/imgs/about/loveval.PNG";
+import snow from "../../assets/imgs/about/lovesnow.JPG";
 
 function LoveCards() {
   return (

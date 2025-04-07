@@ -3,7 +3,7 @@ import roundtable from "../../assets/imgs/collabrisd/Roundtable-04.jpg";
 import notion from "../../assets/imgs/collabrisd/notion.png";
 import ContentWrapper from "../general/ContentWrapper";
 import { IoStarSharp } from "react-icons/io5";
-import Content from "../Content";
+import Content from "../general/Content";
 
 function CollabTLDR() {
   return (

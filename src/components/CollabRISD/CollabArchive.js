@@ -6,7 +6,7 @@ import mobile from "../../assets/imgs/collabrisd/notionmobile.PNG";
 import ContentWrapper from "../general/ContentWrapper";
 import { MdArrowOutward } from "react-icons/md";
 import { IoStarSharp } from "react-icons/io5";
-import Content from "../Content";
+import Content from "../general/Content";
 
 function CollabArchive() {
   return (

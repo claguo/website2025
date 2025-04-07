@@ -1,7 +1,7 @@
 import React from "react";
 import ContentWrapper from "../general/ContentWrapper";
 import { IoStarSharp } from "react-icons/io5";
-import Content from "../Content";
+import Content from "../general/Content";
 
 function CollabProblem() {
   return (

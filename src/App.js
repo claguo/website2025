@@ -7,16 +7,17 @@ import {
 import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/general/Navbar";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import Footer from "./components/Footer";
-import A11yBuddyPage from "./pages/A11yBuddyPage";
-import CollabRISDPage from "./pages/CollabRISDPage";
-import EatTheOceanPage from "./pages/EatTheOceanPage";
-import ReproCarePage from "./pages/ReproCarePage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Footer from "./components/general/Footer";
+import Mochi from "./pages/Mochi";
+import A11yBuddy from "./pages/A11yBuddy";
+import CollabRISD from "./pages/CollabRISD";
+import EatTheOcean from "./pages/EatTheOcean";
+import ReproCare from "./pages/ReproCare";
 import { ProjectContextProvider } from "./context/ProjectContext";
 import ScrollToTop from "./components/general/ScrollToTop";
-
+import Login from "./pages/Login";
 function BackgroundColor({ children }) {
   const location = useLocation();
 
@@ -40,12 +41,14 @@ function App() {
         <BackgroundColor />
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/a11y-buddy" element={<A11yBuddyPage />} />
-          <Route path="/collab-risd" element={<CollabRISDPage />} />
-          <Route path="/repro-care" element={<ReproCarePage />} />
-          <Route path="/eat-the-ocean" element={<EatTheOceanPage />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/mochi-health" element={<Mochi />} />
+          <Route path="/a11y-buddy" element={<A11yBuddy />} />
+          <Route path="/collab-risd" element={<CollabRISD />} />
+          <Route path="/repro-care" element={<ReproCare />} />
+          <Route path="/eat-the-ocean" element={<EatTheOcean />} />
+          <Route path="/login" element={<Login />} />
           <Route
             path="/repro-web-app"
             component={() => {

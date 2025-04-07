@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectCard from "../custom/ProjectCard.js";
 import { useProjectContext } from "../../context/ProjectContext.js";
 import ContentWrapper from "../general/ContentWrapper.js";
-import Button from "../buttons/Button.js";
-import { IoMdArrowForward } from "react-icons/io";
-import mochi from "../../assets/imgs/mochi/mochi-cover.png";
+// import mochi from "../../assets/imgs/mochi/mochi-cover.png";
 
 function WorkSection() {
   const projects = useProjectContext();
@@ -18,8 +16,6 @@ function WorkSection() {
   //   "illustration",
   // ]);
   // const [filtered, setFiltered] = useState(projects);
-
-  const [hovered, setHovered] = useState(false);
 
   return (
     <>
@@ -79,7 +75,7 @@ function WorkSection() {
         lg:bg-bg-white lg:rounded-[16px] lg:border-[1px] lg:border-border-default mx-xs lg:mx-sm lg:py-3xl"
       >
         <ContentWrapper>
-          <div
+          {/* <div
             className={`flex flex-col-reverse gap-sm lg:items-center lg:flex-row lg:gap-md lg:flex-1 ${
               hovered ? "cursor-pointer" : ""
             }`}
@@ -118,7 +114,7 @@ function WorkSection() {
               alt="Screenshot of joinmochi.com, which I designed."
               className={`w-full lg:w-[328px] object-contain lg:px-md py-xs lg:py-sm bg-bg-white lg:bg-bg-gray border-[1px] border-border-default rounded-[12px]`}
             />
-          </div>
+          </div> */}
 
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

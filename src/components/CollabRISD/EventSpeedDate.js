@@ -12,7 +12,7 @@ import sd3 from "../../assets/imgs/collabrisd/speeddate3.jpg";
 import sd2 from "../../assets/imgs/collabrisd/speeddate1.jpg";
 import InstagramPosts from "./InstagramPosts";
 import ContentWrapper from "../general/ContentWrapper";
-import Content from "../Content";
+import Content from "../general/Content";
 
 function EventSpeedDate() {
   return (

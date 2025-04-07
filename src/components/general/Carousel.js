@@ -6,28 +6,6 @@ import { IoMdArrowForward } from "react-icons/io";
 
 function Carousel({ title, items, delay = 6000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const intervalRef = useRef(null);
-
-  // const startInterval = () => {
-  //   intervalRef.current = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  //   }, delay);
-  // };
-
-  // const resetInterval = () => {
-  //   if (intervalRef.current) {
-  //     clearInterval(intervalRef.current);
-  //   }
-  //   startInterval();
-  // };
-
-  // useEffect(() => {
-  //   intervalRef.current = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  //   }, delay);
-
-  //   return () => clearInterval(intervalRef.current); // Cleanup the interval on unmount
-  // }, [items.length, delay]);
 
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % items.length);

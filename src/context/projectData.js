@@ -23,6 +23,7 @@ const projectData = [
   //   team: "Mochi Design Team + me",
   //   duration: "Mar 2024 - Present",
   // },
+
   {
     id: 0,
     project: "a11y",
@@ -38,6 +39,18 @@ const projectData = [
   },
   {
     id: 1,
+    project: "mochi",
+    path: "mochi-health",
+    title: "Mochi Health: Bento Design System",
+    description:
+      "Mochi Health's design system, which now supports a platform serving over 100,000 patients.",
+    alt: "Preview of design system components",
+    category: "UI/UX",
+    team: "Stacia Seetoh + me",
+    duration: "Oct 2024 - Dec 2024",
+  },
+  {
+    id: 2,
     project: "eto",
     title: "Eat the Ocean",
     categories: ["design strategy"],
@@ -64,7 +77,7 @@ const projectData = [
   //   tldr: "This project was a semester-long Collaborative Study Project, during which a group of 4 other industrial and graphic designers and I sought to increase interdisciplinary collaboration at RISD. Over the course of four months, we designed, tested, and implemented two solutions:",
   // },
   {
-    id: 2,
+    id: 3,
     project: "rcw",
     title: "Reproductive Care World",
     categories: ["ui/ux design", "web development"],

@@ -8,7 +8,7 @@ import ig4 from "../../assets/imgs/collabrisd/rtig4.png";
 import ig5 from "../../assets/imgs/collabrisd/rtig5.png";
 import InstagramPosts from "./InstagramPosts";
 import ContentWrapper from "../general/ContentWrapper";
-import Content from "../Content";
+import Content from "../general/Content";
 
 function EventRoundtable() {
   return (
