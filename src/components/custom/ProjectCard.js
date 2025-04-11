@@ -9,7 +9,7 @@ function ProjectCard({ project, size, className }) {
   return (
     <>
       <Link
-        to={`/${project.path}`}
+        to={project.protected ? "/login" : `/${project.path}`}
         onMouseEnter={() => {
           setIsHovered(true);
         }}

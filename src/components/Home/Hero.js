@@ -19,7 +19,7 @@ function Hero() {
 
       <div>
         <div className="text-sm">
-          UI/UX designer @&nbsp;
+          Product Designer @&nbsp;
           <ExternalURLButton
             url="https://joinmochi.com/"
             text="Mochi Health"

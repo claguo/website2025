@@ -41,6 +41,7 @@ const projectData = [
     id: 1,
     project: "mochi",
     path: "mochi-health",
+    protected: true,
     title: "Mochi Health: Bento Design System",
     description:
       "Mochi Health's design system, which now supports a platform serving over 100,000 patients.",

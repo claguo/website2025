@@ -29,7 +29,6 @@ function Login() {
         path: "/",
       });
       navigate("/mochi-health");
-      window.location.reload();
     } else {
       alert("Incorrect password");
     }
@@ -41,7 +40,13 @@ function Login() {
         text=""
         icon={<IoArrowBackSharp className="text-[20px] text-text-default" />}
         className=""
-        onClick={() => window.history.back()}
+        onClick={() => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            navigate("/");
+          }
+        }}
       />
 
       <div className="flex w-full lg:h-full py-4xl justify-center items-center">
