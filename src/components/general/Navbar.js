@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ExternalURLButton from "../buttons/ExternalURLButton";
 import Button from "../buttons/Button";
 import { useLocation } from "react-router-dom";
-import resume from "../../assets/Claire_Guo_resume.pdf";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import { IoStarSharp } from "react-icons/io5";
@@ -83,7 +82,10 @@ function Navbar() {
             text="about"
             icon={props.active === "/about" ? <IoStarSharp /> : null}
           />
-          <ExternalURLButton text="resume" url={resume} />
+          <ExternalURLButton
+            text="resume"
+            url="https://docs.google.com/document/d/1BW0_VTv6gtI6qj3kKQFtbFZlUbN4zj1lq-hit1NGRQE/edit?usp=sharing"
+          />
         </div>
       </div>
     );
@@ -119,7 +121,7 @@ function Navbar() {
             <Button text="about" to="/about" />
             <ExternalURLButton
               text="resume"
-              url={resume}
+              url="https://docs.google.com/document/d/1BW0_VTv6gtI6qj3kKQFtbFZlUbN4zj1lq-hit1NGRQE/edit?usp=sharing"
               isButton={true}
               className="px-[3rem]"
             />

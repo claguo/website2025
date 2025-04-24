@@ -6,8 +6,8 @@ import TLDR from "../components/mochi/TLDR";
 import TextStack from "../components/general/TextStack";
 import colorTokens from "../assets/imgs/mochi/colortokens.png";
 import button from "../assets/imgs/mochi/button.png";
-import dropdown from "../assets/imgs/mochi/dropdown.png";
-import checkbox from "../assets/imgs/mochi/checkbox.png";
+import textfield from "../assets/imgs/mochi/textfield.png";
+import other from "../assets/imgs/mochi/other.png";
 
 function Mochi() {
   return (
@@ -25,7 +25,7 @@ function Mochi() {
           </p>
           <img
             src={colorTokens}
-            alt="color tokens"
+            alt="Background and accent color tokens"
             className="border-[1px] border-border-default rounded-[12px] object-cover"
           />
         </TextStack>
@@ -33,21 +33,19 @@ function Mochi() {
           header="Components"
           className="italic font-mono text-text-subtle"
         >
-          <img
-            src={button}
-            alt="color tokens"
-            className="border-[1px] border-border-default rounded-[12px] object-cover"
-          />
-          <img
-            src={dropdown}
-            alt="color tokens"
-            className="border-[1px] border-border-default rounded-[12px] object-cover"
-          />
-          <img
-            src={checkbox}
-            alt="color tokens"
-            className="border-[1px] border-border-default rounded-[12px] object-cover"
-          />
+          <div className="flex flex-col gap-xl">
+            <img src={button} alt="Button component" className="object-cover" />
+            <img
+              src={textfield}
+              alt="Text field component"
+              className="object-cover"
+            />
+            <img
+              src={other}
+              alt="Tab bar and action menu components"
+              className="object-cover"
+            />
+          </div>
         </TextStack>
       </ContentWrapper>
     </SecondaryPage>
