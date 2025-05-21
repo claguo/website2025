@@ -9,7 +9,7 @@ function ETODesign() {
     <Section tagText="Research" project="eto">
       <div className="bg-bg-gray border-[1px] border-border-default rounded-[16px] px-lg py-md lg:px-4xl lg:py-xl w-full flex justify-center">
         <img
-          src="images.claireguo.com/demo.gif"
+          src="https://images.claireguo.com/demo.gif"
           alt=""
           className="max-w-[260px] border-[1px] border-border-default rounded-[24px]"
         />
@@ -30,7 +30,7 @@ function ETODesign() {
           their natural stocks.
         </p>
         <img
-          src="images.claireguo.com/featurefish.gif"
+          src="https://images.claireguo.com/featurefish.gif "
           alt="Gif of ETO's Fish page. A list of fish images. Tapping on a fish takes you to a page with more information about the fish."
           className="max-w-[260px] border-[1px] border-border-default rounded-[24px] mx-sm"
         />
