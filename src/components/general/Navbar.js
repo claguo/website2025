@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import SplitHover from "../custom/SplitHoverEffects";
 import ExternalURLButton from "../buttons/ExternalURLButton";
 import Button from "../buttons/Button";
 import { useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
-import { IoStarSharp } from "react-icons/io5";
 
 function Navbar() {
   const location = useLocation();
@@ -61,7 +62,7 @@ function Navbar() {
 
   function MobileOverlay(props) {
     return (
-      <div className="p-3xs fixed w-screen h-screen bg-bg-gray flex flex-col items-end">
+      <div className="pt-3xs fixed w-full h-screen bg-bg-gray flex flex-col items-end">
         <Button
           text=""
           onClick={() => setShowOverlay(false)}
@@ -73,14 +74,12 @@ function Navbar() {
           <Button
             to="/"
             onClick={() => setShowOverlay(false)}
-            text="home"
-            icon={props.active === "/" ? <IoStarSharp /> : null}
+            text={props.active === "/" ? "* home" : "home"}
           />
           <Button
             to="/about"
             onClick={() => setShowOverlay(false)}
-            text="about"
-            icon={props.active === "/about" ? <IoStarSharp /> : null}
+            text={props.active === "/about" ? "* about" : "about"}
           />
           <ExternalURLButton
             text="resume"
@@ -96,11 +95,18 @@ function Navbar() {
       {isMobile ? (
         <>
           <div
-            className={`p-3xs flex justify-between items-center z-99 w-screen transition duration-100 ease-in flex fixed ${
+            className={`lg:px-4xs pt-3xs flex justify-between items-center z-99 w-full transition duration-100 ease-in flex fixed ${
               active === "/" ? "bg-bg-gray" : "bg-bg-white"
             } ${show ? "opacity-100" : "opacity-0"}`}
           >
-            <Button text="claire ✶ guo" to="/" />
+            <Link
+              to="/"
+              className="flex flex-row gap-2xs px-xs pt-3xs items-center cursor-pointer"
+            >
+              <span className="font-mono text-[1.25rem]"> claire</span>
+              <span className="font-sans text-[1.25rem]">*</span>
+              <span className="font-mono text-[1.25rem]"> guo</span>
+            </Link>
             <Button
               text=""
               onClick={() => setShowOverlay(true)}
@@ -111,12 +117,32 @@ function Navbar() {
         </>
       ) : (
         <div
-          className={`flex w-screen py-xs justify-between fixed transition duration-100 ease-in px-xs ${
+          className={`flex w-full px-4xs pt-3xs justify-between fixed transition duration-100 ease-in ${
             active === "/" ? "bg-bg-gray" : "bg-bg-white"
           } ${show ? "opacity-100" : "opacity-0"}`}
         >
-          <Button text="claire ✶ guo" to="/" />
-          <div className="flex gap-[6rem]">
+          <Link
+            to="/"
+            className="flex flex-row lg:flex-row gap-2xs px-xs py-3xs items-center cursor-pointer"
+          >
+            <SplitHover
+              text="claire"
+              styling="italic"
+              className="font-mono text-md"
+            />
+            <SplitHover
+              text="*"
+              styling="color"
+              className="font-sans text-md"
+            />
+            <SplitHover
+              text="guo"
+              styling="italic"
+              className="font-mono text-md"
+            />
+          </Link>
+
+          <div className="flex gap-xl">
             <Button text="work" to="/" />
             <Button text="about" to="/about" />
             <ExternalURLButton

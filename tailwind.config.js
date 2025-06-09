@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Space Mono", "sans-serif"],
-        sans: ["Inter"],
+        mono: ["Kosugi Maru", "monospace"],
+        sans: ["Roboto"],
       },
       colors: {
         "bg-white": "#FFFFFF",
@@ -22,19 +22,19 @@ module.exports = {
 
         "text-mochi": "#5447FF",
         "border-mochi": "#6B60FF",
-        "bg-mochi": "#6B60FF33",
+        "bg-mochi": "#6B60FF26",
 
         "text-a11y": "#BD5500",
         "border-a11y": "#FF9E34",
-        "bg-a11y": "#FF9E3433",
+        "bg-a11y": "#FF9E3426",
 
         "text-eto": "#0C56DC",
         "border-eto": "#0C56DC",
-        "bg-eto": "#0C56DC33",
+        "bg-eto": "#0C56DC26",
 
-        "text-rcw": "#DA1699",
-        "border-rcw": "#FF3EBF",
-        "bg-rcw": "#FF3EBF33",
+        "text-blooms": "#DA1699",
+        "border-blooms": "#FF3EBF",
+        "bg-blooms": "#FF3EBF26",
       },
       fontSize: {
         xs: "0.75rem",
@@ -47,7 +47,8 @@ module.exports = {
         md: "0.5rem",
       },
       spacing: {
-        "4xs": "2px",
+        "5xs": "2px",
+        "4xs": "4px",
         "3xs": "8px",
         "2xs": "12px",
         xs: "16px",

@@ -23,22 +23,8 @@ const projectData = [
   //   team: "Mochi Design Team + me",
   //   duration: "Mar 2024 - Present",
   // },
-
   {
     id: 0,
-    project: "a11y",
-    path: "a11y-buddy",
-    title: "A11y Buddy For VSCode",
-    categories: ["ui/ux design", "web development"],
-    description:
-      "A VSCode extension pet care game designed to encourage web developers to proactively implement web accessibility.",
-    alt: "A11y Buddy screenshot",
-    category: "UI/UX, Web Dev",
-    team: "Anna Ohrt + me",
-    duration: "Nov 2023 - May 2024",
-  },
-  {
-    id: 1,
     project: "mochi",
     path: "mochi-health",
     protected: true,
@@ -46,22 +32,47 @@ const projectData = [
     description:
       "Mochi Health's design system, which now supports a platform serving over 100,000 patients.",
     alt: "Preview of design system components",
-    category: "UI/UX",
+    tags: ["2025", "Design systems", "shipped!"],
     team: "Stacia Seetoh + me",
-    duration: "Oct 2024 - Dec 2024",
+    duration: "Dec 2024 - Mar 2025",
+  },
+  {
+    id: 1,
+    project: "blooms",
+    title: "Blooms",
+    tags: ["2024", "Web dev", "design research", "shipped!"],
+    description:
+      "An interactive web app that visualizes gloabl data to highlight women's shared challenges and destigmatize abortion.",
+    alt: "Screenshot of web app: a blue globe and statistics",
+    path: "blooms",
+    team: "Just me!",
+    duration: "Oct 2024",
+    tldr: "tldr",
   },
   {
     id: 2,
+    project: "a11y",
+    path: "a11y-buddy",
+    title: "A11y Buddy For VSCode",
+    tags: ["2024", "Web dev", "product design", "shipped!"],
+    description:
+      "A VSCode extension pet care game designed to encourage web developers to proactively implement web accessibility.",
+    alt: "A11y Buddy screenshot",
+    team: "Anna Ohrt + me",
+    duration: "Nov 2023 - May 2024",
+  },
+
+  {
+    id: 3,
     project: "eto",
     title: "Eat the Ocean",
-    categories: ["design strategy"],
+    tags: ["2023", "Product design"],
     description:
       "A bycatch seafood recipe app designed to reduce waste in the New England fishing industry through awareness and education.",
     alt: "Three screenshotted previews of Eat the Ocean app.",
     path: "eat-the-ocean",
-    category: "Product Design, UI/UX",
     team: "Just me!",
-    duration: "Feb - May 2022",
+    duration: "Feb - May 2023",
   },
   // {
   //   id: 4,
@@ -77,20 +88,6 @@ const projectData = [
   //   duration: "Feb - May 2023",
   //   tldr: "This project was a semester-long Collaborative Study Project, during which a group of 4 other industrial and graphic designers and I sought to increase interdisciplinary collaboration at RISD. Over the course of four months, we designed, tested, and implemented two solutions:",
   // },
-  {
-    id: 3,
-    project: "rcw",
-    title: "Reproductive Care World",
-    categories: ["ui/ux design", "web development"],
-    description:
-      "An interactive web app that visualizes gloabl data to highlight women's shared challenges and destigmatize abortion.",
-    alt: "Screenshot of web app: a blue globe and statistics",
-    path: "repro-care",
-    category: "UI/UX, Web Dev",
-    team: "Just me!",
-    duration: "Jan - Oct 2023",
-    tldr: "tldr",
-  },
   // {
   //     id: 3,
   //     title: 'experiments in p5.js',

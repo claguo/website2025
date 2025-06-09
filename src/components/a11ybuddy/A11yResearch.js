@@ -4,14 +4,6 @@ import UserPersona from "../custom/UserPersona";
 import TextStack from "../general/TextStack";
 import Card from "../general/Card";
 
-import ariel from "../../assets/imgs/personas/ariel.png";
-import arielSoftware from "../../assets/imgs/personas/ariel-software.png";
-import kevin from "../../assets/imgs/personas/kevin.png";
-import kevinSoftware from "../../assets/imgs/personas/kevin-software.png";
-import tamagotchi from "../../assets/imgs/a11ybuddy/tamagotchi.png";
-import sparkle from "../../assets/imgs/a11ybuddy/sparkle.png";
-import vscode from "../../assets/imgs/a11ybuddy/vscode.png";
-
 function A11yResearch() {
   return (
     <Section tagText="Research" project="a11y">
@@ -26,8 +18,8 @@ function A11yResearch() {
           company's website. Aware of its lack of accessibility, she's eager to
           improve it, even as she learns the principles to make effective
           changes."
-          memojiSrc={ariel}
-          softwareSrc={arielSoftware}
+          memojiSrc="https://images.claireguo.com/a11y/personas/ariel.png"
+          softwareSrc="https://images.claireguo.com/a11y/personas/ariel_software.png"
           softwareAlt="VSCode, React, Stardew Valley"
         />
         <UserPersona
@@ -36,18 +28,15 @@ function A11yResearch() {
           motNum={1}
           quote='"Web accessibility is time-consuming and annoying."'
           p="Kevin, an experienced software engineer, views web accessibility as a chore. He often ignores ESLint warnings, believing the impact doesn’t justify extra efforts, prioritizing functionality over accessibility."
-          memojiSrc={kevin}
-          softwareSrc={kevinSoftware}
+          memojiSrc="https://images.claireguo.com/a11y/personas/kevin.png"
+          softwareSrc="https://images.claireguo.com/a11y/personas/kevin_software.png"
           softwareAlt="VSCode, React, ESLint"
         />
       </div>
 
       {/* PAIN POINTS */}
       <div className="flex flex-col gap-md">
-        <TextStack
-          header="Pain point 1"
-          className="font-mono italic text-text-subtle"
-        >
+        <TextStack header="Pain point 1" className="font-mono text-text-subtle">
           <p>
             <span className="text-text-a11y font-medium">
               Perceived low impact{" "}
@@ -56,10 +45,7 @@ function A11yResearch() {
             to the perceived low impact of web accessibility.
           </p>
         </TextStack>
-        <TextStack
-          header="Pain point 2"
-          className="font-mono italic text-text-subtle"
-        >
+        <TextStack header="Pain point 2" className="font-mono text-text-subtle">
           <p>
             <span className="text-text-a11y font-medium">
               Overwhelming rules and guidelines{" "}
@@ -68,10 +54,7 @@ function A11yResearch() {
             to the perceived low impact of web accessibility.
           </p>
         </TextStack>
-        <TextStack
-          header="Pain point 3"
-          className="font-mono italic text-text-subtle"
-        >
+        <TextStack header="Pain point 3" className="font-mono text-text-subtle">
           <p>
             <span className="text-text-a11y font-medium">
               Time-consuming debug process{" "}
@@ -83,19 +66,17 @@ function A11yResearch() {
       </div>
 
       {/* HOW MIGH WE QUESTION */}
-      <span className="text-center mx-xs lg:mx-2xl text-md">
+      <span className="text-center my-md lg:my-lg mx-xs lg:mx-2xl text-md">
         How might we enable and encourage web developers to implement web
         accessibility?
       </span>
 
       {/* DESIGN PRINCIPLES */}
-      <div className="flex flex-col gap-xs lg:flex-row">
-        <Card className="flex-1">
-          <span className="font-mono italic text-text-subtle">
-            Design Principle 1
-          </span>
+      <div className="flex flex-col gap-2xs lg:flex-row">
+        <Card className="border-[1px] p-xs rounded-[4px] flex-1">
+          <span className="font-mono text-text-subtle">Design Principle 1</span>
           <img
-            src={tamagotchi}
+            src="https://images.claireguo.com/a11y/principle_tamagotchi.png"
             alt="Tamagotchi"
             className="h-[140px] object-contain"
           />
@@ -107,12 +88,12 @@ function A11yResearch() {
             </p>
           </TextStack>
         </Card>
-        <Card className="flex-1">
+        <Card className="border-[1px] p-xs rounded-[4px] flex-1">
           <span className="font-mono italic text-text-subtle">
             Design Principle 2
           </span>
           <img
-            src={sparkle}
+            src="https://images.claireguo.com/a11y/principle_sparkle.png"
             alt="Yellow sparkle icon"
             className="h-[140px] object-contain"
           />
@@ -122,12 +103,12 @@ function A11yResearch() {
             </p>
           </TextStack>
         </Card>
-        <Card className="flex-1">
+        <Card className="border-[1px] p-xs rounded-[4px] flex-1">
           <span className="font-mono italic text-text-subtle">
             Design Principle 3
           </span>
           <img
-            src={vscode}
+            src="https://images.claireguo.com/a11y/principle_vscode.png"
             alt="VSCode logo"
             className="h-[140px] object-contain"
           />

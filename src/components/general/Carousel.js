@@ -18,15 +18,15 @@ function Carousel({ title, items, delay = 6000 }) {
   };
 
   return (
-    <div className="flex flex-col gap-xs lg:gap-sm items-center">
+    <div className="w-full flex flex-col gap-xs lg:gap-sm items-center">
       <div className="flex flex-col lg:flex-row-reverse gap-xs lg:gap-md items-center">
         <img
           src={items[currentIndex].src}
           alt={items[currentIndex].alt}
-          className="w-[400px]"
+          className="lg:w-[600px]"
         />
         <div className="flex flex-col gap-3xs lg:gap-2xs items-center lg:items-start">
-          <span className="font-mono italic">{title}</span>
+          <span className="font-mono">{title}</span>
           <p className="text-center lg:text-left">
             {items[currentIndex].description}
           </p>

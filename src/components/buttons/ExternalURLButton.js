@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import Button from "./Button";
 
-function ExternalURLButton(props) {
-  const externalUrl = props.url;
+function ExternalURLButton({ url, plainText, className, text, icon }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleButtonClick = () => {
     // Open the external URL in a new tab
-    window.open(externalUrl, "_blank");
+    window.open(url, "_blank");
   };
 
   return (
     <>
-      {props.plaintext === true ? (
+      {plainText === true ? (
         <div
           onMouseEnter={() => {
             setIsHovered(true);
@@ -20,20 +18,24 @@ function ExternalURLButton(props) {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={`font-mono italic inline-block cursor-pointer ${
-            props.className
-          } ${isHovered ? "text-blue" : "text-text-default"}`}
+          className={`font-mono inline-block cursor-pointer ${className} ${
+            isHovered ? "text-pink italic" : ""
+          }`}
           onClick={handleButtonClick}
+          tabIndex={0}
+          role="link"
         >
-          <span className="flex items-center">{props.text}</span>
+          <span className="flex items-center gap-3xs">
+            {text} {icon && icon}
+          </span>
         </div>
       ) : (
-        // plaintext === true
-        <Button
+        <div
           onClick={handleButtonClick}
-          text={props.text}
-          icon={props.icon}
-        />
+          className="flex items-center gap-3xs font-mono cursor-pointer px-xs py-3xs hover:text-pink"
+        >
+          {text} {icon && icon}
+        </div>
       )}
     </>
   );

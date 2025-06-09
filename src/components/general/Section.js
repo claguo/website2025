@@ -10,7 +10,7 @@ function Section({ tagText, project, children, className }) {
       `}
     >
       <Tag text={tagText} theme={project} />
-      <div className="flex flex-col gap-lg lg:gap-2xl">{children}</div>
+      <div className="flex flex-col gap-lg lg:gap-xl w-full">{children}</div>
     </section>
   );
 }

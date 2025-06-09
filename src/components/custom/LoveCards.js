@@ -1,23 +1,44 @@
 import React from "react";
 import LoveCard from "./LoveCard";
-import cereal from "../../assets/imgs/about/lovecereal.png";
-import marina from "../../assets/imgs/about/lovemarina.webp";
-import grass from "../../assets/imgs/about/lovegrass.jpeg";
-import out from "../../assets/imgs/about/loveout.webp";
-import debussy from "../../assets/imgs/about/lovedebussy.jpg";
-import val from "../../assets/imgs/about/loveval.PNG";
-import snow from "../../assets/imgs/about/lovesnow.JPG";
 
 function LoveCards() {
   return (
-    <div className="flex flex-col">
-      <LoveCard src={grass} text="Sitting in the grass" />
-      <LoveCard src={val} text="Trying to hit diamond in Valorant" />
-      <LoveCard src={cereal} text="Eating cereal" />
-      <LoveCard src={debussy} text="Learning Debussy's Arabesques" />
-      <LoveCard src={marina} text="Looking for Marina in Animal Crossing" />
-      <LoveCard src={snow} text="Waiting for it to snow" />
-      <LoveCard src={out} text="Reading OUT by Natsuo Kirino" />
+    <div className="flex lg:flex-col flex items-center gap-xs lg:gap-0 overflow-x-scroll scrollbar-hide">
+      <LoveCard
+        src="https://images.claireguo.com/about/benny.png"
+        text="Hanging out with Benny"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/grass.jpeg"
+        text="Sitting in the grass"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/valorant.png"
+        text="Trying to hit diamond in Valorant"
+        imgClassName="max-w-[200px]"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/cereal.png"
+        text="Eating cereal"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/debussy.jpg"
+        text="Learning Debussy's Arabesques"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/marina.webp"
+        text="Looking for Marina in Animal Crossing"
+        imgClassName="max-w-[150px]"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/snow.jpg"
+        text="Waiting for it to snow"
+      />
+      <LoveCard
+        src="https://images.claireguo.com/about/out.webp"
+        text="Reading OUT by Natsuo Kirino"
+        imgClassName="max-w-[200px]"
+      />
     </div>
   );
 }

@@ -7,12 +7,10 @@ import NextSteps from "../components/custom/NextSteps";
 import ContentWrapper from "../components/general/ContentWrapper";
 import SecondaryPage from "../components/general/SecondaryPage";
 
-import hero from "../assets/imgs/a11ybuddy/hero.png";
-
 function A11yBuddy() {
   return (
     <SecondaryPage>
-      <ProjectHero src={hero} />
+      <ProjectHero />
       <ContentWrapper>
         <TLDR />
         <Research />

@@ -1,53 +1,53 @@
 import React from "react";
+import Button from "../buttons/Button";
 import ExternalURLButton from "../buttons/ExternalURLButton";
-import SplitHover from "../custom/SplitHoverEffects";
 
 function Hero() {
   return (
-    <div
-      className="flex flex-col text-center items-center mx-xs pt-[180px] pb-3xl gap-3xs 
-      lg:justify-end lg:px-sm lg:h-[96vh] lg:gap-md"
-    >
-      <div className="flex flex-row lg:flex-row gap-xs lg:gap-md items-center">
-        <SplitHover text="claire" styling="italic" />
-        <div className="flex gap-[0.5em]">
-          <SplitHover text="✶" styling="color" />
-          <SplitHover text="✶" styling="color" />
-        </div>
-        <SplitHover text="guo" styling="italic" />
+    <div className="flex flex-col pt-3xl px-xs lg:px-[20px] pb-lg lg:pb-[120px] lg:gap-md gap-sm max-w-[405px]">
+      <div className="text-sm">
+        Improving access to healthcare and building design systems at
+        <ExternalURLButton
+          url="https://joinmochi.com/"
+          text="&nbsp;Mochi Health"
+          plainText={true}
+        />
+        . BFA in
+        <ExternalURLButton
+          url="https://id.risd.edu/"
+          text="&nbsp;Design&nbsp;"
+          plainText={true}
+        />
+        and
+        <ExternalURLButton
+          url="https://ctc.risd.edu/"
+          text="Computation&nbsp;"
+          plainText={true}
+        />
+        at
+        <ExternalURLButton
+          url="https://www.risd.edu/"
+          text="&nbsp;RISD"
+          plainText={true}
+        />
+        .
       </div>
-
-      <div>
-        <div className="text-sm">
-          Product Designer @&nbsp;
-          <ExternalURLButton
-            url="https://joinmochi.com/"
-            text="Mochi Health"
-            plaintext={true}
-          />
-          .
-        </div>
-        <div className="text-sm">
-          Previously @&nbsp;
-          <ExternalURLButton
-            url="https://www.mlb.com/astros"
-            text="Houston Astros"
-            plaintext={true}
-          />
-          ,&nbsp;
-          <ExternalURLButton
-            url="https://www.ridehitch.com"
-            text="Hitch"
-            plaintext={true}
-          />
-          , and&nbsp;
-          <ExternalURLButton
-            url="https://www.risd.edu/"
-            text="RISD"
-            plaintext={true}
-          />
-          .
-        </div>
+      <div className="flex flex-col gap-0">
+        <Button
+          text="claireguo@gmail.com"
+          onClick={() => (window.location = "mailto:claireguo@gmail.com")}
+          plainText={true}
+        />
+        <ExternalURLButton
+          text="github"
+          url="https://github.com/claguo"
+          plainText={true}
+        />
+        <ExternalURLButton
+          text="linkedin"
+          url="https://www.linkedin.com/in/claguo"
+          plainText={true}
+        />
       </div>
     </div>
   );

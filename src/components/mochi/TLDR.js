@@ -20,14 +20,14 @@ function TLDR() {
       </p>
       <ProjectSummary />
       <Callout title="Components I Designed">
-        <p className="mb-2xs">
+        <p>
           Alert, Blanket, Button, Card, Checkbox, Code Input, Date Picker,
           Drawer, Dropdown, Modal, Notification, Password Input, Radio, Tag,
           Text Area, Text FIeld, Time Picker, and Toast
         </p>
       </Callout>
       <Callout title="Tokens I Defined">
-        <p className="mb-2xs">Color, Spacing, and Typography</p>
+        <p>Color, Spacing, and Typography</p>
       </Callout>
     </Section>
   );

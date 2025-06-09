@@ -13,7 +13,7 @@ function UserPersona({
   softwareAlt,
 }) {
   return (
-    <Card>
+    <Card className="border-[1px] p-xs rounded-[4px]">
       <div className="w-full flex gap-xs items-center">
         <img
           src={memojiSrc}

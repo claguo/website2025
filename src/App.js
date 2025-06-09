@@ -12,12 +12,12 @@ import About from "./pages/About";
 import Footer from "./components/general/Footer";
 import Mochi from "./pages/Mochi";
 import A11yBuddy from "./pages/A11yBuddy";
-import CollabRISD from "./pages/CollabRISD";
 import EatTheOcean from "./pages/EatTheOcean";
-import ReproCare from "./pages/ReproCare";
+import Blooms from "./pages/Blooms";
 import { ProjectContextProvider } from "./context/ProjectContext";
 import ScrollToTop from "./components/general/ScrollToTop";
 import Login from "./pages/Login";
+
 function BackgroundColor({ children }) {
   const location = useLocation();
 
@@ -45,14 +45,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/mochi-health" element={<Mochi />} />
           <Route path="/a11y-buddy" element={<A11yBuddy />} />
-          <Route path="/collab-risd" element={<CollabRISD />} />
-          <Route path="/repro-care" element={<ReproCare />} />
+          {/* <Route path="/collab-risd" element={<CollabRISD />} /> */}
+          <Route path="/blooms" element={<Blooms />} />
           <Route path="/eat-the-ocean" element={<EatTheOcean />} />
           <Route path="/login" element={<Login />} />
           <Route
-            path="/repro-web-app"
+            path="/blooms"
             component={() => {
-              window.location.href = "https://repro-care-world.netlify.app/";
+              window.location.href = "https://blooms-globe.netlify.app/";
               return null;
             }}
           />

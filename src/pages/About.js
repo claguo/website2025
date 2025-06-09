@@ -1,9 +1,8 @@
 import React, { useLayoutEffect } from "react";
-
-import pfp from "../assets/imgs/pfp.jpg";
-import SecondaryPage from "../components/general/SecondaryPage";
 import Section from "../components/general/Section";
 import LoveCards from "../components/custom/LoveCards";
+import ExternalURLButton from "../components/buttons/ExternalURLButton";
+import Button from "../components/buttons/Button";
 
 function AboutPage() {
   useLayoutEffect(() => {
@@ -11,78 +10,84 @@ function AboutPage() {
   });
 
   return (
-    <SecondaryPage>
-      {/* <div className="mx-xs lg:mx-sm flex flex-col mt-4xl max-w-[928px] items-center gap-md lg:flex-row"> */}
-
-      <section
-        className="flex flex-col lg:flex-row text-text-default
-        py-2xl gap-md items-center
-        lg:px-lg lg:py-[196px] lg:gap-xl max-w-[1200px]"
-      >
-        <img
-          src={pfp}
-          alt="Me, holding my cat Benny"
-          className="object-cover object-[0%_33%] lg:object-center max-h-[240px] lg:max-h-none w-full lg:w-[30%] rounded-[16px]"
-        />
-
-        <div className="flex flex-col gap-lg lg:gap-xl items-center">
-          <div className="flex flex-col gap-2xs">
-            <p>
-              I'm <span className="font-medium text-pink">Claire</span>, a
-              product designer passionate about building social equity through
-              design. At the core of my design practice is a desire to learn
-              about and work with a diverse range of people and problems to
-              enable me to create more empathetic and inclusive designs.
-            </p>
-            <span className="font-mono italic">
-              RISD BFA Industrial Design + Computation '24
-            </span>
+    <section className="px-xs lg:px-[20px] flex flex-col pt-3xl pb-lg w-screen overflow-hidden">
+      {/* <div className="flex flex-col pt-3xl pb-lg lg:pb-[120px] lg:gap-md gap-sm w-full"> */}
+      <div className="flex flex-col-reverse lg:flex-row lg:gap-md pb-xl gap-sm lg:gap-xl w-full justify-between">
+        <div className="flex flex-col lg:gap-md gap-sm max-w-[405px]">
+          <p className="text-sm text-left">
+            I'm Claire, a product designer passionate about building social
+            equity through design. At the core of my design practice is a desire
+            to learn about and work with a diverse range of people and problems
+            to enable me to create more empathetic and inclusive designs.
+          </p>
+          <div className="text-sm text-left">
+            Currently at{" "}
+            <ExternalURLButton
+              text="Mochi Health"
+              url="https://joinmochi.com/"
+              plainText={true}
+            />
+            . Previously at{" "}
+            <ExternalURLButton
+              text="Hitch"
+              url="https://www.hitch.com/"
+              plainText={true}
+            />{" "}
+            and{" "}
+            <ExternalURLButton
+              text="RISD"
+              url="https://www.risd.edu/"
+              plainText={true}
+            />{" "}
+            <ExternalURLButton
+              text="Industrial Design"
+              url="https://id.risd.edu/"
+              plainText={true}
+            />{" "}
+            +{" "}
+            <ExternalURLButton
+              text="Computation"
+              url="https://ctc.risd.edu/"
+              plainText={true}
+            />
+            .
           </div>
-          <Section
-            tagText="Outside of the studio, I am..."
-            project="rcw"
-            className="w-full"
-          >
-            <LoveCards />
-          </Section>
-        </div>
+          <div className="flex flex-col gap-0">
+            <Button
+              text="claireguo@gmail.com"
+              onClick={() => (window.location = "mailto:claireguo@gmail.com")}
+              plainText={true}
+            />
+            <ExternalURLButton
+              text="github"
+              url="https://github.com/claguo"
+              plainText={true}
+            />
+            <ExternalURLButton
+              text="linkedin"
+              url="https://www.linkedin.com/in/claguo"
+              plainText={true}
+            />
+          </div>
 
-        {/* <section className="flex justify-between hidden lg:not-hidden">
-          <img
-            src={smoliv}
-            alt="Smoliv the Pokemon"
-            className="w-[10%] object-contain"
-          />
-          <img
-            src={tulip}
-            alt="A pink tulip"
-            className="w-[10%] object-contain"
-          />
-          <img src={keroppi} alt="Keroppi" className="w-[10%] object-contain" />
-          <img
-            src={lily}
-            alt="Lily from Animal Crossing"
-            className="w-[10%] object-contain px-xs"
-          />
-          <img
-            src={smoliv}
-            alt="Smoliv the Pokemon"
-            className="w-[10%] object-contain"
-          />
-          <img
-            src={tulip}
-            alt="A pink tulip"
-            className="w-[10%] object-contain"
-          />
-          <img src={keroppi} alt="Keroppi" className="w-[10%] object-contain" />
-          <img
-            src={lily}
-            alt="Lily from Animal Crossing"
-            className="w-[10%] object-contain px-xs"
-          />
-        </section> */}
-      </section>
-    </SecondaryPage>
+          <span className="text-md">*</span>
+        </div>
+        <img
+          src="https://images.claireguo.com/about/pfp.jpg"
+          alt="Me, holding my cat, Benny"
+          className="object-cover object-[0%_33%] lg:object-center max-h-[240px] lg:max-h-none w-full lg:w-[20%] rounded-[4px]"
+        />
+      </div>
+
+      <Section
+        tagText="Outside of the studio, I am..."
+        project="blooms"
+        className="w-full"
+      >
+        <LoveCards />
+      </Section>
+      {/* </div> */}
+    </section>
   );
 }
 

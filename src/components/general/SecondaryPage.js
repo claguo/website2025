@@ -2,7 +2,7 @@ import React from "react";
 
 function SecondaryPage({ children }) {
   return (
-    <section className="mx-xs lg:mx-sm flex flex-col items-center">
+    <section className="w-full mx-xs lg:mx-[20px] flex flex-col items-center">
       {children}
     </section>
   );

@@ -1,61 +1,82 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
+import Tag from "../general/Tag";
 
 function ProjectCard({ project, size, className }) {
   const [isHovered, setIsHovered] = useState(false);
-  const src = `./imgs/${project.project}-cover.png`;
+  const src = `https://images.claireguo.com/${project.project}-cover.png`;
 
   return (
     <>
-      <Link
-        to={project.protected ? "/login" : `/${project.path}`}
-        onMouseEnter={() => {
-          setIsHovered(true);
-        }}
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }}
-        className={`flex flex-col-reverse gap-sm lg:items-center lg:flex-row lg:gap-md lg:flex-1 ${className}`}
-      >
-        {size === "sm" ? (
-          <div
-            className={`flex flex-col items-end gap-3xs lg:gap-2xs w-[216px] ${
-              isHovered ? "text-pink" : ""
-            }`}
-          >
+      {size === "sm" ? (
+        <Link
+          to={project.protected ? "/login" : `/${project.path}`}
+          onMouseEnter={() => {
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+          }}
+          className={`flex flex-col lg:items-center gap-2xs lg:gap-xs lg:flex-1 shrink-0 w-[240px] ${
+            isHovered ? "text-pink italic" : ""
+          } ${className}`}
+        >
+          <div className="flex overflow-hidden rounded-sm object-cover w-full">
             <img
               src={src}
               alt={project.alt}
-              className="w-full object-contain p-3xs lg:px-sm py-3xs lg:py-sm bg-bg-white lg:bg-bg-gray border-[1px] border-border-default rounded-[8px]"
+              className={`duration-500 ${isHovered ? "scale-[1.025]" : ""}`}
             />
-            <span className="font-mono italic w-full h-[3em]">
-              {project.title}
-            </span>
-            <IoMdArrowForward className="text-[20px]" />
           </div>
-        ) : (
-          <>
-            <div className="flex flex-col gap-3xs items-end">
-              <h3
-                className={`w-full text-sm font-mono italic lg:text-md lg:spacing-tight ${
-                  isHovered ? "text-pink" : ""
-                }`}
-              >
-                {project.title}
-              </h3>
-              <p className="text-sm font-sans">{project.description}</p>
-              <IoMdArrowForward className="text-[20px] lg:hidden" />
-            </div>
-
+          <div className="flex flex-col lg:flex-row w-full justify-between">
+            <span className="font-mono w-full">{project.title}</span>
+            <IoMdArrowForward className="text-[16px] hidden lg:block" />
+          </div>
+        </Link>
+      ) : (
+        <Link
+          to={project.protected ? "/login" : `/${project.path}`}
+          onMouseEnter={() => {
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+          }}
+          className="flex flex-col gap-xs lg:gap-sm lg:w-[calc(50%-4px)]"
+        >
+          <div className="flex justify-between items-center overflow-hidden rounded-sm">
             <img
               src={src}
               alt={project.alt}
-              className={`w-full lg:w-[328px] object-contain lg:px-md py-xs lg:py-sm bg-bg-white lg:bg-bg-gray border-[1px] border-border-default rounded-[12px]`}
+              className={`duration-500 ${isHovered ? "scale-[1.015]" : ""}`}
             />
-          </>
-        )}
-      </Link>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-3xs lg:gap-xl px-4xs w-full">
+            <h3
+              className={`lg:w-1/3 lg:text-[16px] font-mono ${
+                isHovered ? "text-pink italic" : ""
+              }`}
+            >
+              {project.title}
+            </h3>
+
+            <div className="flex flex-col gap-2xs">
+              <p className="text-sm font-sans">{project.description}</p>
+              <div className="flex justify-between items-center">
+                <div className="flex flex-wrap gap-3xs">
+                  {project.tags.map((tag, index) => (
+                    <Tag key={index} text={tag}>
+                      {tag}
+                    </Tag>
+                  ))}
+                </div>
+                <IoMdArrowForward className="text-[16px] lg:hidden" />
+              </div>
+            </div>
+          </div>
+        </Link>
+      )}
     </>
   );
 }

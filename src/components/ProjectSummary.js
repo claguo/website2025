@@ -6,29 +6,22 @@ function ProjectSummary() {
   const path = useLocation().pathname.slice(1);
   const project = useProjectContext().find((project) => project.path === path);
 
+  if (!project) return null;
+
   return (
-    <div className="flex gap-xs lg:text-sm lg:text-sm lg:justify-between lg:gap-[3rem] text-xs lg:text-sm">
-      <div className="flex flex-col gap-3xs lg:gap-xs flex-1">
-        <span className="font-mono text-text-subtle text-sm italic">
-          {" "}
-          Category{" "}
-        </span>
-        <p> {project.category} </p>
+    <div className="flex gap-xs lg:text-sm lg:text-sm lg:justify-between lg:gap-md text-sm">
+      <div className="flex flex-col gap-3xs lg:gap-2xs flex-1">
+        <span className="font-mono text-text-subtle text-sm"> What? </span>
+        <p className="text-text-default">{project.tags.slice(1).join(", ")}</p>
       </div>
 
-      <div className="flex flex-col gap-3xs lg:gap-xs flex-1">
-        <span className="font-mono text-text-subtle text-sm italic">
-          {" "}
-          Team{" "}
-        </span>
+      <div className="flex flex-col gap-3xs lg:gap-2xs flex-1">
+        <span className="font-mono text-text-subtle text-sm"> Who? </span>
         <p> {project.team} </p>
       </div>
 
-      <div className="flex flex-col gap-3xs lg:gap-xs flex-1">
-        <span className="font-mono text-text-subtle text-sm italic">
-          {" "}
-          Duration{" "}
-        </span>
+      <div className="flex flex-col gap-3xs lg:gap-2xs flex-1">
+        <span className="font-mono text-text-subtle text-sm"> When? </span>
         <p> {project.duration} </p>
       </div>
     </div>

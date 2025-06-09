@@ -1,6 +1,5 @@
 import React from "react";
 import TextStack from "./TextStack";
-import { IoStarSharp } from "react-icons/io5";
 
 function Callout({ title, children, className }) {
   return (
@@ -10,8 +9,9 @@ function Callout({ title, children, className }) {
         ${className}
       `}
     >
-      <IoStarSharp className="text-text-subtle text-[16px] flex-shrink-0 lg:my-[3px]" />
-      <TextStack header={title} className="text-text-subtle font-mono italic">
+      {/* <IoStarSharp className="text-text-subtle text-[16px] flex-shrink-0" /> */}
+      <span className="text-md">*</span>
+      <TextStack header={title} className="mt-[1px] text-text-subtle font-mono">
         {children}
       </TextStack>
     </section>

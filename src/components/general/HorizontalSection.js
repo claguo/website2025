@@ -7,7 +7,7 @@ function HorizontalSection({ src, alt, title, description }) {
       <TextStack header={title} className="font-medium">
         {description}
       </TextStack>
-      <img src={src} alt={alt} className="w-[400px]" />
+      <img src={src} alt={alt} className="w-[600px]" />
     </div>
   );
 }

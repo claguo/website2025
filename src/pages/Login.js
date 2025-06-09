@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import Button from "../components/buttons/Button";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { IoArrowBackSharp } from "react-icons/io5";
+import Clicksplosion from "../components/custom/Clicksplosion";
 
 function Login() {
   const [password, setPassword] = useState("");
@@ -38,7 +39,7 @@ function Login() {
     <div className="p-3xs fixed w-screen h-screen bg-bg-gray flex flex-col">
       <Button
         text=""
-        icon={<IoArrowBackSharp className="text-[20px] text-text-default" />}
+        icon={<IoArrowBackSharp className="text-[16px] text-text-default" />}
         className=""
         onClick={() => {
           if (window.history.length > 1) {
@@ -56,18 +57,23 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleLogin()}
           placeholder="Password"
-          size={password.length || 7}
-          className="bg-transparent outline-none inline-block border-none font-mono italic inline-block caret-pink pl-[1rem] py-[0.5rem]"
+          size={password.length || 10}
+          className="bg-transparent outline-none inline-block text-[16px] border-none font-mono inline-block caret-pink py-[0.5rem]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           autoFocus={true}
         />
         {password !== "" ? (
-          <Button
-            text=""
-            onClick={handleLogin}
-            icon={<IoArrowForwardSharp />}
-          />
+          // <Button
+          //   text=""
+          //   onClick={handleLogin}
+          //   icon={<IoArrowForwardSharp />}
+          // />
+          <Clicksplosion>
+            <div onClick={handleLogin} className="p-xs cursor-pointer">
+              <IoArrowForwardSharp className="text-[16px] text-text-default" />
+            </div>
+          </Clicksplosion>
         ) : null}
       </div>
     </div>
