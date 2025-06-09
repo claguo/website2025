@@ -47,6 +47,13 @@ function Mochi() {
           </TextStack>
         </Section>
         <Section tagText="the system in use" project="mochi">
+          <video className="rounded-md w-full" controls autoPlay muted loop>
+            <source
+              src="https://images.claireguo.com/mochi/video_mobile-app.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
           <img
             src="https://images.claireguo.com/mochi/in-use.png"
             alt="Bento Design System used in various app designs"
