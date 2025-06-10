@@ -17,7 +17,7 @@ function SplitHover(props) {
   };
 
   return (
-    <div className="flex">
+    <div className="flex overflow-visible">
       {props.styling === "italic"
         ? split.map((char, index) => (
             <span

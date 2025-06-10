@@ -35,25 +35,29 @@ function Navbar() {
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== "undefined") {
-        if (window.scrollY > lastScrollY) {
-          // if scroll down hide the navbar
+        const currentScrollY = window.scrollY;
+
+        // Set a threshold to ignore tiny scroll movements / bounce effects
+        const threshold = 5;
+
+        if (currentScrollY > lastScrollY + threshold) {
+          // Scrolling down — hide nav
           setShow(false);
-        } else if (window.scrollY === 0) {
-          setShow(true);
-        } else {
-          // if scroll up show the navbar
+        } else if (
+          currentScrollY < lastScrollY - threshold ||
+          currentScrollY <= threshold
+        ) {
+          // Scrolling up or near top — show nav
           setShow(true);
         }
 
-        // remember current page location to use in the next move
-        setLastScrollY(window.scrollY);
+        setLastScrollY(currentScrollY);
       }
     };
 
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
+      window.addEventListener("scroll", controlNavbar, { passive: true });
 
-      // cleanup function
       return () => {
         window.removeEventListener("scroll", controlNavbar);
       };
