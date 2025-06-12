@@ -13,7 +13,7 @@ function Footer() {
   );
 
   return (
-    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md lg:justify-self-center w-screen overflow-scroll lg:max-w-[1200px]">
+    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md lg:justify-self-center w-screen lg:max-w-[1200px]">
       <SplitHover text="*" styling="color" className="text-lg cursor-default" />
       {currentProject && <span className="font-mono">Other projects</span>}
 

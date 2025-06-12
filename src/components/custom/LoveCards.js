@@ -3,7 +3,7 @@ import LoveCard from "./LoveCard";
 
 function LoveCards() {
   return (
-    <div className="flex lg:flex-col flex items-center gap-xs lg:gap-0 overflow-x-scroll scrollbar-hide">
+    <div className="flex lg:flex-col flex items-center gap-xs lg:gap-0 overflow-x-scroll scrollbar-hidden">
       <LoveCard
         src="https://images.claireguo.com/about/benny.png"
         text="Hanging out with Benny"
