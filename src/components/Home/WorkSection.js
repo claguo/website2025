@@ -68,7 +68,7 @@ function WorkSection() {
           filters={filters}
         />
       </div> */}
-      <div className="flex flex-wrap mx-xs lg:mx-[20px] gap-xl lg:gap-x-3xs lg:gap-y-3xl">
+      <div className="flex flex-wrap w-full px-xs lg:px-[20px] gap-xl lg:gap-x-3xs lg:gap-y-3xl">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

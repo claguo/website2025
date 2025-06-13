@@ -54,6 +54,10 @@ function Mochi() {
             />
             Your browser does not support the video tag.
           </video>
+          <caption className="-mt-sm lg:-mt-md text-xs lg:text-base text-text-subtle">
+            (Wonderful amazing video by Michelle Dang!)
+          </caption>
+
           <img
             src="https://images.claireguo.com/mochi/in-use.png"
             alt="Bento Design System used in various app designs"
