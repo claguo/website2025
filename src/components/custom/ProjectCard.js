@@ -12,6 +12,7 @@ function ProjectCard({ project, size, className }) {
       {size === "sm" ? (
         <Link
           to={project.protected ? "/login" : `/${project.path}`}
+          state={project.protected ? { from: `/${project.path}` } : null}
           onMouseEnter={() => {
             setIsHovered(true);
           }}
@@ -37,6 +38,7 @@ function ProjectCard({ project, size, className }) {
       ) : (
         <Link
           to={project.protected ? "/login" : `/${project.path}`}
+          state={project.protected ? { from: `/${project.path}` } : null}
           onMouseEnter={() => {
             setIsHovered(true);
           }}

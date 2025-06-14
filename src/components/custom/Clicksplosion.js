@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 const colours = ["#002EDF", "#4690FF", "#66EFDF", "#BBB6FF"];
-const sparks = 60;
+const sparks = 40;
 const bangs = 5;
 const speed = 33;
 
@@ -19,15 +19,17 @@ function Clicksplosion({ children }) {
   const swide = window.innerWidth;
   const shigh = window.innerHeight;
 
+  const shapes = ["*"];
+
   useEffect(() => {
     for (let i = 0; i < bangs * sparks; i++) {
       const div = document.createElement("div");
-      div.style.position = "absolute";
-      div.style.font = "13px";
+      div.style.position = "fixed";
+      div.style.font = "18px";
       div.style.color = colours[i % colours.length];
       div.style.zIndex = 9999;
       div.style.visibility = "hidden";
-      div.textContent = "*";
+      div.textContent = shapes[Math.floor(Math.random() * shapes.length)];
       document.body.appendChild(div);
       starsRef.current[i] = div;
     }
@@ -63,10 +65,11 @@ function Clicksplosion({ children }) {
   };
 
   const doClicksplosion = (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
+    const x = e.clientX; // ✅ was e.clientX
+    const y = e.clientY; // ✅ was e.clientY
     const N = ++countRef.current % bangs;
     intensityRef.current[N] = 5 + Math.random() * 4;
+
     for (let i = N * sparks; i < (N + 1) * sparks; i++) {
       XposRef.current[i] = x;
       YposRef.current[i] = y;
@@ -76,6 +79,7 @@ function Clicksplosion({ children }) {
         (intensityRef.current[N] - Math.abs(dYRef.current[i])) *
         1.25;
       decayRef.current[i] = 16 + Math.floor(Math.random() * 16);
+
       const star = starsRef.current[i].style;
       star.left = `${x}px`;
       star.top = `${y}px`;
@@ -83,6 +87,7 @@ function Clicksplosion({ children }) {
       star.visibility = "visible";
       star.color = colours[Math.floor(Math.random() * colours.length)];
     }
+
     clearTimeout(timersRef.current[N]);
     bang(N);
   };

@@ -17,6 +17,7 @@ import Blooms from "./pages/Blooms";
 import { ProjectContextProvider } from "./context/ProjectContext";
 import ScrollToTop from "./components/general/ScrollToTop";
 import Login from "./pages/Login";
+import ProtectedRoute from "./components/general/ProtectedRoute";
 
 function BackgroundColor({ children }) {
   const location = useLocation();
@@ -43,7 +44,14 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/mochi-health" element={<Mochi />} />
+          <Route
+            path="/mochi-health"
+            element={
+              <ProtectedRoute>
+                <Mochi />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/a11y-buddy" element={<A11yBuddy />} />
           {/* <Route path="/collab-risd" element={<CollabRISD />} /> */}
           <Route path="/blooms" element={<Blooms />} />

@@ -6,7 +6,7 @@ import Button from "../buttons/Button";
 import { useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
-
+import Clicksplosion from "../custom/Clicksplosion";
 function Navbar() {
   const location = useLocation();
   const [active, setActive] = useState(null);
@@ -125,26 +125,28 @@ function Navbar() {
             active === "/" ? "bg-bg-gray" : "bg-bg-white"
           } ${show ? "opacity-100" : "opacity-0"}`}
         >
-          <Link
-            to="/"
-            className="flex flex-row lg:flex-row gap-2xs px-xs py-3xs items-center cursor-pointer"
-          >
-            <SplitHover
-              text="claire"
-              styling="italic"
-              className="font-mono text-md"
-            />
-            <SplitHover
-              text="*"
-              styling="color"
-              className="font-sans text-md"
-            />
-            <SplitHover
-              text="guo"
-              styling="italic"
-              className="font-mono text-md"
-            />
-          </Link>
+          <Clicksplosion>
+            <Link
+              to="/"
+              className="flex flex-row lg:flex-row gap-2xs px-xs py-3xs items-center cursor-pointer"
+            >
+              <SplitHover
+                text="claire"
+                styling="italic"
+                className="font-mono text-md"
+              />
+              <SplitHover
+                text="*"
+                styling="color"
+                className="font-sans text-md"
+              />
+              <SplitHover
+                text="guo"
+                styling="italic"
+                className="font-mono text-md"
+              />
+            </Link>
+          </Clicksplosion>
 
           <div className="flex gap-xl">
             <Button text="work" to="/" />

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import SplitHover from "../custom/SplitHoverEffects";
 import ProjectCard from "../custom/ProjectCard";
+import Clicksplosion from "../custom/Clicksplosion";
 
 import { useProjectContext } from "../../context/ProjectContext";
 
@@ -12,9 +12,24 @@ function Footer() {
     (project) => project.path === path.slice(1),
   );
 
+  const colors = ["text-blue", "italic text-green", "text-pink"];
+  const [color, setColor] = useState("#000");
+
+  const handleClick = () => {
+    const random = colors[Math.floor(Math.random() * colors.length)];
+    setColor(random);
+  };
+
   return (
-    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md lg:justify-self-center w-screen lg:max-w-[1200px]">
-      <SplitHover text="*" styling="color" className="text-lg cursor-default" />
+    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md lg:justify-self-center w-full lg:max-w-[1200px]">
+      <Clicksplosion>
+        <span
+          onClick={handleClick}
+          className={`text-lg cursor-pointer ${color}`}
+        >
+          *
+        </span>
+      </Clicksplosion>
       {currentProject && <span className="font-mono">Other projects</span>}
 
       {currentProject && (

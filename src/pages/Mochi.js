@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import Cookies from "js-cookie";
 import ContentWrapper from "../components/general/ContentWrapper";
 import ProjectHero from "../components/ProjectHero";
 import Section from "../components/general/Section";
@@ -6,6 +9,18 @@ import TLDR from "../components/mochi/TLDR";
 import TextStack from "../components/general/TextStack";
 
 function Mochi() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const password = Cookies.get("password");
+    if (password !== "amphibian") {
+      navigate("/login", {
+        state: { from: location.pathname },
+      });
+    }
+  }, [navigate, location]);
+
   return (
     <SecondaryPage>
       <ProjectHero />
@@ -54,9 +69,9 @@ function Mochi() {
             />
             Your browser does not support the video tag.
           </video>
-          <caption className="-mt-sm lg:-mt-md text-xs lg:text-base text-text-subtle">
+          <span className="text-center -mt-sm lg:-mt-md text-xs lg:text-base text-text-subtle">
             (Wonderful amazing video by Michelle Dang!)
-          </caption>
+          </span>
 
           <img
             src="https://images.claireguo.com/mochi/in-use.png"

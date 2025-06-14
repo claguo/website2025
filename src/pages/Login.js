@@ -1,35 +1,35 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import Button from "../components/buttons/Button";
-import { IoArrowForwardSharp } from "react-icons/io5";
-import { IoArrowBackSharp } from "react-icons/io5";
+import { IoArrowForwardSharp, IoArrowBackSharp } from "react-icons/io5";
 import Clicksplosion from "../components/custom/Clicksplosion";
 
 function Login() {
   const [password, setPassword] = useState("");
   const [isHovered, setIsHovered] = useState(false);
-
   const PASSWORD_COOKIE_NAME = "password";
+
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from ?? "/";
+
   useEffect(() => {
-    // Check for existing password cookie on component mount
     const savedPassword = Cookies.get(PASSWORD_COOKIE_NAME);
-    if (savedPassword) {
-      setPassword(savedPassword);
+    if (savedPassword === "amphibian") {
+      navigate(from, { replace: true });
     }
-  }, []);
+  }, [from, navigate]);
 
   const handleLogin = () => {
     if (password === "amphibian") {
-      // Store the password in cookie
       Cookies.set(PASSWORD_COOKIE_NAME, password, {
-        expires: 1, // Cookie expires in 1 day
-        secure: true, // Only sent over HTTPS
+        expires: 1,
+        secure: true,
         sameSite: "strict",
         path: "/",
       });
-      navigate("/mochi-health");
+      navigate(from, { replace: true });
     } else {
       alert("Incorrect password");
     }
@@ -61,20 +61,15 @@ function Login() {
           className="bg-transparent outline-none inline-block text-[16px] border-none font-mono inline-block caret-pink py-[0.5rem]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          autoFocus={true}
+          autoFocus
         />
-        {password !== "" ? (
-          // <Button
-          //   text=""
-          //   onClick={handleLogin}
-          //   icon={<IoArrowForwardSharp />}
-          // />
+        {password !== "" && (
           <Clicksplosion>
             <div onClick={handleLogin} className="p-xs cursor-pointer">
               <IoArrowForwardSharp className="text-[16px] text-text-default" />
             </div>
           </Clicksplosion>
-        ) : null}
+        )}
       </div>
     </div>
   );
