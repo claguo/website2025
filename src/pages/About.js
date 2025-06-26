@@ -12,7 +12,7 @@ function AboutPage() {
   return (
     <section className="px-xs lg:px-[20px] flex flex-col pt-3xl pb-lg w-screen overflow-hidden">
       {/* <div className="flex flex-col pt-3xl pb-lg lg:pb-[120px] lg:gap-md gap-sm w-full"> */}
-      <div className="flex flex-col-reverse lg:flex-row lg:gap-md pb-xl gap-sm lg:gap-xl w-full justify-between">
+      <div className="flex flex-col-reverse lg:flex-row lg:gap-md pb-xl gap-sm lg:gap-xl w-full">
         <div className="flex flex-col lg:gap-md gap-sm max-w-[405px]">
           <p className="text-sm text-left">
             I'm Claire, a product designer passionate about building social

@@ -49,10 +49,3 @@ html {
   font-weight: 200;
   font-style: italic;
 }
-
-@font-face {
-  font-family: "Inter";
-  src: url("./fonts/InterDisplay-SemiBold.otf") format("opentype");
-  font-weight: 600;
-  font-style: bold;
-}

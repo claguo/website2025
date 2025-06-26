@@ -87,7 +87,7 @@ function Navbar() {
           />
           <ExternalURLButton
             text="resume"
-            url="https://docs.google.com/document/d/1BW0_VTv6gtI6qj3kKQFtbFZlUbN4zj1lq-hit1NGRQE/edit?usp=sharing"
+            url="https://images.claireguo.com/Claire_Guo_resume.pdf"
           />
         </div>
       </div>
@@ -155,7 +155,7 @@ function Navbar() {
             <Button text="about" to="/about" className="tracking-normal" />
             <ExternalURLButton
               text="resume"
-              url="https://docs.claireguo.com/Claire_Guo_resume.pdf"
+              url="https://images.claireguo.com/Claire_Guo_resume.pdf"
               className="px-[3rem] tracking-normal"
             />
           </div>
