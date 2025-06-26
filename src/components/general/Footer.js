@@ -30,7 +30,9 @@ function Footer() {
           *
         </span>
       </Clicksplosion>
-      {currentProject && <span className="font-mono">Other projects</span>}
+      {currentProject && (
+        <span className="font-mono italic tracking-normal">Other projects</span>
+      )}
 
       {currentProject && (
         <div className="flex gap-3xs lg:gap-xs overflow-x-scroll w-full snap-x scrollbar-hidden mb-2xl">

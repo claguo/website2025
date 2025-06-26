@@ -23,7 +23,7 @@ function SplitHover(props) {
             <span
               key={index}
               className={`${props.className} ${
-                italicStates[index] ? "" : "italic"
+                italicStates[index] ? "italic" : ""
               }`}
               onMouseEnter={() => handleMouseEnter(index)}
             >

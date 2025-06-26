@@ -11,10 +11,10 @@ function Button({ to, text, icon, onClick, className, plainText }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`font-mono flex items-center gap-3xs cursor-pointer ${
-          plainText ? "" : "px-xs py-3xs"
+        className={`flex items-center gap-3xs cursor-pointer ${
+          plainText ? "" : "px-xs py-3xs font-mono tracking-normal"
         }
-        ${className} ${isHovered ? "text-pink italic" : ""}`}
+        ${className} ${isHovered ? "text-pink" : "italic"}`}
       >
         {text}
         {icon && icon}

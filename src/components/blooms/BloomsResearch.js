@@ -8,7 +8,9 @@ function BloomsResearch() {
     <Section tagText="Research" project="blooms">
       <div className="flex flex-col gap-xs">
         <Card className="border-b-[1px]">
-          <span className="font-mono text-text-subtle">Insight 1</span>
+          <span className="font-mono italic tracking-normal text-text-subtle">
+            Insight 1
+          </span>
           <TextStack header="A lack of social support causes feelings of guilt and shame in women.">
             <p>
               The social stigma surrounding abortion care is often perpetrated
@@ -20,7 +22,9 @@ function BloomsResearch() {
           </TextStack>
         </Card>
         <Card className="border-b-[1px]">
-          <span className="font-mono text-text-subtle">Insight 2</span>
+          <span className="font-mono italic tracking-normal text-text-subtle">
+            Insight 2
+          </span>
           <TextStack header="Social and environmental determinants affect health outcomes.">
             <p>
               Social support systems, including family and community networks,
@@ -31,7 +35,9 @@ function BloomsResearch() {
           </TextStack>
         </Card>
         <Card>
-          <span className="font-mono text-text-subtle">Insight 3</span>
+          <span className="font-mono italic tracking-normal text-text-subtle">
+            Insight 3
+          </span>
           <TextStack header="Logistical difficulties involved getting an abortion cause stress that result in negative mental health outcomes.">
             <p>
               Logistical issues include expenses (of the abortion itself,

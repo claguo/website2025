@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Kosugi Maru", "monospace"],
-        sans: ["Roboto"],
+        mono: ["Space Mono"],
+        sans: ["Inter"],
       },
       colors: {
         "bg-white": "#FFFFFF",
-        "bg-gray": "#F6F6FA",
+        "bg-gray": "#ffffff",
 
-        "text-default": "#07081D",
-        "text-subtle": "#413F69",
+        "text-default": "#000000",
+        "text-subtle": "#666666",
 
         blue: "#248EFF",
         pink: "#FF6BE1",

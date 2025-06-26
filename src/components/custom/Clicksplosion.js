@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const colours = ["#002EDF", "#4690FF", "#66EFDF", "#BBB6FF"];
+const colours = ["#248EFF", "#FF6BE1", "#00CE7F"];
 const sparks = 40;
 const bangs = 5;
 const speed = 33;

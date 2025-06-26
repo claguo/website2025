@@ -29,7 +29,7 @@ function Mochi() {
         <Section tagText="the system" project="mochi">
           <TextStack
             header="Color Tokens"
-            className="font-mono text-text-subtle"
+            className="font-mono tracking-normal italic text-text-subtle"
           >
             <p>
               Colors are logically named based on their usage. Each color token
@@ -41,7 +41,10 @@ function Mochi() {
               className="border-[1px] border-border-default rounded-[12px] object-cover"
             />
           </TextStack>
-          <TextStack header="Components" className="font-mono text-text-subtle">
+          <TextStack
+            header="Components"
+            className="font-mono tracking-normal italic text-text-subtle"
+          >
             <div className="flex flex-col gap-xl">
               <img
                 src="https://images.claireguo.com/mochi/system_button.png"

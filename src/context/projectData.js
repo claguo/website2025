@@ -42,7 +42,7 @@ const projectData = [
     title: "Blooms",
     tags: ["2024", "Web dev", "design research", "shipped!"],
     description:
-      "An interactive web app that visualizes gloabl data to highlight women's shared challenges and destigmatize abortion.",
+      "An interactive web app that visualizes global data to highlight women's shared challenges and destigmatize abortion.",
     alt: "Screenshot of web app: a blue globe and statistics",
     path: "blooms",
     team: "Just me!",

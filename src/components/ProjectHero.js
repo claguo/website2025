@@ -14,7 +14,7 @@ function ProjectHero() {
           alt={project.alt}
         />
       </div>
-      <h1 className="text-md font-mono lg:text-lg lg:w-[928px] lg:px-lg lg:self-center">
+      <h1 className="text-md font-mono italic tracking-normal lg:text-lg lg:w-[928px] lg:px-lg lg:self-center">
         {project.title}
       </h1>
     </div>

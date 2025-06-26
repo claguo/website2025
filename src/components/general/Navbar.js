@@ -107,9 +107,15 @@ function Navbar() {
               to="/"
               className="flex flex-row gap-2xs px-xs pt-3xs items-center cursor-pointer"
             >
-              <span className="font-mono text-[1.25rem]"> claire</span>
+              <span className="font-mono italic tracking-normal text-[1.25rem]">
+                {" "}
+                claire
+              </span>
               <span className="font-sans text-[1.25rem]">*</span>
-              <span className="font-mono text-[1.25rem]"> guo</span>
+              <span className="font-mono italic tracking-normal text-[1.25rem]">
+                {" "}
+                guo
+              </span>
             </Link>
             <Button
               text=""
@@ -128,18 +134,14 @@ function Navbar() {
           <Clicksplosion>
             <Link
               to="/"
-              className="flex flex-row lg:flex-row gap-2xs px-xs py-3xs items-center cursor-pointer"
+              className="text-md flex flex-row lg:flex-row gap-2xs px-xs py-3xs items-center cursor-pointer"
             >
               <SplitHover
                 text="claire"
                 styling="italic"
                 className="font-mono text-md"
               />
-              <SplitHover
-                text="*"
-                styling="color"
-                className="font-sans text-md"
-              />
+              *
               <SplitHover
                 text="guo"
                 styling="italic"
@@ -149,13 +151,12 @@ function Navbar() {
           </Clicksplosion>
 
           <div className="flex gap-xl">
-            <Button text="work" to="/" />
-            <Button text="about" to="/about" />
+            <Button text="work" to="/" className="tracking-normal" />
+            <Button text="about" to="/about" className="tracking-normal" />
             <ExternalURLButton
               text="resume"
-              url="https://docs.google.com/document/d/1BW0_VTv6gtI6qj3kKQFtbFZlUbN4zj1lq-hit1NGRQE/edit?usp=sharing"
-              isButton={true}
-              className="px-[3rem]"
+              url="https://docs.claireguo.com/Claire_Guo_resume.pdf"
+              className="px-[3rem] tracking-normal"
             />
           </div>
         </div>

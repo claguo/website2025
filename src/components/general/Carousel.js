@@ -26,7 +26,7 @@ function Carousel({ title, items, delay = 6000 }) {
           className="lg:w-[600px]"
         />
         <div className="flex flex-col gap-3xs lg:gap-2xs items-center lg:items-start">
-          <span className="font-mono">{title}</span>
+          <span className="">{title}</span>
           <p className="text-center lg:text-left">
             {items[currentIndex].description}
           </p>

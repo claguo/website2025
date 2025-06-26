@@ -24,7 +24,7 @@ function BloomsSolution() {
           plainText={true}
           text="View the web app"
           url="https://blooms-globe.netlify.app/"
-          className="bg-[#b8007a] text-white font-mono text-md"
+          className="bg-[#b8007a] text-white font-mono tracking-normal text-md"
           icon={<MdArrowOutward className="text-[20px]" />}
         />
       </div>

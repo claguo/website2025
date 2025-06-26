@@ -19,8 +19,8 @@ function ProjectCard({ project, size, className }) {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={`flex flex-col lg:items-center gap-2xs lg:gap-xs lg:flex-1 shrink-0 w-[240px] ${
-            isHovered ? "text-pink italic" : ""
+          className={`flex flex-col lg:items-center gap-2xs lg:gap-xs lg:flex-1 shrink-0 w-[240px] font-mono tracking-normal ${
+            isHovered ? "text-pink" : "italic"
           } ${className}`}
         >
           <div className="flex overflow-hidden rounded-sm object-cover w-full">
@@ -30,9 +30,9 @@ function ProjectCard({ project, size, className }) {
               className={`duration-500 ${isHovered ? "scale-[1.025]" : ""}`}
             />
           </div>
-          <div className="flex flex-col lg:flex-row w-full justify-between">
-            <span className="font-mono w-full">{project.title}</span>
-            <IoMdArrowForward className="text-[16px] hidden lg:block" />
+          <div className="flex w-full justify-between">
+            <span className="w-full">{project.title}</span>
+            <IoMdArrowForward className="text-[16px] block" />
           </div>
         </Link>
       ) : (
@@ -55,13 +55,7 @@ function ProjectCard({ project, size, className }) {
             />
           </div>
           <div className="flex flex-col lg:flex-row gap-3xs lg:gap-xl px-4xs w-full">
-            <h3
-              className={`lg:w-1/3 lg:text-[16px] font-mono ${
-                isHovered ? "text-pink italic" : ""
-              }`}
-            >
-              {project.title}
-            </h3>
+            <h3 className="lg:w-1/3 lg:text-[16px]">{project.title}</h3>
 
             <div className="flex flex-col gap-2xs">
               <p className="text-sm font-sans">{project.description}</p>

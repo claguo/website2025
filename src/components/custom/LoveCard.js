@@ -60,7 +60,7 @@ function LoveCard(props) {
 
         <div className="flex cursor-default gap-3xs grow-0 shrink-1">
           <span className="font-sans text-md">*</span>
-          <p className="font-mono mt-[1px]">{props.text}</p>
+          <p className="font-mono tracking-normal mt-[1px]">{props.text}</p>
         </div>
       </div>
     );
@@ -70,12 +70,12 @@ function LoveCard(props) {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`flex cursor-default gap-3xs w-full ${
-          isHovered ? "italic text-pink" : ""
+        className={`flex cursor-default gap-3xs w-full tracking-normal ${
+          isHovered ? "text-pink" : "italic"
         }`}
       >
         <span className="font-sans text-md">*</span>
-        <p className="font-mono mt-[1px]">{props.text}</p>
+        <p className="font-mono tracking-normal mt-[1px]">{props.text}</p>
       </div>
 
       <img

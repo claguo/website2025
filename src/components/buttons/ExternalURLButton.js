@@ -18,8 +18,8 @@ function ExternalURLButton({ url, plainText, className, text, icon }) {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={`font-mono inline-block cursor-pointer ${className} ${
-            isHovered ? "text-pink italic" : ""
+          className={`inline-block cursor-pointer ${className} ${
+            isHovered ? "text-pink" : "italic"
           }`}
           onClick={handleButtonClick}
           tabIndex={0}
@@ -32,7 +32,7 @@ function ExternalURLButton({ url, plainText, className, text, icon }) {
       ) : (
         <div
           onClick={handleButtonClick}
-          className="flex items-center gap-3xs font-mono cursor-pointer px-xs py-3xs hover:text-pink"
+          className="flex items-center gap-3xs font-mono italic tracking-normal cursor-pointer px-xs py-3xs hover:text-pink"
         >
           {text} {icon && icon}
         </div>

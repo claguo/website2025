@@ -36,7 +36,10 @@ function A11yResearch() {
 
       {/* PAIN POINTS */}
       <div className="flex flex-col gap-md">
-        <TextStack header="Pain point 1" className="font-mono text-text-subtle">
+        <TextStack
+          header="Pain point 1"
+          className="font-mono italic tracking-normal text-text-subtle"
+        >
           <p>
             <span className="text-text-a11y font-medium">
               Perceived low impact{" "}
@@ -45,7 +48,10 @@ function A11yResearch() {
             to the perceived low impact of web accessibility.
           </p>
         </TextStack>
-        <TextStack header="Pain point 2" className="font-mono text-text-subtle">
+        <TextStack
+          header="Pain point 2"
+          className="font-mono italic tracking-normal text-text-subtle"
+        >
           <p>
             <span className="text-text-a11y font-medium">
               Overwhelming rules and guidelines{" "}
@@ -54,7 +60,10 @@ function A11yResearch() {
             to the perceived low impact of web accessibility.
           </p>
         </TextStack>
-        <TextStack header="Pain point 3" className="font-mono text-text-subtle">
+        <TextStack
+          header="Pain point 3"
+          className="font-mono italic tracking-normal text-text-subtle"
+        >
           <p>
             <span className="text-text-a11y font-medium">
               Time-consuming debug process{" "}
@@ -74,7 +83,9 @@ function A11yResearch() {
       {/* DESIGN PRINCIPLES */}
       <div className="flex flex-col gap-2xs lg:flex-row">
         <Card className="border-[1px] p-xs rounded-[4px] flex-1">
-          <span className="font-mono text-text-subtle">Design Principle 1</span>
+          <span className="font-mono italic tracking-normal text-text-subtle">
+            Design Principle 1
+          </span>
           <img
             src="https://images.claireguo.com/a11y/principle_tamagotchi.png"
             alt="Tamagotchi"
@@ -89,7 +100,7 @@ function A11yResearch() {
           </TextStack>
         </Card>
         <Card className="border-[1px] p-xs rounded-[4px] flex-1">
-          <span className="font-mono italic text-text-subtle">
+          <span className="font-mono italic tracking-normal text-text-subtle">
             Design Principle 2
           </span>
           <img
@@ -104,7 +115,7 @@ function A11yResearch() {
           </TextStack>
         </Card>
         <Card className="border-[1px] p-xs rounded-[4px] flex-1">
-          <span className="font-mono italic text-text-subtle">
+          <span className="font-mono italic tracking-normal text-text-subtle">
             Design Principle 3
           </span>
           <img

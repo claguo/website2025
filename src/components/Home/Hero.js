@@ -24,13 +24,7 @@ function Hero() {
           text="Computation&nbsp;"
           plainText={true}
         />
-        at
-        <ExternalURLButton
-          url="https://www.risd.edu/"
-          text="&nbsp;RISD"
-          plainText={true}
-        />
-        .
+        at RISD.
       </div>
       <div className="flex flex-col gap-0">
         <Button

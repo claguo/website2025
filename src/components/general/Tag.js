@@ -11,7 +11,7 @@ function Tag({ text, theme }) {
 
   return (
     <div
-      className={`font-mono text-sm rounded-full px-[6px] py-[1px] border-[1px] ${themeColors}`}
+      className={`font-mono italic text-sm rounded-full px-[6px] py-[1px] border-[1px] tracking-normal ${themeColors}`}
     >
       {text && text.toLowerCase()}
     </div>
