@@ -21,7 +21,7 @@ function Footer() {
   };
 
   return (
-    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md lg:justify-self-center w-full lg:max-w-[1200px]">
+    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md w-full lg:max-w-[1200px] mx-auto">
       <Clicksplosion>
         <span
           onClick={handleClick}
@@ -51,19 +51,8 @@ function Footer() {
 
       <div className="flex flex-col items-center">
         <span>Thank you for visiting!</span>
-        <span>Designed and developed by mee : )</span>
+        <span>Designed and developed by me : )</span>
       </div>
-      {/* <div className="flex flex-col text-md lg:text-lg font-mono italic items-center">
-          <Button
-            text="claireguo@gmail.com"
-            onClick={() => (window.location = "mailto:claireguo@gmail.com")}
-          />
-          <ExternalURLButton text="github" url="https://github.com/claguo" />
-          <ExternalURLButton
-            text="linkedin"
-            url="https://www.linkedin.com/in/claguo"
-          />
-        </div> */}
     </footer>
   );
 }
