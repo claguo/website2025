@@ -21,7 +21,7 @@ function Footer() {
   };
 
   return (
-    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md w-full lg:max-w-[1200px] mx-auto">
+    <footer className="flex flex-col items-center gap-xs pt-md pb-lg px-xs lg:px-lg lg:pt-3xl lg:gap-md w-[100vw] lg:w-full lg:max-w-[1200px] lg:mx-auto">
       <Clicksplosion>
         <span
           onClick={handleClick}
@@ -35,7 +35,7 @@ function Footer() {
       )}
 
       {currentProject && (
-        <div className="flex gap-3xs lg:gap-xs overflow-x-scroll w-full snap-x scrollbar-hidden mb-2xl">
+        <div className="flex w-full gap-3xs lg:gap-xs overflow-x-scroll snap-x scrollbar-hidden mb-2xl">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}

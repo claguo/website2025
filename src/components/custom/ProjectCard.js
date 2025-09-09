@@ -30,7 +30,7 @@ function ProjectCard({ project, size, className }) {
               className={`duration-500 ${isHovered ? "scale-[1.025]" : ""}`}
             />
           </div>
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between gap-2xs">
             <span className="w-full">{project.title}</span>
             <IoMdArrowForward className="text-[16px] block" />
           </div>

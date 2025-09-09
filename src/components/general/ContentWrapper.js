@@ -5,8 +5,8 @@ function ContentWrapper({ children, className }) {
     <section
       className={`
         flex flex-col text-text-default
-        py-md gap-3xl
-        lg:px-lg lg:py-lg lg:gap-2xl max-w-[928px]
+        py-md gap-3xl w-full
+        lg:px-lg lg:py-lg lg:gap-2xl lg:max-w-[928px]
         ${className}
       `}
     >
