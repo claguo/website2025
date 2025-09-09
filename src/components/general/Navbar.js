@@ -154,8 +154,7 @@ function Navbar() {
             <Button text="about" to="/about" className="tracking-normal" />
             <Button
               text="resume"
-              url="https://images.claireguo.com/Claire_Guo_resume.pdf"
-              className="px-[3rem] tracking-normal"
+              url="https://docs.claireguo.com/Claire_Guo_resume.pdf"
             />
           </div>
         </div>
