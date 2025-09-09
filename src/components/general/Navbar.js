@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SplitHover from "../custom/SplitHoverEffects";
-import ExternalURLButton from "../buttons/ExternalURLButton";
 import Button from "../buttons/Button";
 import { useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
@@ -85,7 +84,7 @@ function Navbar() {
             onClick={() => setShowOverlay(false)}
             text={props.active === "/about" ? "* about" : "about"}
           />
-          <ExternalURLButton
+          <Button
             text="resume"
             url="https://images.claireguo.com/Claire_Guo_resume.pdf"
           />
@@ -153,7 +152,7 @@ function Navbar() {
           <div className="flex gap-xl">
             <Button text="work" to="/" className="tracking-normal" />
             <Button text="about" to="/about" className="tracking-normal" />
-            <ExternalURLButton
+            <Button
               text="resume"
               url="https://images.claireguo.com/Claire_Guo_resume.pdf"
               className="px-[3rem] tracking-normal"

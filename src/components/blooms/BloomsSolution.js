@@ -1,7 +1,7 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import Section from "../general/Section";
-import ExternalURLButton from "../buttons/ExternalURLButton";
+import Button from "../buttons/Button";
 
 function BloomsSolution() {
   return (
@@ -20,12 +20,12 @@ function BloomsSolution() {
         .
       </p>
       <div className="flex gap-2xs items-center text-text-blooms">
-        <ExternalURLButton
+        <Button
           plainText={true}
           text="View the web app"
           url="https://blooms-globe.netlify.app/"
-          className="bg-[#b8007a] text-white font-mono tracking-normal text-md"
-          icon={<MdArrowOutward className="text-[20px]" />}
+          className="bg-text-blooms text-white hover:text-white rounded-md"
+          icon={<MdArrowOutward className="text-[16px]" />}
         />
       </div>
     </Section>

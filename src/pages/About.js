@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import Section from "../components/general/Section";
 import LoveCards from "../components/custom/LoveCards";
-import ExternalURLButton from "../components/buttons/ExternalURLButton";
 import Button from "../components/buttons/Button";
 
 function AboutPage() {
@@ -22,30 +21,26 @@ function AboutPage() {
           </p>
           <div className="text-sm text-left">
             Currently at{" "}
-            <ExternalURLButton
+            <Button
               text="Mochi Health"
               url="https://joinmochi.com/"
               plainText={true}
             />
             . Previously at{" "}
-            <ExternalURLButton
+            <Button
               text="Hitch"
               url="https://www.hitch.com/"
               plainText={true}
             />{" "}
             and{" "}
-            <ExternalURLButton
-              text="RISD"
-              url="https://www.risd.edu/"
-              plainText={true}
-            />{" "}
-            <ExternalURLButton
+            <Button text="RISD" url="https://www.risd.edu/" plainText={true} />{" "}
+            <Button
               text="Industrial Design"
               url="https://id.risd.edu/"
               plainText={true}
             />{" "}
             +{" "}
-            <ExternalURLButton
+            <Button
               text="Computation"
               url="https://ctc.risd.edu/"
               plainText={true}
@@ -58,12 +53,12 @@ function AboutPage() {
               onClick={() => (window.location = "mailto:claireguo@gmail.com")}
               plainText={true}
             />
-            <ExternalURLButton
+            <Button
               text="github"
               url="https://github.com/claguo"
               plainText={true}
             />
-            <ExternalURLButton
+            <Button
               text="linkedin"
               url="https://www.linkedin.com/in/claguo"
               plainText={true}

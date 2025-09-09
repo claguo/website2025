@@ -2,8 +2,8 @@ import React from "react";
 import Section from "../general/Section";
 import ProjectSummary from "../ProjectSummary";
 import Callout from "../general/Callout";
-import ExternalURLButton from "../buttons/ExternalURLButton";
 import { MdArrowOutward } from "react-icons/md";
+import Button from "../buttons/Button";
 
 function BloomsTLDR() {
   return (
@@ -18,11 +18,11 @@ function BloomsTLDR() {
           </span>
         </p>
         <div className="flex gap-2xs items-center text-text-blooms">
-          <ExternalURLButton
+          <Button
             plainText={true}
             text="View the web app"
             url="https://blooms-globe.netlify.app/"
-            className="bg-[#b8007a] text-white"
+            className="bg-text-blooms text-white hover:text-white rounded-md"
             icon={<MdArrowOutward className="text-[16px]" />}
           />
         </div>

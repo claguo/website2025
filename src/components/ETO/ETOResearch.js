@@ -1,7 +1,7 @@
 import React from "react";
-import ExternalURLButton from "../buttons/ExternalURLButton";
 import Section from "../general/Section";
 import Card from "../general/Card";
+import Button from "../buttons/Button";
 
 function ETOResearch() {
   return (
@@ -63,11 +63,7 @@ function ETOResearch() {
             <div>
               “I bring my tape measure when I go fishing to make sure I comply
               with{" "}
-              <ExternalURLButton
-                url="https://dem.ri.gov/"
-                text="DEM"
-                plainText={true}
-              />{" "}
+              <Button url="https://dem.ri.gov/" text="DEM" plainText={true} />{" "}
               regulations.”
             </div>
           </Card>
