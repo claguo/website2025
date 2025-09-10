@@ -24,7 +24,6 @@ function BloomsSolution() {
           text="View the web app"
           to="https://blooms-globe.netlify.app/"
           target="_blank"
-          className="bg-text-blooms/95 hover:bg-text-blooms/90"
           icon={<MdArrowOutward className="text-[16px]" />}
         />
       </div>

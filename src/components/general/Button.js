@@ -12,7 +12,7 @@ function Button({ variant = "default", onClick, className, children }) {
         className || ""
       }`;
     } else {
-      return `bg-text-default text-white flex items-center gap-3xs font-mono italic px-xs py-3xs hover:bg-text-default/80 rounded-sm hover:not-italic ${
+      return `bg-text-blooms text-white flex items-center gap-3xs font-mono italic px-xs py-3xs hover:bg-text-blooms/90 rounded-sm hover:not-italic ${
         className || ""
       }`;
     }

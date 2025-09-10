@@ -21,7 +21,7 @@ function ButtonLink({
         className || ""
       }`;
     } else {
-      return `bg-text-blooms bg-text-default hover:bg-text-default/80 text-white flex items-center gap-3xs font-mono italic px-xs py-3xs rounded-sm hover:not-italic ${
+      return `bg-text-blooms hover:bg-text-blooms/90 text-white flex items-center gap-3xs font-mono italic px-xs py-3xs rounded-sm hover:not-italic ${
         className || ""
       }`;
     }
