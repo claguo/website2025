@@ -88,7 +88,7 @@ function Navbar() {
           <ButtonLink
             variant="ghost"
             text="resume"
-            url="https://images.claireguo.com/Claire_Guo_resume.pdf"
+            url="https://docs.claireguo.com/Claire_Guo_resume-protected.pdf"
           />
         </div>
       </div>
@@ -155,7 +155,7 @@ function Navbar() {
             <ButtonLink
               variant="ghost"
               text="resume"
-              to="https://docs.claireguo.com/Claire_Guo_resume.pdf"
+              to="https://docs.claireguo.com/Claire_Guo_resume-protected.pdf"
               target="_blank"
             />
           </div>
