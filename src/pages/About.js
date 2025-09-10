@@ -85,11 +85,7 @@ function AboutPage() {
         />
       </div>
 
-      <Section
-        tagText="Outside of the studio, I am..."
-        project="blooms"
-        className="w-full"
-      >
+      <Section tagText="Outside of the studio, I am..." project="blooms">
         <LoveCards />
       </Section>
     </section>
