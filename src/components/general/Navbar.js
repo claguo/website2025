@@ -7,6 +7,7 @@ import Clicksplosion from "../custom/Clicksplosion";
 import { useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
+import { MdLockOutline } from "react-icons/md";
 
 function Navbar() {
   const location = useLocation();
@@ -88,7 +89,9 @@ function Navbar() {
           <ButtonLink
             variant="ghost"
             text="resume"
-            url="https://docs.claireguo.com/Claire_Guo_resume-protected.pdf"
+            to="https://docs.claireguo.com/Claire_Guo_resume-protected.pdf"
+            target="_blank"
+            icon={<MdLockOutline />}
           />
         </div>
       </div>
@@ -157,6 +160,7 @@ function Navbar() {
               text="resume"
               to="https://docs.claireguo.com/Claire_Guo_resume-protected.pdf"
               target="_blank"
+              icon={<MdLockOutline />}
             />
           </div>
         </div>
