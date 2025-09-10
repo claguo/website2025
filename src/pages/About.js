@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import Section from "../components/general/Section";
 import LoveCards from "../components/custom/LoveCards";
-import Button from "../components/general/Button";
 import ButtonLink from "../components/general/ButtonLink";
 
 function AboutPage() {
