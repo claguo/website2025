@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
-import Button from "../components/buttons/Button";
-import { IoArrowForwardSharp, IoArrowBackSharp } from "react-icons/io5";
+import Button from "../components/general/Button";
 import Clicksplosion from "../components/custom/Clicksplosion";
+import { IoArrowForwardSharp, IoArrowBackSharp } from "react-icons/io5";
 
 function Login() {
   const [password, setPassword] = useState("");
@@ -38,9 +38,7 @@ function Login() {
   return (
     <div className="p-3xs fixed w-screen h-screen bg-bg-gray flex flex-col">
       <Button
-        text=""
-        icon={<IoArrowBackSharp className="text-[16px] text-text-default" />}
-        className=""
+        variant="ghost"
         onClick={() => {
           if (window.history.length > 1) {
             window.history.back();
@@ -48,7 +46,9 @@ function Login() {
             navigate("/");
           }
         }}
-      />
+      >
+        <IoArrowBackSharp className="text-[20px]" />
+      </Button>
 
       <div className="flex w-full lg:h-full py-4xl justify-center items-center">
         <input
@@ -65,9 +65,9 @@ function Login() {
         />
         {password !== "" && (
           <Clicksplosion>
-            <div onClick={handleLogin} className="p-xs cursor-pointer">
-              <IoArrowForwardSharp className="text-[16px] text-text-default" />
-            </div>
+            <Button onClick={handleLogin} variant="ghost">
+              <IoArrowForwardSharp className="text-[16px]" />
+            </Button>
           </Clicksplosion>
         )}
       </div>

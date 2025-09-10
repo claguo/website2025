@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../general/Section";
 import Card from "../general/Card";
-import Button from "../buttons/Button";
+import ButtonLink from "../general/ButtonLink";
 
 function ETOResearch() {
   return (
@@ -63,7 +63,12 @@ function ETOResearch() {
             <div>
               “I bring my tape measure when I go fishing to make sure I comply
               with{" "}
-              <Button url="https://dem.ri.gov/" text="DEM" plainText={true} />{" "}
+              <ButtonLink
+                to="https://dem.ri.gov/"
+                text="DEM"
+                variant="inline"
+                target="_blank"
+              />{" "}
               regulations.”
             </div>
           </Card>

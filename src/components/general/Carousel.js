@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Button from "../buttons/Button";
+import Button from "./Button";
 import TextStack from "./TextStack";
 import { IoMdArrowBack } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
@@ -43,12 +43,14 @@ function Carousel({ title, items }) {
 
       <div className="flex gap-sm items-center">
         <Button
-          icon={<IoMdArrowBack />}
+          variant="ghost"
           onClick={currentIndex === 0 ? undefined : prevImage}
           className={`hover:bg-bg-a11y rounded-full px-3xs hover:text-text-a11y text-md ${
             currentIndex === 0 ? "hidden" : ""
           }`}
-        />
+        >
+          <IoMdArrowBack />
+        </Button>
         <div className="flex gap-[4px]">
           {items.map((_, index) => (
             <div
@@ -60,10 +62,12 @@ function Carousel({ title, items }) {
           ))}
         </div>
         <Button
-          icon={<IoMdArrowForward />}
+          variant="ghost"
           onClick={nextImage}
           className="hover:bg-bg-a11y rounded-full px-3xs hover:text-text-a11y text-md"
-        />
+        >
+          <IoMdArrowForward />
+        </Button>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { useLayoutEffect } from "react";
 import Section from "../components/general/Section";
 import LoveCards from "../components/custom/LoveCards";
-import Button from "../components/buttons/Button";
+import Button from "../components/general/Button";
+import ButtonLink from "../components/general/ButtonLink";
 
 function AboutPage() {
   useLayoutEffect(() => {
@@ -10,7 +11,6 @@ function AboutPage() {
 
   return (
     <section className="px-xs lg:px-[20px] flex flex-col pt-3xl pb-lg w-screen overflow-hidden">
-      {/* <div className="flex flex-col pt-3xl pb-lg lg:pb-[120px] lg:gap-md gap-sm w-full"> */}
       <div className="flex flex-col-reverse lg:flex-row lg:gap-md pb-xl gap-sm lg:gap-xl w-full">
         <div className="flex flex-col lg:gap-md gap-sm max-w-[405px]">
           <p className="text-sm text-left">
@@ -21,47 +21,58 @@ function AboutPage() {
           </p>
           <div className="text-sm text-left">
             Currently at{" "}
-            <Button
+            <ButtonLink
+              variant="inline"
               text="Mochi Health"
-              url="https://joinmochi.com/"
-              plainText={true}
+              to="https://joinmochi.com/"
+              target="_blank"
             />
             . Previously at{" "}
-            <Button
+            <ButtonLink
+              variant="inline"
               text="Hitch"
-              url="https://www.hitch.com/"
-              plainText={true}
+              to="https://www.hitch.com/"
+              target="_blank"
             />{" "}
             and{" "}
-            <Button text="RISD" url="https://www.risd.edu/" plainText={true} />{" "}
-            <Button
+            <ButtonLink
+              variant="inline"
+              text="RISD"
+              to="https://www.risd.edu/"
+              target="_blank"
+            />{" "}
+            <ButtonLink
+              variant="inline"
               text="Industrial Design"
-              url="https://id.risd.edu/"
-              plainText={true}
+              to="https://id.risd.edu/"
+              target="_blank"
             />{" "}
             +{" "}
-            <Button
+            <ButtonLink
+              variant="inline"
               text="Computation"
-              url="https://ctc.risd.edu/"
-              plainText={true}
+              to="https://ctc.risd.edu/"
+              target="_blank"
             />
             .
           </div>
           <div className="flex flex-col gap-0">
-            <Button
+            <ButtonLink
+              variant="inline"
               text="claireguo@gmail.com"
               onClick={() => (window.location = "mailto:claireguo@gmail.com")}
-              plainText={true}
             />
-            <Button
+            <ButtonLink
+              variant="inline"
               text="github"
-              url="https://github.com/claguo"
-              plainText={true}
+              to="https://github.com/claguo"
+              target="_blank"
             />
-            <Button
+            <ButtonLink
+              variant="inline"
               text="linkedin"
-              url="https://www.linkedin.com/in/claguo"
-              plainText={true}
+              to="https://www.linkedin.com/in/claguo"
+              target="_blank"
             />
           </div>
 
@@ -81,7 +92,6 @@ function AboutPage() {
       >
         <LoveCards />
       </Section>
-      {/* </div> */}
     </section>
   );
 }

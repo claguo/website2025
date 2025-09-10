@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SplitHover from "../custom/SplitHoverEffects";
-import Button from "../buttons/Button";
+import Button from "./Button";
+import ButtonLink from "./ButtonLink";
+import Clicksplosion from "../custom/Clicksplosion";
 import { useLocation } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
-import Clicksplosion from "../custom/Clicksplosion";
+
 function Navbar() {
   const location = useLocation();
   const [active, setActive] = useState(null);
@@ -66,25 +68,25 @@ function Navbar() {
   function MobileOverlay(props) {
     return (
       <div className="pt-3xs fixed w-full h-screen bg-bg-gray flex flex-col items-end">
-        <Button
-          text=""
-          onClick={() => setShowOverlay(false)}
-          icon={<IoCloseSharp className="text-[20px] text-text-default" />}
-          className=""
-        />
+        <Button variant="ghost" onClick={() => setShowOverlay(false)}>
+          <IoCloseSharp className="text-[20px]" />
+        </Button>
 
         <div className="flex flex-col w-full h-full justify-center items-center gap-8">
-          <Button
+          <ButtonLink
+            variant="ghost"
             to="/"
             onClick={() => setShowOverlay(false)}
             text={props.active === "/" ? "* home" : "home"}
           />
-          <Button
+          <ButtonLink
+            variant="ghost"
             to="/about"
             onClick={() => setShowOverlay(false)}
             text={props.active === "/about" ? "* about" : "about"}
           />
-          <Button
+          <ButtonLink
+            variant="ghost"
             text="resume"
             url="https://images.claireguo.com/Claire_Guo_resume.pdf"
           />
@@ -98,9 +100,9 @@ function Navbar() {
       {isMobile ? (
         <>
           <div
-            className={`lg:px-4xs pt-3xs flex justify-between items-center z-99 w-full transition duration-100 ease-in flex fixed ${
-              active === "/" ? "bg-bg-gray" : "bg-bg-white"
-            } ${show ? "opacity-100" : "opacity-0"}`}
+            className={`lg:px-4xs pt-3xs flex justify-between items-center z-99 w-full transition duration-100 ease-in flex fixed bg-white ${
+              show ? "opacity-100" : "opacity-0"
+            }`}
           >
             <Link
               to="/"
@@ -116,11 +118,9 @@ function Navbar() {
                 guo
               </span>
             </Link>
-            <Button
-              text=""
-              onClick={() => setShowOverlay(true)}
-              icon={<IoMdMenu className="text-[20px] text-text-default" />}
-            />
+            <Button variant="ghost" onClick={() => setShowOverlay(true)}>
+              <IoMdMenu className="text-[20px]" />
+            </Button>
           </div>
           {showOverlay && <MobileOverlay active={active} />}
         </>
@@ -150,11 +150,13 @@ function Navbar() {
           </Clicksplosion>
 
           <div className="flex gap-xl">
-            <Button text="work" to="/" className="tracking-normal" />
-            <Button text="about" to="/about" className="tracking-normal" />
-            <Button
+            <ButtonLink variant="ghost" text="work" to="/" />
+            <ButtonLink variant="ghost" text="about" to="/about" />
+            <ButtonLink
+              variant="ghost"
               text="resume"
-              url="https://docs.claireguo.com/Claire_Guo_resume.pdf"
+              to="https://docs.claireguo.com/Claire_Guo_resume.pdf"
+              target="_blank"
             />
           </div>
         </div>
