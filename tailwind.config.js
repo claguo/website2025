@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         mono: ["Space Mono"],
         sans: ["Inter"],
+        kosugi: ["Kosugi Maru"],
       },
       colors: {
         "bg-white": "#FFFFFF",
@@ -16,6 +17,7 @@ module.exports = {
 
         blue: "#248EFF",
         pink: "#FF6BE1",
+        "pink-light": "#FF79E4",
         green: "#00CE7F",
 
         "border-default": "#D0D0E2",

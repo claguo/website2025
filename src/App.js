@@ -14,6 +14,7 @@ import Mochi from "./pages/Mochi";
 import A11yBuddy from "./pages/A11yBuddy";
 import EatTheOcean from "./pages/EatTheOcean";
 import Blooms from "./pages/Blooms";
+import Landing from "./pages/Landing";
 import { ProjectContextProvider } from "./context/ProjectContext";
 import ScrollToTop from "./components/general/ScrollToTop";
 import Login from "./pages/Login";
@@ -25,6 +26,8 @@ function BackgroundColor({ children }) {
   // Apply different classes or styles based on the route
   useEffect(() => {
     if (location.pathname === "/") {
+      document.body.className = "bg-black";
+    } else if (location.pathname === "/2025" || location.pathname === "/2025/") {
       document.body.className = "bg-bg-gray";
     } else {
       document.body.className = "bg-bg-white";
@@ -34,41 +37,42 @@ function BackgroundColor({ children }) {
   return children;
 }
 
+function AppContent() {
+  const location = useLocation();
+  const isLandingPage = location.pathname === "/";
+
+  return (
+    <>
+      <ScrollToTop />
+      <BackgroundColor />
+      {!isLandingPage && <Navbar />}
+      <Routes>
+        <Route path="/" exact element={<Landing />} />
+        <Route path="/2025" exact element={<Home />} />
+        <Route path="/2025/about" element={<About />} />
+        <Route
+          path="/2025/mochi-health"
+          element={
+            <ProtectedRoute>
+              <Mochi />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/2025/a11y-buddy" element={<A11yBuddy />} />
+        <Route path="/2025/blooms" element={<Blooms />} />
+        <Route path="/2025/eat-the-ocean" element={<EatTheOcean />} />
+        <Route path="/2025/login" element={<Login />} />
+      </Routes>
+      {!isLandingPage && <Footer />}
+    </>
+  );
+}
+
 function App() {
   return (
     <ProjectContextProvider>
       <Router>
-        <ScrollToTop />
-        <BackgroundColor />
-        <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/mochi-health"
-            element={
-              <ProtectedRoute>
-                <Mochi />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/a11y-buddy" element={<A11yBuddy />} />
-          {/* <Route path="/collab-risd" element={<CollabRISD />} /> */}
-          <Route path="/blooms" element={<Blooms />} />
-          <Route path="/eat-the-ocean" element={<EatTheOcean />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/blooms"
-            component={() => {
-              window.location.href = "https://blooms-globe.netlify.app/";
-              return null;
-            }}
-          />
-          {/* {projectData.map((project) => (
-              <Route key={project.id} path={`/projects/${project.path}`} element={<ProjectPage project={project} />} />
-            ))} */}
-        </Routes>
-        <Footer />
+        <AppContent />
       </Router>
     </ProjectContextProvider>
   );
